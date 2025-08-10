@@ -252,6 +252,10 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+@app.get("/")
+def read_root():
+    return {"message": "API Tennis Elo est en ligne."}
+
 class MatchInput(BaseModel):
     A: str
     B: str
