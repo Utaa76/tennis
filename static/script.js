@@ -1,3 +1,17 @@
+fetch("./joueurs.json")
+	.then(res => res.json())
+	.then(joueurs => {
+		const datalist = document.getElementById("joueurs");
+		joueurs.forEach(joueur => {
+			const option = document.createElement("option");
+			option.value = joueur;
+			datalist.appendChild(option);
+		});
+		console.log(datalist)
+	})
+	.catch(error => console.error("Erreur de chargement des joueurs :", error));
+
+
 const form = document.getElementById('betForm')
 const resultDiv = document.getElementById('result')
 

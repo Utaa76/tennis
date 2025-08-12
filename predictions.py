@@ -365,7 +365,7 @@ def predict_match(
 
 
 
-def evaluate_bets_online(dataset, bankroll=1, min_ev=0.05):
+def evaluate_bets_online(dataset, bankroll=100, min_ev=0.05):
     results = []
     combines = []
 
@@ -428,7 +428,7 @@ def evaluate_bets_online(dataset, bankroll=1, min_ev=0.05):
         if (max(evA, evB) <= 0):
             continue
 
-        if (probA > 0.5):
+        if (evA > evB):
             proba_effective = probA
             player_pred = playerA
             cote_pred = unfairOddA
@@ -1107,43 +1107,50 @@ upcoming_df['Surface'] = 'Grass'
 upcoming_df['Series'] = 'Grand Slam'
 
 
-# erreurs()
+import json
 
-simulation_paris_2025()
+# simulation_paris_2025()
 
-predict_match("Lehecka J.", "Boyer T.", "Hard", 1.14, 5.4, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Comesana F.", "Darderi L.", "Hard", 1.65, 2.15, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("De Minaur A.", "Opelka R.", "Hard", 1.21, 4.3, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Mensik J.", "Quinn E.", "Hard", 1.48, 2.6, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Bautista Agut R.", "Norrie C.", "Hard", 2.48, 1.53, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Tien L.", "Rublev A.", "Hard", 2.6, 1.48, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Nardi L.", "Shapovalov D.", "Hard", 3.8, 1.25, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Walton A.", "Medvedev D.", "Hard", 5.2, 1.16, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Popyrin A.", "Landaluce M.", "Hard", 1.31, 3.35, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Dzumhur D.", "Alcaraz C.", "Hard", 15, 1.02, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Brooksby J.", "Cazaux A.", "Hard", 1.8, 1.98, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Nakashima B.", "Blockx A.", "Hard", 1.32, 3.3, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Griekspoor T.", "Medjedovic H.", "Hard", 1.79, 2, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Khachanov K.", "Royer V.", "Hard", 1.22, 4.1, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Shelton B.", "Ugo Carabelli C.", "Hard", 1.08, 7.5, 'Masters 1000', '2nd Round') # Cincinnati
-predict_match("Basavareddy N.", "Zverev A.", "Hard", 6, 1.13, 'Masters 1000', '2nd Round') # Cincinnati
+# with open("joueurs.json", "w", encoding="utf-8") as f:
+#     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
 
-predict_match("Paolini J.", "Sakkari M.", "Hard", 1.77, 1.91, 'WTA1000', '2nd Round') # Cincinnati WTA 
-predict_match("Yastremska D.", "Tomova V.", "Hard", 1.32, 3.3, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Sevastova A.", "Krueger A.", "Hard", 2.15, 1.68, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Kudermetova V.", "Bencic B.", "Hard", 2.18, 1.67, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Navarro E.", "Seidel E.", "Hard", 1.17, 4.8, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Linette M.", "Sramkova R.", "Hard", 1.83, 1.95, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Tauson C.", "Tomljanovic A.", "Hard", 1.28, 3.55, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Wang Xiy.", "Gauff C.", "Hard", 4.05, 1.23, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Osorio M.", "Ostapenko J.", "Hard", 2.65, 1.47, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Kenin S.", "Gracheva V.", "Hard", 1.56, 2.4, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Mcnally C.", "Kessler M.", "Hard", 2.09, 1.72, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Kasatkina D.", "Bronzetti L.", "Hard", 1.33, 3.2, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Birrell K.", "Pegula J.", "Hard", 4.9, 1.17, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Noskova L.", "Jovic I.", "Hard", 1.44, 2.77, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Krejcikova B.", "Svitolina E.", "Hard", 3.55, 1.28, 'WTA1000', '2nd Round') # Cincinnati WTA
-predict_match("Garcia C.", "Muchova K.", "Hard", 4.05, 1.23, 'WTA1000', '2nd Round') # Cincinnati WTA
+predict_match("Opelka R.", "Comesana F.", "Hard", 1.47, 2.62, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Popyrin A.", "Rublev A.", "Hard", 2.57, 1.49, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Medjedovic H.", "Alcaraz C.", "Hard", 5.8, 1.13, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Mensik J.", "Nardi L.", "Hard", 1.22, 4.15, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Khachanov K.", "Brooksby J.", "Hard", 1.45, 2.72, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Lehecka J.", "Walton A.", "Hard", 1.22, 4.25, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Nakashima B.", "Zverev A.", "Hard", 3.5, 1.29, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Shelton B.", "Bautista Agut R.", "Hard", 1.17, 4.9, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+
+predict_match("Jovic I.", "Krejcikova B.", "Hard", 2.15, 1.68, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA 
+predict_match("Seidel E.", "Kessler M.", "Hard", 3.75, 1.26, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Paolini J.", "Krueger A.", "Hard", 1.44, 2.75, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Yastremska D.", "Gauff C.", "Hard", 3.85, 1.25, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Gracheva V.", "Muchova K.", "Hard", 3.5, 1.29, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Bronzetti L.", "Ostapenko J.", "Hard", 3.2, 1.33, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Linette M.", "Pegula J.", "Hard", 5.6, 1.13, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Tauson C.", "Kudermetova V.", "Hard", 1.59, 2.33, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+
+# Winamax
+# predict_match("Opelka R.", "Comesana F.", "Hard", 1.47, 2.65, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Popyrin A.", "Rublev A.", "Hard", 2.7, 1.46, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Medjedovic H.", "Alcaraz C.", "Hard", 5.9, 1.13, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Mensik J.", "Nardi L.", "Hard", 1.22, 4.3, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Khachanov K.", "Brooksby J.", "Hard", 1.44, 2.8, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Lehecka J.", "Walton A.", "Hard", 1.22, 4.2, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Nakashima B.", "Zverev A.", "Hard", 3.5, 1.3, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+# predict_match("Shelton B.", "Bautista Agut R.", "Hard", 1.17, 4.9, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+
+# predict_match("Jovic I.", "Krejcikova B.", "Hard", 2.1, 1.7, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA 
+# predict_match("Seidel E.", "Kessler M.", "Hard", 3.7, 1.28, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Paolini J.", "Krueger A.", "Hard", 1.43, 2.8, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Yastremska D.", "Gauff C.", "Hard", 3.95, 1.25, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Gracheva V.", "Muchova K.", "Hard", 3.6, 1.29, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Bronzetti L.", "Ostapenko J.", "Hard", 3.15, 1.36, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Linette M.", "Pegula J.", "Hard", 5.2, 1.16, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+# predict_match("Tauson C.", "Kudermetova V.", "Hard", 1.58, 2.35, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+
 
 
 # !!!!!!!!!!!!!!!!!!!!!! avec min_ev = 0 et rmv_margin = False, on parie sur les même matchs qu'avec min_ev = 0.05 et rmv_margin = True

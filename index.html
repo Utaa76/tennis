@@ -8,10 +8,12 @@
 <body>
     <form id="betForm">
         <label for="A">Joueur A :</label>
-        <input type="text" id="A" name="A" required />
+        <input type="text" id="A" name="A" list="joueurs" required />
 
         <label for="B">Joueur B :</label>
-        <input type="text" id="B" name="B" required />
+        <input type="text" id="B" name="B" list="joueurs" required />
+
+        <datalist id="joueurs"></datalist>
 
         <label for="surface">Surface :</label>
         <select id="surface" name="surface" required>
