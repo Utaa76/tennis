@@ -1,4 +1,4 @@
-fetch("./joueurs.json")
+fetch("/static/joueurs.json")
 	.then(res => res.json())
 	.then(joueurs => {
 		const datalist = document.getElementById("joueurs");
