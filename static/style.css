@@ -14,6 +14,18 @@ body {
 	margin: 20%;
 	background-color: white;
 
+	h2 {
+			text-align: center;
+			font-size: 3em;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+			font-weight: bolder;
+			margin: 0;
+			background: linear-gradient(to right, var(--bleu) 0%, var(--vert) 100%);
+			background-clip: text;
+			color: transparent;
+		}
+
 	#betForm {
 		width: 100%;
 		padding: 50px;
@@ -25,18 +37,6 @@ body {
 		box-shadow: 0 0 20px 10px rgba(0, 0, 0, .25);
 		border-radius: 20px;
 		gap: 50px;
-
-		h2 {
-			text-align: center;
-			font-size: 3em;
-			text-transform: uppercase;
-			letter-spacing: 5px;
-			font-weight: bolder;
-			margin: 0;
-			background: linear-gradient(to right, var(--bleu) 0%, var(--vert) 100%);
-			background-clip: text;
-			color: transparent;
-		}
 
 		input[type=text], input[type=number] {
 			border: none;
@@ -158,5 +158,34 @@ body {
 			box-shadow: 0 0 20px 5px rgba(0, 0, 0, .25);
 			cursor: pointer;
 		}
+	}
+
+	#result {
+		display: flex;
+		flex-direction: column;
+		background-color: white;
+		box-shadow: 0 0 20px 10px rgba(0, 0, 0, .25);
+		padding: 50px;
+		border-radius: 20px;
+
+		#noms-joueurs {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+
+			p {
+				text-transform: uppercase;
+
+				&.winner {
+					font-weight: bold;
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.hidden {
+		display: none !important;
 	}
 }

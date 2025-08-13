@@ -49,9 +49,15 @@ surfaceSelectors.forEach(surfaceSelector => {
 
 const form = document.getElementById('betForm');
 const resultDiv = document.getElementById('result');
+const joueur1 = document.getElementById('joueur1');
+const joueur2 = document.getElementById('joueur2');
+const infosBet = document.getElementById('infos-bet');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
+
+	form.classList.add("hidden");
+	resultDiv.classList.remove("hidden");
 
     // Construire l'objet data à partir du formulaire
     const data = {
@@ -82,13 +88,23 @@ form.addEventListener('submit', async (e) => {
         const json = await response.json();
 
         if (json.message) {
-            resultDiv.textContent = json.message;
+            infosBet.textContent = json.message;
         } else {
-            resultDiv.innerHTML = `
-                <strong>Match :</strong> ${json.match}<br/>
+			joueur1.textContent = json.joueur1;
+			joueur2.textContent = json.joueur2;
+
+			if (json.joueur1 === json.winner) {
+				joueur1.classList.add("winner");
+			} else {
+				joueur2.classList.add("winner");
+			}
+
+
+            infosBet.innerHTML = `
                 <strong>Pari recommandé :</strong> ${json.winner}<br/>
                 <strong>Mise :</strong> ${(json.mise).toFixed(2)} €<br/>
-                <strong>Gain attendu :</strong> ${(json.gain_attendu).toFixed(2)} €
+                <strong>Gain attendu :</strong> ${(json.gain_attendu).toFixed(2)} € <br/>
+                <strong>Probabilité :</strong> ${(json.probability*100).toFixed(2)} %
             `;
         }
     } catch (err) {
