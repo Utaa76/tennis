@@ -3,60 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
     <title>Betting</title>
 </head>
 <body>
     <form id="betForm">
-        <label for="A">Joueur A :</label>
-        <input type="text" id="A" name="A" list="joueurs" required />
-
-        <label for="B">Joueur B :</label>
-        <input type="text" id="B" name="B" list="joueurs" required />
+        <h2>Match</h2>
+        <div id="joueurs-field">
+            <input type="text" id="A" name="A" list="joueurs" placeholder="Joueur 1" required />
+    
+            <input type="text" id="B" name="B" list="joueurs" placeholder="Joueur 2" required />
+        </div>
 
         <datalist id="joueurs"></datalist>
 
-        <label for="surface">Surface :</label>
-        <select id="surface" name="surface" required>
-            <option value="Hard">Hard</option>
-            <option value="Clay">Clay</option>
-            <option value="Grass">Grass</option>
-        </select>
+        <div id="cotes">
+            <input type="number" step="0.01" id="cote_A" name="cote_A" placeholder="Cote 1" required />
+    
+            <input type="number" step="0.01" id="cote_B" name="cote_B" placeholder="Cote 2" required />
+        </div>
 
-        <label for="cote_A">Cote joueur A :</label>
-        <input type="number" step="0.01" id="cote_A" name="cote_A" required />
+        <div id="surfaces">
+            <div class="surface-selector">Clay</div>
+            <div class="surface-selector">Grass</div>
+            <div class="surface-selector">Hard</div>
+        </div>
 
-        <label for="cote_B">Cote joueur B :</label>
-        <input type="number" step="0.01" id="cote_B" name="cote_B" required />
+        <div id="infos-tournoi">
+            <select id="level_name" name="level_name" required>
+                <option value="" disabled selected hidden>Tournoi</option>
+                <option value="Grand Slam">Grand Slam</option>
+                <option value="Masters 1000">Masters 1000</option>
+                <option value="ATP500">ATP500</option>
+                <option value="ATP250">ATP250</option>
+                <option value="WTA250">WTA250</option>
+                <option value="WTA500">WTA500</option>
+                <option value="WTA1000">WTA1000</option>
+            </select>
+            
+            <select id="round_name" name="round_name" required>
+                <option value="" disabled selected hidden>Round</option>
+                <option value="1st Round">1er tour</option>
+                <option value="2nd Round">2e tour</option>
+                <option value="3rd Round">3e tour</option>
+                <option value="4th Round">4e tour</option>
+                <option value="Quarterfinals">Quart de finale</option>
+                <option value="Semifinals">Demi-finale</option>
+                <option value="The Final">Finale</option>
+            </select>
+        </div>
 
-        <label for="level_name">Niveau du tournoi :</label>
-        <select id="level_name" name="level_name" required>
-            <option value="Grand Slam">Grand Slam</option>
-            <option value="Masters 1000">Masters 1000</option>
-            <option value="ATP500">ATP500</option>
-            <option value="ATP250">ATP250</option>
-            <option value="WTA250">WTA250</option>
-            <option value="WTA500">WTA500</option>
-            <option value="WTA1000">WTA1000</option>
-        </select>
+        <div id="param-pari">
+            <div class="pari-infos">
+                <label for="bankroll">Bankroll (€)</label>
+                <input type="number" step="0.01" id="bankroll" name="bankroll" value="100" required />
+            </div>
+    
+            <div class="pari-infos">
+                <label for="min_ev">Seuil EV minimum</label>
+                <input type="number" step="0.01" id="min_ev" name="min_ev" value="0.05" required />
+            </div>
+        </div>
 
-        <label for="round_name">Tour / Round :</label>
-        <select id="round_name" name="round_name" required>
-            <option value="1st Round">1er tour</option>
-            <option value="2nd Round">2e tour</option>
-            <option value="3rd Round">3e tour</option>
-            <option value="4th Round">4e tour</option>
-            <option value="Quarterfinals">Quart de finale</option>
-            <option value="Semifinals">Demi-finale</option>
-            <option value="The Final">Finale</option>
-        </select>
-
-        <label for="bankroll">Bankroll (€) :</label>
-        <input type="number" step="0.01" id="bankroll" name="bankroll" value="100" required />
-
-        <label for="min_ev">Seuil EV minimum :</label>
-        <input type="number" step="0.01" id="min_ev" name="min_ev" value="0.05" required />
-
-        <button type="submit">Calculer pari</button>
+        <button type="submit">Prédire</button>
     </form>
     <div id="result"></div>
 </body>

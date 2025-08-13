@@ -11,6 +11,41 @@ fetch("./joueurs.json")
 	})
 	.catch(error => console.error("Erreur de chargement des joueurs :", error));
 
+const selectLevel = document.getElementById("level_name")
+const selectRound = document.getElementById("round_name")
+
+const surfaceSelectors = document.querySelectorAll(".surface-selector");
+
+function updateColor() {
+	if (!selectLevel.value) {
+		selectLevel.classList.remove("active");
+	} else {
+		selectLevel.classList.add("active");
+	}
+
+	if (!selectRound.value) {
+		selectRound.classList.remove("active");
+	} else {
+		selectRound.classList.add("active");
+	}
+}
+
+function selectSurface(self) {
+	surfaceSelectors.forEach(surfaceSelector => {
+		surfaceSelector.classList.remove("selected");
+	});
+
+	self.classList.add("selected");
+}
+
+updateColor();
+
+selectLevel.addEventListener("change", updateColor);
+selectRound.addEventListener("change", updateColor);
+
+surfaceSelectors.forEach(surfaceSelector => {
+	surfaceSelector.addEventListener("click", () => selectSurface(surfaceSelector));
+});
 
 const form = document.getElementById('betForm')
 const resultDiv = document.getElementById('result')

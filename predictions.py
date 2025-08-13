@@ -1114,23 +1114,19 @@ import json
 # with open("joueurs.json", "w", encoding="utf-8") as f:
 #     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
 
-predict_match("Opelka R.", "Comesana F.", "Hard", 1.47, 2.62, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Popyrin A.", "Rublev A.", "Hard", 2.57, 1.49, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Medjedovic H.", "Alcaraz C.", "Hard", 5.8, 1.13, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Mensik J.", "Nardi L.", "Hard", 1.22, 4.15, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Khachanov K.", "Brooksby J.", "Hard", 1.45, 2.72, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Lehecka J.", "Walton A.", "Hard", 1.22, 4.25, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Nakashima B.", "Zverev A.", "Hard", 3.5, 1.29, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
-predict_match("Shelton B.", "Bautista Agut R.", "Hard", 1.17, 4.9, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
+predict_match("Tiafoe F.", "Rune H.", "Hard", 2.1, 1.71, 'Masters 1000', '4th Round') # Cincinnati
+predict_match("Shelton B.", "Bautista Agut R.", "Hard", 1.16, 4.95, 'Masters 1000', '3rd Round') # Cincinnati
+predict_match("Sinner J.", "Mannarino A.", "Hard", 1.02, 14.5, 'Masters 1000', '4th Round') # Cincinnati
+predict_match("Auger-Aliassime F.", "Bonzi B.", "Hard", 1.34, 3.2, 'Masters 1000', '4th Round') # Cincinnati
+predict_match("Fritz T.", "Atmane T.", "Hard", 1.09, 6.8, 'Masters 1000', '4th Round') # Cincinnati
+predict_match("Comesana F.", "Rublev A.", "Hard", 3.8, 1.19, 'Masters 1000', '4th Round') # Cincinnati
+predict_match("Nardi L.", "Alcaraz C.", "Hard", 7.8, 1.03, 'Masters 1000', '4th Round') # Cincinnati
 
-predict_match("Jovic I.", "Krejcikova B.", "Hard", 2.15, 1.68, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA 
-predict_match("Seidel E.", "Kessler M.", "Hard", 3.75, 1.26, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Paolini J.", "Krueger A.", "Hard", 1.44, 2.75, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Yastremska D.", "Gauff C.", "Hard", 3.85, 1.25, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Gracheva V.", "Muchova K.", "Hard", 3.5, 1.29, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Bronzetti L.", "Ostapenko J.", "Hard", 3.2, 1.33, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Linette M.", "Pegula J.", "Hard", 5.6, 1.13, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
-predict_match("Tauson C.", "Kudermetova V.", "Hard", 1.59, 2.33, 'WTA1000', '3rd Round', ev_comparison=True) # Cincinnati WTA
+predict_match("Swiatek I.", "Cirstea S.", "Hard", 1.05, 11, 'WTA1000', '4th Round') # Cincinnati WTA 
+predict_match("Kudermetova V.", "Tauson C.", "Hard", 1.64, 2.23, 'WTA1000', '3rd Round') # Cincinnati WTA
+predict_match("Sabalenka A.", "Bouzas Maneiro J.", "Hard", 1.12, 6, 'WTA1000', '4th Round') # Cincinnati WTA
+predict_match("Rybakina E.", "Keys M.", "Hard", 1.64, 2.23, 'WTA1000', '4th Round') # Cincinnati WTA
+predict_match("Alexandrova E.", "Kalinskaya A.", "Hard", 1.58, 2.35, 'WTA1000', '4th Round') # Cincinnati WTA
 
 # Winamax
 # predict_match("Opelka R.", "Comesana F.", "Hard", 1.47, 2.65, 'Masters 1000', '3rd Round', ev_comparison=True) # Cincinnati
