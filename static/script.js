@@ -72,8 +72,6 @@ form.addEventListener('submit', async (e) => {
         surface: getSelectedSurface()
     };
 
-	console
-
     try {
         const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
             method: 'POST',
