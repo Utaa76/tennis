@@ -277,7 +277,7 @@ class MatchInput(BaseModel):
 def predict(match: MatchInput):
     # Appelle ta fonction predict_match avec les paramètres reçus
     result = predict_match(
-        match.A, match.B, match.surface,
+        match.A, match.B, "Hard",
         match.cote_A, match.cote_B,
         match.level_name, match.round_name,
         bankroll=match.bankroll, min_ev=match.min_ev,
