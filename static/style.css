@@ -55,6 +55,10 @@ body {
 			input:nth-child(even) {
 				text-align: right;
 			}
+
+			input {
+				width: 100%;
+			}
 		}
 
 		#cotes {
@@ -144,9 +148,11 @@ body {
 		}
 
 		button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
 			border: none;
-			width: 30%;
-			padding: 10px;
+			padding: 10px 50px;
 			text-align: center;
 			background: linear-gradient(to right, var(--bleu) 0%, var(--vert) 100%);
 			color: white;
