@@ -47,50 +47,71 @@ surfaceSelectors.forEach(surfaceSelector => {
 	surfaceSelector.addEventListener("click", () => selectSurface(surfaceSelector));
 });
 
-const form = document.getElementById('betForm')
-const resultDiv = document.getElementById('result')
-
-console.log("bien reçu")
+const form = document.getElementById('betForm');
+const resultDiv = document.getElementById('result');
 
 form.addEventListener('submit', async (e) => {
-	e.preventDefault();
+    e.preventDefault(); // Empêche le rechargement de la page
 
-	const formData = new FormData(form);
-	const data = {};
-	formData.forEach((value, key) => {
-		if (key === 'cote_A' || key === 'cote_B' || key === 'bankroll' || key === 'min_ev') {
-			data[key] = parseFloat(value);
-		} else {
-			data[key] = value;
-		}
-	});
+    // Construire l'objet data à partir du formulaire
+    const data = {
+        A: document.getElementById('A').value,
+        B: document.getElementById('B').value,
+        cote_A: parseFloat(document.getElementById('cote_A').value),
+        cote_B: parseFloat(document.getElementById('cote_B').value),
+        level_name: document.getElementById('level_name').value,
+        round_name: document.getElementById('round_name').value,
+        bankroll: parseFloat(document.getElementById('bankroll').value),
+        min_ev: parseFloat(document.getElementById('min_ev').value),
+        surface: getSelectedSurface()
+    };
 
-	resultDiv.textcontent = 'Chargement...';
+	console
 
-	try {
-		const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
-			method: 'POST',
-			headers: { 'Content-Type': 'application/json' },
-			body: JSON.stringify(data)
-		});
+    try {
+        const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
 
-		if (!response.ok) {
-			throw new Error('Erreur réseau ou serveur')
-		}
+        if (!response.ok) {
+            throw new Error(`Erreur serveur (${response.status})`);
+        }
 
-		const json = await response.json();
+        const json = await response.json();
 
-		if (json.message) {
-			resultDiv.textContent = json.message;
-		} else {
-			resultDiv.innerHTML = `
-				<strong>Match :</strong> ${json.match}<br/>
-				<strong>Pari recommandé :</strong> ${json.winner}<br/>
-				<strong>Mise :</strong> ${(json.mise).toFixed(2)} €<br/>
-				<strong>Gain attendu :</strong> ${(json.gain_attendu).toFixed(2)} €
-			`;
-		};
-	} catch (err) {
-		resultDiv.textcontent = 'Erreur : ' + err.message;
-	}
+        if (json.message) {
+            resultDiv.textContent = json.message;
+        } else {
+            resultDiv.innerHTML = `
+                <strong>Match :</strong> ${json.match}<br/>
+                <strong>Pari recommandé :</strong> ${json.winner}<br/>
+                <strong>Mise :</strong> ${(json.mise).toFixed(2)} €<br/>
+                <strong>Gain attendu :</strong> ${(json.gain_attendu).toFixed(2)} €
+            `;
+        }
+    } catch (err) {
+        resultDiv.textContent = 'Erreur : ' + err.message;
+    }
+});
+
+// Fonction pour récupérer la surface sélectionnée
+function getSelectedSurface() {
+    const surfaces = document.querySelectorAll('.surface-selector');
+    for (const s of surfaces) {
+        if (s.classList.contains('selected')) {
+            return s.textContent;
+        }
+    }
+    return null; // ou une valeur par défaut si nécessaire
+}
+
+// Exemple : ajout de la sélection de surface
+const surfaces = document.querySelectorAll('.surface-selector');
+surfaces.forEach(s => {
+    s.addEventListener('click', () => {
+        surfaces.forEach(x => x.classList.remove('selected'));
+        s.classList.add('selected');
+    });
 });
