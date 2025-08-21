@@ -299,3 +299,21 @@ def predict(match: MatchInput):
 	'round': round_name,
 	'level': level_name
 """
+
+from types import SimpleNamespace
+
+match = {
+    "A": "Van De Zandschulp B.",
+    "B": "Bu Y.",
+    "surface": "Hard",
+    "cote_A": 1.86,
+    "cote_B": 1.9,
+    "level_name": "ATP250",
+    "round_name": "Quarterfinals",
+    "bankroll": 100,
+    "min_ev": 0.05
+}
+
+match = SimpleNamespace(**match)
+
+predict(match)
