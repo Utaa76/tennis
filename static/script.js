@@ -115,6 +115,7 @@ function getSelectedSurface() {
     const surfaces = document.querySelectorAll('.surface-selector');
     for (const s of surfaces) {
         if (s.classList.contains('selected')) {
+            console.log("Surface : " + s.textContent);
             return s.textContent;
         }
     }
