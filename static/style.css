@@ -179,6 +179,8 @@ body {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
+			padding: 20px 0px;
+			font-size: 1.2em;
 
 			p {
 				text-transform: uppercase;
@@ -189,8 +191,93 @@ body {
 				}
 			}
 		}
-	}
 
+		#infos-bet {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 20px;
+
+			#mise {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+				p {
+					margin: 0;
+					font-weight: bold;
+					font-size: 2em;
+					background: linear-gradient(to right, var(--bleu) 0%, var(--vert) 100%);
+					background-clip: text;
+					color: transparent;
+				}
+
+				.title {
+					font-weight: 600;
+					font-size: 0.85em;
+					background: none;
+					color: black;
+				}
+			}
+
+			#details {
+				width: 100%;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+
+				.info {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					flex: 1;
+
+					p {
+						width: 100%;
+						text-align: center;
+						margin: 0;
+						font-weight: bold;
+						font-size: 1.2em;
+						color: #aaa;
+					}
+
+					.title {
+						font-weight: 600;
+						font-size: 0.85em;
+						color: black;
+					}
+				}
+
+				#ev {
+					p {
+						text-align: left;
+					}
+				}
+
+				#proba {
+					p {
+						text-align: right;
+					}
+				}
+			}
+		}
+
+		#no-bet {
+			color: red;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			p {
+				margin: -20px;
+				font-weight: bold;
+			}
+		}
+	}
+	
 	.hidden {
 		display: none !important;
 	}

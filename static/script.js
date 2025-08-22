@@ -51,7 +51,10 @@ const form = document.getElementById('betForm');
 const resultDiv = document.getElementById('result');
 const joueur1 = document.getElementById('joueur1');
 const joueur2 = document.getElementById('joueur2');
-const infosBet = document.getElementById('infos-bet');
+const mise = document.getElementById('mise');
+const ev = document.getElementById('ev');
+const gainAttendu = document.getElementById('gain-attendu');
+const proba = document.getElementById('proba');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
@@ -71,6 +74,9 @@ form.addEventListener('submit', async (e) => {
         min_ev: parseFloat(document.getElementById('min_ev').value),
         surface: getSelectedSurface()
     };
+
+    joueur1.textContent = document.getElementById('A').value;
+    joueur2.textContent = document.getElementById('B').value;
 
     try {
         const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
@@ -97,13 +103,10 @@ form.addEventListener('submit', async (e) => {
 				joueur2.classList.add("winner");
 			}
 
-
-            infosBet.innerHTML = `
-                <strong>Pari recommandé :</strong> ${json.winner}<br/>
-                <strong>Mise :</strong> ${(json.mise).toFixed(2)} €<br/>
-                <strong>Gain attendu :</strong> ${(json.gain_attendu).toFixed(2)} € <br/>
-                <strong>Probabilité :</strong> ${(json.probability*100).toFixed(2)} %
-            `;
+            mise.querySelector(".content").textContent = (json.mise).toFixed(2);
+            ev.querySelector(".content").textContent = (json.expected_value).toFixed(3);
+            gainAttendu.querySelector(".content").textContent = (json.gain_attendu).toFixed(2);
+            proba.querySelector(".content").textContent = (json.probability*100).toFixed(2);
         }
     } catch (err) {
         resultDiv.textContent = 'Erreur : ' + err.message;
@@ -121,12 +124,3 @@ function getSelectedSurface() {
     }
     return null; // ou une valeur par défaut si nécessaire
 }
-
-// Exemple : ajout de la sélection de surface
-const surfaces = document.querySelectorAll('.surface-selector');
-surfaces.forEach(s => {
-    s.addEventListener('click', () => {
-        surfaces.forEach(x => x.classList.remove('selected'));
-        s.classList.add('selected');
-    });
-});

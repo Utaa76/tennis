@@ -7,7 +7,7 @@
     <title>Betting</title>
 </head>
 <body>
-    <form id="betForm">
+    <form id="betForm" class="hidden">
         <h2>Match</h2>
         <div id="joueurs-field">
             <input type="text" id="A" name="A" list="joueurs" placeholder="Joueur 1" required />
@@ -67,14 +67,37 @@
 
         <button type="submit">Prédire</button>
     </form>
-    <div id="result" class="hidden">
+    <div id="result" class="">
         <h2>Prediction</h2>
         <div id="noms-joueurs">
-            <p id="joueur1">Chargement</p>
-            <p id="joueur2">Patience</p>
+            <p id="joueur1">Joueur 1</p>
+            <p id="joueur2">Joueur 2</p>
         </div>
         <div id="infos-bet">
-
+            <div id="mise">
+                <p class="title">Mise (€)</p>
+                <p class="content">11,72</p>
+            </div>
+            <div id="details">
+                <div id="ev" class="info">
+                    <p class="title">EV</p>
+                    <p class="content">0,502</p>
+                </div>
+                <div id="gain-attendu" class="info">
+                    <p class="title">Gain attendu</p>
+                    <p class="content">17,02</p>
+                </div>
+                <div id="proba" class="info">
+                    <p class="title">Probabilité (%)</p>
+                    <p class="content">61,29</p>
+                </div>
+            </div>
+        </div>
+        <div id="no-bet" class="hidden">
+            <svg width="150px" height="150px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 8L8 16M8.00001 8L16 16" stroke="red" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <p>Pas de pari recommandé</p>
         </div>
     </div>
 </body>

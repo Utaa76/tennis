@@ -172,8 +172,6 @@ def predict_match(
     if not rmv_margin:
         oddA, oddB = cote_A, cote_B
 
-    # print(feat)
-
     # ---------- probabilités modèles ----------
     # probaLGBM = modelLGBMfinal.predict_proba(feat)[0, 1] # mettre modelLGBMfinal !!!
     probaLGBM = predict_proba_calibrated(modelLGBM, feat)[0]
@@ -194,6 +192,14 @@ def predict_match(
             winner, odd, cote, p_win = A, oddA, bookOddA, probaLGBM
         else:
             winner, odd, cote, p_win = B, oddB, bookOddB, 1 - probaLGBM
+
+    if (winner == A and statsB['rank'] <= 10) or (winner == B and statsA['rank'] <= 10):
+        if winner == A:
+            rang = statsB['rank']
+        else:
+            rang = statsA['rank']
+        print(f"\t⚠️ \033[91m Pari contre TOP10 ({rang}). Aucun pari conseillé. 🚫\033[0m")
+        return None
 
     print(f"🎾 \033[1m{A} vs {B}\033[0m ({surface}) — pari : \033[4m{winner}\033[0m 🏆")
     print(f"\t📊 Probabilité modèle : {p_win:.2%} | Cote : {cote}")
@@ -226,8 +232,6 @@ def predict_match(
 
     return {
         'match': f"{A} vs {B}",
-        'joueur1': A,
-        'joueur2': B,
         'winner': winner,
         'surface': surface,
         'probability': p_win,
@@ -277,7 +281,7 @@ class MatchInput(BaseModel):
 def predict(match: MatchInput):
     # Appelle ta fonction predict_match avec les paramètres reçus
     result = predict_match(
-        match.A, match.B, "Hard",
+        match.A, match.B, match.surface,
         match.cote_A, match.cote_B,
         match.level_name, match.round_name,
         bankroll=match.bankroll, min_ev=match.min_ev,
@@ -302,14 +306,16 @@ def predict(match: MatchInput):
 
 from types import SimpleNamespace
 
+# predict_match("Boulter K.", "Golubic V.", "Hard", 1.72, 2.05, 'WTA500', '2nd Round', bankroll=100)
+
 match = {
-    "A": "Van De Zandschulp B.",
-    "B": "Bu Y.",
+    "A": "Boulter K.",
+    "B": "Golubic V.",
     "surface": "Hard",
-    "cote_A": 1.86,
-    "cote_B": 1.9,
-    "level_name": "ATP250",
-    "round_name": "Quarterfinals",
+    "cote_A": 1.72,
+    "cote_B": 2.05,
+    "level_name": "WTA500",
+    "round_name": "2nd Round",
     "bankroll": 100,
     "min_ev": 0.05
 }

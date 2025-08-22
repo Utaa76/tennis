@@ -11,9 +11,6 @@ match_df_test = match_df[match_df['Date'] >= '2024-01-01']
 h2h = joblib.load("h2h.pkl")
 h2h_surface = joblib.load("h2h_surface.pkl")
 
-a_cal = 0.992
-b_cal = 0.000
-
 # Maps “tour level” & “round”
 tournament_level_map = {
     "Grand Slam": 4,
@@ -297,10 +294,7 @@ def predict_match(
     if not rmv_margin:
         oddA, oddB = cote_A, cote_B
 
-    # print(feat)
-
     # ---------- probabilités modèles ----------
-    # probaLGBM = modelLGBMfinal.predict_proba(feat)[0, 1] # mettre modelLGBMfinal !!!
     probaLGBM = predict_proba_calibrated(modelLGBM, feat)[0]
     
     probA = probaLGBM
@@ -1125,67 +1119,43 @@ import json
 # with open("joueurs.json", "w", encoding="utf-8") as f:
 #     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
 
-predict_match("Blockx A.", "Coppejeans K.", "Hard", 1.16, 4.5, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Cerundolo J.M.", "Shimizu Y.", "Hard", 1.38, 2.8, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Virtanen O.", "Riedi L.", "Hard", 2.5, 1.45, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Crawford O.", "Johns G.", "Hard", 1.62, 2.1, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Sakamoto R.", "Buse I.", "Hard", 2.15, 1.6, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Damm Jr M.", "Hassan B.", "Hard", 1.76, 1.92, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Ito A.", "Maristany G.", "Hard", 1.25, 3.45, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Vickery S.", "Seidel E.", "Hard", 4.8, 1.14, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Jones F.", "Gorgodze E.", "Hard", 1.12, 5.3, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Zhang S.", "Vidmanova D.", "Hard", 1.76, 1.94, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Aiava D.", "Mikulskyte J.", "Hard", 1.34, 2.95, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Hartono A.", "Gadecki O.", "Hard", 2.7, 1.4, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Chwalinska M.", "Tjen J.", "Hard", 4.5, 1.16, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Romero Gormaz L.", "Wei S.", "Hard", 1.88, 1.8, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Piros Z.", "Tirante T.", "Hard", 2.35, 1.5, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Duckworth J.", "Mccabe J.", "Hard", 1.33, 3, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("De Jong J.", "Mayot H.", "Hard", 1.5, 2.35, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Basilashvili N.", "Huesler M.", "Hard", 1.5, 2.35, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Cassone M.", "Prizmic D.", "Hard", 3.5, 1.25, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Gigante M.", "Wong C.", "Hard", 2.1, 1.62, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Jacquet K.", "Kubler J.", "Hard", 2.1, 1.64, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Harris B.", "Kukushkin M.", "Hard", 1.6, 2.15, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Zhukayev B.", "Svajda Z.", "Hard", 3.85, 1.21, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Boulter K.", "Golubic V.", "Hard", 1.72, 2.05, 'WTA500', '2nd Round', bankroll=100)
-predict_match("Krueger M.", "Collarini A.", "Hard", 1.36, 2.85, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Korda S.", "Kecmanovic M.", "Hard", 1.68, 2.1, 'ATP250', 'Quarterfinals', bankroll=100)
-predict_match("Faria J.", "Zeppieri G.", "Hard", 1.8, 1.88, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Blanchet U.", "Popko D.", "Hard", 1.48, 2.45, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Mochizuki S.", "Burruchaga R.", "Hard", 1.52, 2.35, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Sun F.", "Harris L.", "Hard", 4, 1.2, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Aguilar D.", "Droguet T.", "Hard", 2.55, 1.43, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Tomic B.", "Rocha H.", "Hard", 1.68, 2, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Passaro F.", "Mendez R.", "Hard", 1.52, 2.35, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Gracheva V.", "Wuerth T.", "Hard", 1.09, 6, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Martic P.", "Wang Xiy.", "Hard", 2.2, 1.58, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Marcinko P.", "Charaeva A.", "Hard", 1.17, 4.3, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Pridankina E.", "Shibahara E.", "Hard", 2.35, 1.52, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Kym J.", "Zheng M.", "Hard", 2.15, 1.6, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Munar J.", "Fucsovics M.", "Hard", 1.78, 1.98, 'ATP250', 'Quarterfinals', bankroll=100)
-predict_match("Hontama M.", "Marino R.", "Hard", 2, 1.68, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Liu C.", "Inglis M.", "Hard", 2.1, 1.64, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Brace C.", "Erjavec V.", "Hard", 2.5, 1.46, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Salkova D.", "Dmitruk K.", "Hard", 1.54, 2.25, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Zhao C.", "Stefanini L.", "Hard", 2.95, 1.34, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Inoue H.", "Waltert S.", "Hard", 2.75, 1.38, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Shnaider D.", "Mertens E.", "Hard", 2.15, 1.64, 'WTA250', 'Quarterfinals', bankroll=100)
-predict_match("Medjedovic H.", "Mpetshi G.", "Hard", 1.42, 2.8, 'ATP250', 'Quarterfinals', bankroll=100)
-predict_match("Parks A.", "Sramkova R.", "Hard", 2.05, 1.74, 'WTA250', 'Quarterfinals', bankroll=100)
-predict_match("Tomova V.", "Vandewinkel H.", "Hard", 1.29, 3.25, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Niemeier J.", "Hon P.", "Hard", 2, 1.7, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Dart H.", "Akli A.", "Hard", 1.76, 1.94, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Ponchet J.", "Klimovicova L.", "Hard", 1.86, 1.82, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Selekhmeteva O.", "Shymanovich I.", "Hard", 1.27, 3.35, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Semenistaja D.", "Cabrera L.", "Hard", 1.43, 2.55, 'Grand Slam', '1st Round', bankroll=100)
-predict_match("Bu Y.", "Van De Zandschulp B.", "Hard", 1.9, 1.86, 'ATP250', 'Quarterfinals', bankroll=100)
-predict_match("Samsonova L.", "Cirstea S.", "Hard", 1.52, 2.45, 'WTA500', 'Quarterfinals', bankroll=100)
-predict_match("Noskova L.", "Alexandrova E.", "Hard", 2, 1.76, 'WTA250', 'Quarterfinals', bankroll=100)
-predict_match("Ruzic A.", "Bouzkova M.", "Hard", 2.85, 1.4, 'WTA250', 'Quarterfinals', bankroll=100)
-
-
-
+predict_match("Cazaux A.", "Struff J.L.", "Hard", 1.62, 2, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Coppejeans K.", "Buse I.", "Hard", 2.4, 1.45, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Riedi L.", "Johns G.", "Hard", 1.28, 3.25, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Gomez F.A.", "Grenier H.", "Hard", 1.98, 1.72, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Shimizu Y.", "Damm Jr M.", "Hard", 2.2, 1.56, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Trungelliti M.", "Llamas Ruiz P.", "Hard", 2.05, 1.62, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Aiava D.", "Seidel E.", "Hard", 3.05, 1.29, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Ito A.", "Tjen J.", "Hard", 1.82, 1.8, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Zhang S.", "Wei S.", "Hard", 1.33, 2.8, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Jones F.", "Hartono A.", "Hard", 1.17, 4.3, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Galfi D.", "Udvardy P.", "Hard", 1.41, 2.65, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Jones E.", "Jimenez Kasintseva V.", "Hard", 1.66, 1.98, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Huesler M.A.", "Svajda Z.", "Hard", 2.9, 1.35, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Duckworth J.", "Piros Z.", "Hard", 1.58, 2.1, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Kubler J.", "Prizmic D.", "Hard", 2.65, 1.38, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Passaro F.", "Rocha H.", "Hard", 1.74, 1.88, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Wong C.", "Harris B.", "Hard", 1.66, 1.98, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Aguilar D.", "Harris L.", "Hard", 2.35, 1.46, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("De Jong J.", "Krueger M.", "Hard", 1.26, 3.2, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Gracheva V.", "Shibahara E.", "Hard", 1.38, 2.65, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Volynets K.", "Fett J.", "Hard", 1.41, 2.5, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Charaeva A.", "Wang Xiy.", "Hard", 3, 1.29, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Valentova T.", "Rus A.", "Hard", 1.14, 4.3, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Liu C.", "Erjavec V.", "Hard", 1.86, 1.76, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Faria J.", "Blanchet U.", "Hard", 1.56, 2.15, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Mochizuki S.", "Galan D.", "Hard", 1.5, 2.25, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Kym J.", "Wu Y.", "Hard", 1.92, 1.7, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Stefanini L.", "Inoue H.", "Hard", 1.45, 2.4, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Salkova D.", "Marino R.", "Hard", 1.7, 1.94, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Vandewinkel H.", "Hon P.", "Hard", 2.05, 1.6, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Korda S.", "Fucsovics M.", "Hard", 1.49, 2.3, 'ATP250', 'Semifinals', ev_comparison=True, bankroll=19.27)
+predict_match("Cirstea S.", "Zakharova A.", "Hard", 1.27, 3.6, 'WTA250', 'Semifinals', ev_comparison=True, bankroll=19.27)
+predict_match("Parks A.", "Shnaider D.", "Hard", 2.6, 1.39, 'WTA500', 'Semifinals', ev_comparison=True, bankroll=19.27)
+predict_match("Li A.", "Wang Xin.", "Hard", 2.25, 1.62, 'WTA250', 'Semifinals', ev_comparison=True, bankroll=19.27)
+predict_match("Bouzkova M.", "Alexandrova E.", "Hard", 2.1, 1.58, 'WTA500', 'Semifinals', ev_comparison=True, bankroll=19.27)
+predict_match("Semenistaja D.", "Klimovicova L.", "Hard", 1.86, 1.74, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Akli A.", "Selekhmeteva O.", "Hard", 2.55, 1.38, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
 
 # !!!!!!!!!!!!!!!!!!!!!! avec min_ev = 0 et rmv_margin = False, on parie sur les même matchs qu'avec min_ev = 0.05 et rmv_margin = True
 
