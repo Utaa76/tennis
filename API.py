@@ -232,6 +232,8 @@ def predict_match(
 
     return {
         'match': f"{A} vs {B}",
+        'joueur1': A,
+        'joueur2': B,
         'winner': winner,
         'surface': surface,
         'probability': p_win,

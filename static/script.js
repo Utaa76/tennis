@@ -51,10 +51,12 @@ const form = document.getElementById('betForm');
 const resultDiv = document.getElementById('result');
 const joueur1 = document.getElementById('joueur1');
 const joueur2 = document.getElementById('joueur2');
+const infosBet = document.getElementById("infos-bet");
 const mise = document.getElementById('mise');
 const ev = document.getElementById('ev');
 const gainAttendu = document.getElementById('gain-attendu');
 const proba = document.getElementById('proba');
+const noBet = document.getElementById('no-bet');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault(); // Empêche le rechargement de la page
@@ -79,7 +81,8 @@ form.addEventListener('submit', async (e) => {
     joueur2.textContent = document.getElementById('B').value;
 
     try {
-        const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
+        // https://tennis-8gw3.onrender.com
+        const response = await fetch('http://127.0.0.1:8000/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -92,8 +95,12 @@ form.addEventListener('submit', async (e) => {
         const json = await response.json();
 
         if (json.message) {
-            infosBet.textContent = json.message;
+            noBet.classList.remove("hidden");
+            infosBet.classList.add("hidden");
         } else {
+            noBet.classList.add("hidden");
+            infosBet.classList.remove("hidden");
+
 			joueur1.textContent = json.joueur1;
 			joueur2.textContent = json.joueur2;
 
