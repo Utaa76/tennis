@@ -175,39 +175,34 @@ def predict_match(
     # ---------- probabilités modèles ----------
     # probaLGBM = modelLGBMfinal.predict_proba(feat)[0, 1] # mettre modelLGBMfinal !!!
     probaLGBM = predict_proba_calibrated(modelLGBM, feat)[0]
-    
+
     probA = probaLGBM
     probB = 1 - probA
 
+    # EV des deux côtés
     evA = (probA * (oddA - 1)) - (1 - probA)
     evB = (probB * (oddB - 1)) - (1 - probB)
 
-    if (ev_comparison):
-      if evA > evB:
-          winner, odd, cote, p_win = A, oddA, bookOddA, probaLGBM
-      else:
-          winner, odd, cote, p_win = B, oddB, bookOddB, 1 - probaLGBM
-    else:
-        if probA > 0.5:
-            winner, odd, cote, p_win = A, oddA, bookOddA, probaLGBM
-        else:
-            winner, odd, cote, p_win = B, oddB, bookOddB, 1 - probaLGBM
+    # Kelly des deux côtés
+    kellyA = (probA * (oddA - 1) - (1 - probA)) / (oddA - 1)
+    kellyB = (probB * (oddB - 1) - (1 - probB)) / (oddB - 1)
 
+    # Sélection via Kelly (même si EV < 0, tu choisis le + gros Kelly)
+    if kellyA > kellyB:
+        winner, odd, cote, p_win, kelly = A, oddA, bookOddA, probA, kellyA
+    else:
+        winner, odd, cote, p_win, kelly = B, oddB, bookOddB, probB, kellyB
+
+    # Vérification "pari contre TOP 10"
     if (winner == A and statsB['rank'] <= 10) or (winner == B and statsA['rank'] <= 10):
-        if winner == A:
-            rang = statsB['rank']
-        else:
-            rang = statsA['rank']
+        rang = statsB['rank'] if winner == A else statsA['rank']
         print(f"\t⚠️ \033[91m Pari contre TOP10 ({rang}). Aucun pari conseillé. 🚫\033[0m")
         return None
 
     print(f"🎾 \033[1m{A} vs {B}\033[0m ({surface}) — pari : \033[4m{winner}\033[0m 🏆")
     print(f"\t📊 Probabilité modèle : {p_win:.2%} | Cote : {cote}")
 
-    # if (p_win < 0.54):
-    #     print("\tProbabilité trop proche de 50%, pas de pari.")
-    #     return None
-
+    # Vérification EV après sélection
     ev = (p_win * (odd - 1)) - (1 - p_win)
     if ev < min_ev:
         print(f"\t⚠️ \033[91m EV {ev:.4f} < {min_ev}, aucun pari. 🚫\033[0m")
