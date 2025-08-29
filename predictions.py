@@ -287,48 +287,36 @@ def predict_match(
         'round': round_map.get(round_name, 1),
         'rank_diff': statsA['rank'] - statsB['rank'],
         'pts_diff': statsA['pts'] - statsB['pts'],
-        'games_diff_recent': statsA['recent_games_diff_last'] - statsB['recent_games_diff_last'],
-        'decider_winrate_diff': statsA['recent_decider_last'] - statsB['recent_decider_last']
     }]).astype(float)
 
     if not rmv_margin:
         oddA, oddB = cote_A, cote_B
 
     # ---------- probabilités modèles ----------
+    # probaLGBM = modelLGBMfinal.predict_proba(feat)[0, 1] # mettre modelLGBMfinal !!!
     probaLGBM = predict_proba_calibrated(modelLGBM, feat)[0]
-    
+
     probA = probaLGBM
     probB = 1 - probA
 
+    # EV des deux côtés
     evA = (probA * (oddA - 1)) - (1 - probA)
     evB = (probB * (oddB - 1)) - (1 - probB)
 
-    if (ev_comparison):
-      if evA > evB:
-          winner, odd, cote, p_win = A, oddA, bookOddA, probaLGBM
-      else:
-          winner, odd, cote, p_win = B, oddB, bookOddB, 1 - probaLGBM
-    else:
-        if probA > 0.5:
-            winner, odd, cote, p_win = A, oddA, bookOddA, probaLGBM
-        else:
-            winner, odd, cote, p_win = B, oddB, bookOddB, 1 - probaLGBM
+    # Kelly des deux côtés
+    kellyA = (probA * (oddA - 1) - (1 - probA)) / (oddA - 1)
+    kellyB = (probB * (oddB - 1) - (1 - probB)) / (oddB - 1)
 
-    if (winner == A and statsB['rank'] <= 10) or (winner == B and statsA['rank'] <= 10):
-        if winner == A:
-            rang = statsB['rank']
-        else:
-            rang = statsA['rank']
-        print(f"\t⚠️ \033[91m Pari contre TOP10 ({rang}). Aucun pari conseillé. 🚫\033[0m")
-        return None
+    # Sélection via Kelly (même si EV < 0, tu choisis le + gros Kelly)
+    if kellyA > kellyB:
+        winner, odd, cote, p_win, kelly = A, oddA, bookOddA, probA, kellyA
+    else:
+        winner, odd, cote, p_win, kelly = B, oddB, bookOddB, probB, kellyB
 
     print(f"🎾 \033[1m{A} vs {B}\033[0m ({surface}) — pari : \033[4m{winner}\033[0m 🏆")
     print(f"\t📊 Probabilité modèle : {p_win:.2%} | Cote : {cote}")
 
-    # if (p_win < 0.54):
-    #     print("\tProbabilité trop proche de 50%, pas de pari.")
-    #     return None
-
+    # Vérification EV après sélection
     ev = (p_win * (odd - 1)) - (1 - p_win)
     if ev < min_ev:
         print(f"\t⚠️ \033[91m EV {ev:.4f} < {min_ev}, aucun pari. 🚫\033[0m")
@@ -336,9 +324,7 @@ def predict_match(
         return None
 
     # ---------- Kelly ----------
-    b = odd - 1
-    fraction_kelly = max((b * p_win - (1 - p_win)) / b, 0)
-    mise = fraction_kelly * bankroll * 0.25
+    mise = kelly * bankroll * 0.25
     if mise < 0.1:
         print(f"\t⚠️ \033[91m Mise ({mise:.2f} €) trop faible, aucun pari. 💸\033[0m")
         print("\n")
@@ -353,6 +339,8 @@ def predict_match(
 
     return {
         'match': f"{A} vs {B}",
+        'joueur1': A,
+        'joueur2': B,
         'winner': winner,
         'surface': surface,
         'probability': p_win,
@@ -363,7 +351,6 @@ def predict_match(
         'round': round_name,
         'level': level_name
     }
-    # return winner, cote, p_win
 
 
 
@@ -406,8 +393,6 @@ def evaluate_bets_online(dataset, bankroll=100, min_ev=0.1):
             'round',
             'rank_diff',
             'pts_diff',
-            'games_diff_recent',
-            'decider_winrate_diff'
         ]
 
         # print(playerA, "vs", playerB, "Surface :", surface, "Cotes : ", coteA, " ; ", coteB)
@@ -1114,48 +1099,12 @@ upcoming_df['Series'] = 'Grand Slam'
 
 import json
 
-# simulation_paris_2025()
+simulation_paris_2025()
 
 # with open("joueurs.json", "w", encoding="utf-8") as f:
 #     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
 
-predict_match("Cazaux A.", "Struff J.L.", "Hard", 1.62, 2, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Coppejeans K.", "Buse I.", "Hard", 2.4, 1.45, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Riedi L.", "Johns G.", "Hard", 1.28, 3.25, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Gomez F.A.", "Grenier H.", "Hard", 1.98, 1.72, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Shimizu Y.", "Damm Jr M.", "Hard", 2.2, 1.56, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Trungelliti M.", "Llamas Ruiz P.", "Hard", 2.05, 1.62, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Aiava D.", "Seidel E.", "Hard", 3.05, 1.29, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Ito A.", "Tjen J.", "Hard", 1.82, 1.8, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Zhang S.", "Wei S.", "Hard", 1.33, 2.8, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Jones F.", "Hartono A.", "Hard", 1.17, 4.3, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Galfi D.", "Udvardy P.", "Hard", 1.41, 2.65, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Jones E.", "Jimenez Kasintseva V.", "Hard", 1.66, 1.98, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Huesler M.A.", "Svajda Z.", "Hard", 2.9, 1.35, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Duckworth J.", "Piros Z.", "Hard", 1.58, 2.1, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Kubler J.", "Prizmic D.", "Hard", 2.65, 1.38, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Passaro F.", "Rocha H.", "Hard", 1.74, 1.88, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Wong C.", "Harris B.", "Hard", 1.66, 1.98, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Aguilar D.", "Harris L.", "Hard", 2.35, 1.46, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("De Jong J.", "Krueger M.", "Hard", 1.26, 3.2, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Gracheva V.", "Shibahara E.", "Hard", 1.38, 2.65, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Volynets K.", "Fett J.", "Hard", 1.41, 2.5, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Charaeva A.", "Wang Xiy.", "Hard", 3, 1.29, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Valentova T.", "Rus A.", "Hard", 1.14, 4.3, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Liu C.", "Erjavec V.", "Hard", 1.86, 1.76, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Faria J.", "Blanchet U.", "Hard", 1.56, 2.15, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Mochizuki S.", "Galan D.", "Hard", 1.5, 2.25, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Kym J.", "Wu Y.", "Hard", 1.92, 1.7, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Stefanini L.", "Inoue H.", "Hard", 1.45, 2.4, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Salkova D.", "Marino R.", "Hard", 1.7, 1.94, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Vandewinkel H.", "Hon P.", "Hard", 2.05, 1.6, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Korda S.", "Fucsovics M.", "Hard", 1.49, 2.3, 'ATP250', 'Semifinals', ev_comparison=True, bankroll=19.27)
-predict_match("Cirstea S.", "Zakharova A.", "Hard", 1.27, 3.6, 'WTA250', 'Semifinals', ev_comparison=True, bankroll=19.27)
-predict_match("Parks A.", "Shnaider D.", "Hard", 2.6, 1.39, 'WTA500', 'Semifinals', ev_comparison=True, bankroll=19.27)
-predict_match("Li A.", "Wang Xin.", "Hard", 2.25, 1.62, 'WTA250', 'Semifinals', ev_comparison=True, bankroll=19.27)
-predict_match("Bouzkova M.", "Alexandrova E.", "Hard", 2.1, 1.58, 'WTA500', 'Semifinals', ev_comparison=True, bankroll=19.27)
-predict_match("Semenistaja D.", "Klimovicova L.", "Hard", 1.86, 1.74, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
-predict_match("Akli A.", "Selekhmeteva O.", "Hard", 2.55, 1.38, 'Grand Slam', '1st Round', ev_comparison=True, bankroll=19.27)
+predict_match("Bonzi B.", ".", "Hard", 1.62, 2, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
 
 # !!!!!!!!!!!!!!!!!!!!!! avec min_ev = 0 et rmv_margin = False, on parie sur les même matchs qu'avec min_ev = 0.05 et rmv_margin = True
 

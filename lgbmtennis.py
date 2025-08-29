@@ -118,8 +118,6 @@ def build_match_dataset_online(df_matches, k_elo=32, recent_n=50, seed=42):
             'pts_diff': pts_a - pts_b,
             'OddA': odda,
             'OddB': oddb,
-            'games_diff_recent': statsA['recent_games_diff_last'] - statsB['recent_games_diff_last'],
-            'decider_winrate_diff': statsA['recent_decider_last'] - statsB['recent_decider_last'],
             'target': target,
             'PlayerA': A,
             'PlayerB': B,

@@ -165,8 +165,6 @@ def predict_match(
         'round': round_map.get(round_name, 1),
         'rank_diff': statsA['rank'] - statsB['rank'],
         'pts_diff': statsA['pts'] - statsB['pts'],
-        'games_diff_recent': statsA['recent_games_diff_last'] - statsB['recent_games_diff_last'],
-        'decider_winrate_diff': statsA['recent_decider_last'] - statsB['recent_decider_last']
     }]).astype(float)
 
     if not rmv_margin:
@@ -204,9 +202,7 @@ def predict_match(
         return None
 
     # ---------- Kelly ----------
-    b = odd - 1
-    fraction_kelly = max((b * p_win - (1 - p_win)) / b, 0)
-    mise = fraction_kelly * bankroll * 0.25
+    mise = kelly * bankroll * 0.25
     if mise < 0.1:
         print(f"\t⚠️ \033[91m Mise ({mise:.2f} €) trop faible, aucun pari. 💸\033[0m")
         print("\n")
