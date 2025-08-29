@@ -193,12 +193,6 @@ def predict_match(
     else:
         winner, odd, cote, p_win, kelly = B, oddB, bookOddB, probB, kellyB
 
-    # Vérification "pari contre TOP 10"
-    if (winner == A and statsB['rank'] <= 10) or (winner == B and statsA['rank'] <= 10):
-        rang = statsB['rank'] if winner == A else statsA['rank']
-        print(f"\t⚠️ \033[91m Pari contre TOP10 ({rang}). Aucun pari conseillé. 🚫\033[0m")
-        return None
-
     print(f"🎾 \033[1m{A} vs {B}\033[0m ({surface}) — pari : \033[4m{winner}\033[0m 🏆")
     print(f"\t📊 Probabilité modèle : {p_win:.2%} | Cote : {cote}")
 
