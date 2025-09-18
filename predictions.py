@@ -1099,12 +1099,27 @@ upcoming_df['Series'] = 'Grand Slam'
 
 import json
 
-simulation_paris_2025()
+# simulation_paris_2025()
 
 # with open("joueurs.json", "w", encoding="utf-8") as f:
 #     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
 
-predict_match("Bonzi B.", ".", "Hard", 1.62, 2, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Bonzi B.", "Rinderknech A.", "Hard", 1.74, 2.05, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Lehecka J.", "Collignon R.", "Hard", 1.12, 6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Rybakina E.", "Raducanu E.", "Hard", 1.52, 2.5, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Darderi L.", "Alcaraz C.", "Hard", 18, 1.01, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Mertens E.", "Bucsa C.", "Hard", 1.16, 5.2, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Vondrousova M.", "Paolini J.", "Hard", 1.88, 1.92, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Pegula J.", "Azarenka V.", "Hard", 1.24, 4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Shelton B.", "Mannarino A.", "Hard", 1.17, 4.9, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Hon P.", "Li A.", "Hard", 2.95, 1.4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Tiafoe F.", "Struff J.L.", "Hard", 1.36, 3.1, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Navarro E.", "Krejcikova B.", "Hard", 1.84, 1.96, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Blanchet U.", "Machac T.", "Hard", 4.7, 1.19, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Djokovic N.", "Norrie C.", "Hard", 1.08, 8, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Sabalenka A.", "Fernandez L.", "Hard", 1.14, 5.6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Kym J.", "Fritz T.", "Hard", 10, 1.06, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+predict_match("Townsend T.", "Andreeva M.", "Hard", 4.8, 1.18, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
 
 # !!!!!!!!!!!!!!!!!!!!!! avec min_ev = 0 et rmv_margin = False, on parie sur les même matchs qu'avec min_ev = 0.05 et rmv_margin = True
 
