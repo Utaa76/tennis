@@ -514,53 +514,53 @@ def simulation_paris_2025():
     plt.title("Distribution des gains nets")
     plt.show()
 
-    df_combines = df_combines.sort_values(by="Date")
-    pd.set_option('display.max_rows', None)
-    # pd.set_option('display.max_columns', None)
-    df_combines = df_combines[df_combines['Date'] >= '2025-01-01']
-    print(df_combines)
+    # df_combines = df_combines.sort_values(by="Date")
+    # pd.set_option('display.max_rows', None)
+    # # pd.set_option('display.max_columns', None)
+    # df_combines = df_combines[df_combines['Date'] >= '2025-01-01']
+    # print(df_combines)
 
-    losing_bets = df_bets_results[(df_bets_results['Resultat'] == 0) & (df_bets_results['EV'] > 0)]
+    # losing_bets = df_bets_results[(df_bets_results['Resultat'] == 0) & (df_bets_results['EV'] > 0)]
 
-    print(losing_bets['Joueur predit'].value_counts().head(10))  # Top 10 joueurs sur lesquels tu perds
-    print(losing_bets['Surface'].value_counts())                # Surfaces les plus "risquées"
-    print(losing_bets['EV'].describe())                         # Distribution de l’EV perdant
-    print(losing_bets['Cote_pred'].describe())                  # Distribution des cotes sur paris perdants
+    # print(losing_bets['Joueur predit'].value_counts().head(10))  # Top 10 joueurs sur lesquels tu perds
+    # print(losing_bets['Surface'].value_counts())                # Surfaces les plus "risquées"
+    # print(losing_bets['EV'].describe())                         # Distribution de l’EV perdant
+    # print(losing_bets['Cote_pred'].describe())                  # Distribution des cotes sur paris perdants
 
-    # Moyenne EV perdue par joueur
-    mean_ev_per_player = losing_bets.groupby('Joueur predit')['EV'].mean().sort_values()
+    # # Moyenne EV perdue par joueur
+    # mean_ev_per_player = losing_bets.groupby('Joueur predit')['EV'].mean().sort_values()
 
-    # Comptage des pertes par surface
-    losses_by_surface = losing_bets.groupby('Surface').size()
+    # # Comptage des pertes par surface
+    # losses_by_surface = losing_bets.groupby('Surface').size()
 
-    print(mean_ev_per_player.head(10))
-    print(losses_by_surface)
+    # print(mean_ev_per_player.head(10))
+    # print(losses_by_surface)
 
-    import matplotlib.pyplot as plt
-    import seaborn as sns
+    # import matplotlib.pyplot as plt
+    # import seaborn as sns
 
-    plt.hist(losing_bets['EV'], bins=20)
-    plt.title('Distribution EV des paris perdants')
-    plt.xlabel('EV')
-    plt.ylabel('Nombre de paris')
-    plt.show()
+    # plt.hist(losing_bets['EV'], bins=20)
+    # plt.title('Distribution EV des paris perdants')
+    # plt.xlabel('EV')
+    # plt.ylabel('Nombre de paris')
+    # plt.show()
 
-    # Heatmap joueur x surface (nombre de paris perdants)
-    pivot = losing_bets.pivot_table(index='Joueur predit', columns='Surface', aggfunc='size', fill_value=0)
-    sns.heatmap(pivot, cmap='Reds')
-    plt.title('Paris perdants par joueur et surface')
-    plt.show()
+    # # Heatmap joueur x surface (nombre de paris perdants)
+    # pivot = losing_bets.pivot_table(index='Joueur predit', columns='Surface', aggfunc='size', fill_value=0)
+    # sns.heatmap(pivot, cmap='Reds')
+    # plt.title('Paris perdants par joueur et surface')
+    # plt.show()
 
-    print(losing_bets.sort_values('EV', ascending=False).head(10))
+    # print(losing_bets.sort_values('EV', ascending=False).head(10))
 
-    sns.boxplot(x='Resultat', y='elo_diff', data=df_bets_results) # crash ici car elo_diff n'existe pas dans df_bets_results
-    plt.title('Elo diff: gagnants vs perdants')
-    plt.show()
+    # sns.boxplot(x='Resultat', y='elo_diff', data=df_bets_results) # crash ici car elo_diff n'existe pas dans df_bets_results
+    # plt.title('Elo diff: gagnants vs perdants')
+    # plt.show()
 
-    losing_bets['Date'] = pd.to_datetime(losing_bets['Date'])
-    losing_bets.groupby(losing_bets['Date'].dt.month).size().plot(kind='bar')
-    plt.title('Nombre de paris perdants par mois')
-    plt.show()
+    # losing_bets['Date'] = pd.to_datetime(losing_bets['Date'])
+    # losing_bets.groupby(losing_bets['Date'].dt.month).size().plot(kind='bar')
+    # plt.title('Nombre de paris perdants par mois')
+    # plt.show()
 
 
 
@@ -1096,30 +1096,24 @@ upcoming_df = pd.DataFrame(data)
 upcoming_df['Surface'] = 'Grass'
 upcoming_df['Series'] = 'Grand Slam'
 
+simulation_paris_2025()
 
-import json
-
-# simulation_paris_2025()
-
-# with open("joueurs.json", "w", encoding="utf-8") as f:
-#     json.dump(list(player_stats.keys()), f, ensure_ascii=False, indent=4)
-
-predict_match("Bonzi B.", "Rinderknech A.", "Hard", 1.74, 2.05, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Lehecka J.", "Collignon R.", "Hard", 1.12, 6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Rybakina E.", "Raducanu E.", "Hard", 1.52, 2.5, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Darderi L.", "Alcaraz C.", "Hard", 18, 1.01, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Mertens E.", "Bucsa C.", "Hard", 1.16, 5.2, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Vondrousova M.", "Paolini J.", "Hard", 1.88, 1.92, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Pegula J.", "Azarenka V.", "Hard", 1.24, 4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Shelton B.", "Mannarino A.", "Hard", 1.17, 4.9, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Hon P.", "Li A.", "Hard", 2.95, 1.4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Tiafoe F.", "Struff J.L.", "Hard", 1.36, 3.1, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Navarro E.", "Krejcikova B.", "Hard", 1.84, 1.96, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Blanchet U.", "Machac T.", "Hard", 4.7, 1.19, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Djokovic N.", "Norrie C.", "Hard", 1.08, 8, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Sabalenka A.", "Fernandez L.", "Hard", 1.14, 5.6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Kym J.", "Fritz T.", "Hard", 10, 1.06, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
-predict_match("Townsend T.", "Andreeva M.", "Hard", 4.8, 1.18, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Bonzi B.", "Rinderknech A.", "Hard", 1.74, 2.05, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Lehecka J.", "Collignon R.", "Hard", 1.12, 6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Rybakina E.", "Raducanu E.", "Hard", 1.52, 2.5, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Darderi L.", "Alcaraz C.", "Hard", 18, 1.01, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Mertens E.", "Bucsa C.", "Hard", 1.16, 5.2, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Vondrousova M.", "Paolini J.", "Hard", 1.88, 1.92, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Pegula J.", "Azarenka V.", "Hard", 1.24, 4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Shelton B.", "Mannarino A.", "Hard", 1.17, 4.9, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Hon P.", "Li A.", "Hard", 2.95, 1.4, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Tiafoe F.", "Struff J.L.", "Hard", 1.36, 3.1, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Navarro E.", "Krejcikova B.", "Hard", 1.84, 1.96, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Blanchet U.", "Machac T.", "Hard", 4.7, 1.19, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Djokovic N.", "Norrie C.", "Hard", 1.08, 8, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Sabalenka A.", "Fernandez L.", "Hard", 1.14, 5.6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Kym J.", "Fritz T.", "Hard", 10, 1.06, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
+# predict_match("Townsend T.", "Andreeva M.", "Hard", 4.8, 1.18, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
 
 # !!!!!!!!!!!!!!!!!!!!!! avec min_ev = 0 et rmv_margin = False, on parie sur les même matchs qu'avec min_ev = 0.05 et rmv_margin = True
 

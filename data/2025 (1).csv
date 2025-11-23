@@ -2103,3 +2103,404 @@ WTA;Location;Tournament;Date;Tier;Court;Surface;Round;Best of;Winner;Loser;WRank
 42;Sao Paulo;SP Open;13/09/2025;WTA250;Outdoor;Hard;Semifinals;3;Tjen J.;Jones F.;130;85;575;864;7;6;6;3;;;2;0;Completed;1,36;3,2;1,41;3,19;1,4;3,2;1,37;3,02;1,41;3,3
 42;Sao Paulo;SP Open;13/09/2025;WTA250;Outdoor;Hard;Semifinals;3;Rakotomanga Rajaonah T.;Zarazua R.;214;84;330;871;6;3;6;2;;;2;0;Completed;3,75;1,29;3,9;1,29;4;1,29;3,59;1,28;3,65;1,37
 42;Sao Paulo;SP Open;14/09/2025;WTA250;Outdoor;Hard;The Final;3;Rakotomanga Rajaonah T.;Tjen J.;214;130;330;575;6;3;6;4;;;2;0;Completed;4;1,25;4,1;1,28;4,25;1,27;3,97;1,24;4,6;1,26
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Lys E.;Krueger A.;69;45;982;1267;6;3;6;4;;;2;0;Completed;1,73;2,1;1,68;2,29;1,85;2,23;1,74;2,06;1,79;2,24
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Joint M.;Fruhvirtova L.;46;139;1261;511;6;4;7;6;;;2;0;Completed;1,3;3,5;1,37;3,24;1,34;3,7;1,32;3,3;1,37;3,55
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Siniakova K.;Park S.;77;293;900;230;6;2;6;2;;;2;0;Completed;1,05;11;1,06;11,75;1,05;11;1,05;10,05;1,08;12
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Seidel E.;Ponchet J.;105;167;724;427;5;7;6;4;6;2;2;1;Completed;1,5;2,63;1,55;2,59;1,55;2,63;1,52;2,48;1,58;2,68
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Kenin S.;Siegemund L.;30;43;1648;1276;2;6;6;3;7;5;2;1;Completed;1,73;2,1;1,85;2,02;1,77;2,1;1,73;2,07;1,79;2,24
+43;Seoul;Korea Open;15/09/2025;WTA500;Outdoor;Hard;1st Round;3;Boisson L.;Ku Y.;49;305;1229;218;6;2;6;1;;;2;0;Completed;1,44;2,75;1,38;3,23;1,44;3,1;1,41;2,88;1,46;3,1
+43;Seoul;Korea Open;16/09/2025;WTA500;Outdoor;Hard;1st Round;3;Krejcikova B.;Prozorova T.;39;194;1344;383;6;1;6;2;;;2;0;Completed;1,3;3,5;1,34;3,48;1,33;3,66;1,3;3,48;1,35;3,7
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;1st Round;3;Cirstea S.;Zakharova A.;66;79;998;892;6;3;6;1;;;2;0;Completed;1,22;4,33;1,25;4,28;1,25;4,5;1,22;4,11;1,27;4,5
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;1st Round;3;Shnaider D.;McNally C.;19;93;2246;799;2;6;6;2;6;4;2;1;Completed;1,62;2,3;1,64;2,36;1,62;2,45;1,57;2,37;1,61;2,58
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;1st Round;3;Lamens S.;Maria T.;64;44;1009;1274;6;4;6;1;;;2;0;Completed;1,62;2,3;1,67;2,31;1,66;2,38;1,63;2,24;1,7;2,42
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;1st Round;3;Haddad Maia B.;Back D.;25;306;1775;217;6;4;6;3;;;2;0;Completed;1,1;7;1,13;6,77;1,13;7;1,12;6,04;1,15;7,6
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;1st Round;3;Raducanu E.;Cristian J.;33;41;1546;1281;6;3;6;4;;;2;0;Completed;1,29;3,75;1,31;3,72;1,3;3,75;1,29;3,51;1,33;3,9
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Tauson C.;Lys E.;12;69;2721;982;6;2;7;6;;;2;0;Completed;1,62;2,3;1,66;2,32;1,65;2,45;1,6;2,3;1,61;2,6
+43;Seoul;Korea Open;17/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Joint M.;Kenin S.;46;30;1261;1648;6;3;6;1;;;2;0;Completed;1,67;2,2;1,69;2,26;1,75;2,25;1,66;2,19;1,72;2,36
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Lamens S.;Shnaider D.;64;19;1009;2246;6;4;6;4;;;2;0;Completed;3,5;1,3;3,67;1,31;4;1,33;3,43;1,31;3,8;1,34
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Alexandrova E.;Boisson L.;11;49;3026;1229;4;6;6;2;6;2;2;1;Completed;1,22;4,33;1,23;4,57;1,22;4,33;1,22;4,24;1,22;5,2
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Seidel E.;Haddad Maia B.;105;25;724;1775;6;7;7;6;7;5;2;1;Completed;2,1;1,73;2,11;1,79;2,15;1,9;2,06;1,74;2,16;1,83
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Swiatek I.;Cirstea S.;2;66;7933;998;6;3;6;2;;;2;0;Completed;1,08;8;1,09;9,05;1,09;12;1,08;7,62;1,1;10
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Siniakova K.;Kasatkina D.;77;16;900;2421;7;6;6;2;;;2;0;Completed;2;1,8;2,05;1,83;2,04;1,85;2;1,79;2,1;1,88
+43;Seoul;Korea Open;18/09/2025;WTA500;Outdoor;Hard;2nd Round;3;Krejcikova B.;Raducanu E.;39;33;1344;1546;4;6;7;6;6;1;2;1;Completed;2;1,8;2,1;1,79;2,1;1,83;1,99;1,8;2,1;1,89
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Joint M.;Tauson C.;46;12;1261;2721;6;0;6;3;;;2;0;Completed;2,38;1,57;2,58;1,56;2,45;1,65;2,37;1,57;2,6;1,61
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Swiatek I.;Krejcikova B.;2;39;7933;1344;6;0;6;3;;;2;0;Completed;1,17;5;1,19;5,24;1,2;5,2;1,18;4,7;1,21;5,6
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Siniakova K.;Lamens S.;77;64;900;1009;6;1;7;5;;;2;0;Completed;1,5;2,63;1,54;2,63;1,53;2,75;1,51;2,55;1,62;2,6
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Alexandrova E.;Seidel E.;11;105;3026;724;6;2;6;3;;;2;0;Completed;1,2;4,5;1,24;4,47;1,23;4,5;1,22;4,23;1,22;5,1
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Semifinals;3;Swiatek I.;Joint M.;2;46;7933;1261;6;0;6;2;;;2;0;Completed;1,07;9;;;1,1;9;1,08;7,94;1,1;10
+43;Seoul;Korea Open;20/09/2025;WTA500;Outdoor;Hard;Semifinals;3;Alexandrova E.;Siniakova K.;11;77;3026;900;6;4;6;2;;;2;0;Completed;1,44;2,75;1,5;2,72;1,5;2,9;1,44;2,72;1,54;2,82
+43;Seoul;Korea Open;21/09/2025;WTA500;Outdoor;Hard;The Final;3;Swiatek I.;Alexandrova E.;2;11;7933;3026;1;6;7;6;7;5;2;1;Completed;1,11;6,5;1,11;7,8;1,12;7;1,11;6,2;1,14;7,4
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Cirstea S.;Dolehide C.;64;88;1057;827;6;2;6;3;;;2;0;Completed;1,25;4;1,27;4,1;1,28;4;1,25;3,86;1,31;4,1
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Kessler M.;Shi H.;39;312;1370;206;6;2;7;6;;;2;0;Completed;1,08;8;1,1;8,62;1,08;8,5;1,07;8;1,1;10
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Sevastova A.;Birrell K.;221;85;315;841;6;3;7;6;;;2;0;Completed;1,8;2;1,87;2,03;1,85;2;1,82;1,96;1,86;2,12
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;McNally C.;Siegemund L.;90;53;812;1115;6;4;6;2;;;2;0;Completed;1,5;2,63;1,58;2,53;1,55;2,63;1,53;2,46;1,57;2,66
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Rakhimova K.;Bronzetti L.;89;73;823;912;6;4;6;1;;;2;0;Completed;1,67;2,2;1,67;2,33;1,75;2,25;1,64;2,21;1,71;2,34
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Sakkari M.;Krueger A.;56;45;1091;1267;7;6;6;7;7;5;2;1;Completed;1,8;2;1,89;2;1,85;2;1,82;1,96;1,87;2,12
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Ruzic A.;Jacquemot E.;80;65;878;1055;6;3;6;3;;;2;0;Completed;2;1,8;2,04;1,84;2,12;1,81;2,03;1,75;2,14;1,85
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Lys E.;Zhang R.;66;836;1041;32;6;1;6;0;;;2;0;Completed;1,04;13;;;1,04;15;1,03;12,75;1,04;21
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Hon P.;Golubic V.;108;70;696;975;1;6;6;3;7;6;2;1;Completed;1,8;2;1,88;1,99;1,95;2;1,82;1,96;1,87;2,12
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Boulter K.;Baptiste H.;54;51;1108;1176;7;5;5;7;6;4;2;1;Completed;1,67;2,2;1,72;2,23;1,73;2,2;1,69;2,14;1,76;2,28
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Kudermetova P.;Inglis M.;76;158;899;452;7;5;7;6;;;2;0;Completed;1,91;1,91;1,98;1,88;2;1,93;1,89;1,89;2,02;1,95
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Krejcikova B.;Blinkova A.;34;71;1452;938;6;2;6;2;;;2;0;Completed;1,17;5;1,21;4,94;1,2;5;1,18;4,68;1,22;5,3
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Volynets K.;Stearns P.;107;61;699;1067;6;4;2;6;6;3;2;1;Completed;2,1;1,73;2,06;1,83;2,1;1,78;2,06;1,74;2,16;1,84
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Zhang S.;Zakharova A.;112;87;682;840;3;6;6;1;6;4;2;1;Completed;1,8;2;1,88;2,02;1,81;2,08;1,78;2,01;1,88;2,12
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Bouzkova M.;Maria T.;52;44;1173;1274;6;2;6;4;;;2;0;Completed;1,29;3,75;1,29;3,93;1,3;3,75;1,28;3,59;1,31;4,1
+44;Beijing;China Open;24/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Bondar A.;Andreescu B.;96;181;779;396;6;4;7;6;;;2;0;Completed;2,63;1,5;2,74;1,51;2,65;1,57;2,54;1,51;2,7;1,57
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Osorio M.;Li A.;83;47;844;1254;7;5;6;7;7;5;2;1;Completed;2,5;1,53;2,59;1,56;3,2;1,57;2,52;1,52;2,62;1,6
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Sonmez Z.;Wei S.;82;183;855;392;6;2;6;0;;;2;0;Completed;1,5;2,63;1,54;2,62;1,54;2,9;1,52;2,52;1,59;2,66
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Tomljanovic A.;Starodubtseva Y.;94;86;791;840;7;6;6;2;;;2;0;Completed;1,67;2,2;1,71;2,26;1,8;2,28;1,67;2,18;1,76;2,26
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Wang Xiy.;Guo H.;152;192;481;370;7;5;6;1;;;2;0;Completed;1,53;2,5;1,57;2,54;1,53;2,6;1,53;2,48;1,58;2,68
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Ruse E.G.;Sramkova R.;98;55;755;1097;6;2;6;2;;;2;0;Completed;2;1,8;2,05;1,85;2,05;1,81;2,01;1,78;2,16;1,84
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Sasnovich A.;Tjen J.;130;102;580;734;6;7;7;5;6;1;2;1;Completed;3,5;1,3;3,69;1,32;3,66;1,3;3,51;1,29;3,65;1,36
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Potapova A.;Siniakova K.;59;62;1076;1066;6;3;6;4;;;2;0;Completed;2,75;1,44;2,93;1,45;2,85;1,47;2,74;1,44;3;1,48
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Seidel E.;Frech M.;95;46;782;1256;7;5;6;4;;;2;0;Completed;1,73;2,1;1,78;2,12;1,73;2,2;1,68;2,15;1,78;2,26
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Zhu L.;Uchijima M.;253;92;275;807;6;1;6;3;;;2;0;Completed;1,8;2;1,83;2,07;1,85;2,04;1,8;1,99;1,95;2,04
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Kartal S.;Parks A.;81;60;870;1070;6;3;6;2;;;2;0;Completed;1,44;2,75;1,46;2,9;1,45;2,83;1,44;2,75;1,51;2,9
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Bucsa C.;Vekic D.;67;69;1025;992;6;2;6;4;;;2;0;Completed;1,91;1,91;2,07;1,83;2,12;1,91;1,96;1,82;2,06;1,9
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Joint M.;Jimenez Kasintseva V.;36;109;1429;691;6;3;6;2;;;2;0;Completed;1,44;2,75;1,46;2,9;1,45;2,8;1,44;2,73;1,46;3,05
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Boisson L.;Galfi D.;41;97;1289;767;7;6;5;7;6;2;2;1;Completed;2;1,8;1,96;1,93;2;1,91;1,93;1,84;2,04;1,95
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Bouzas Maneiro J.;Cristian J.;48;42;1196;1281;6;4;6;0;;;2;0;Completed;1,91;1,91;1,94;1,94;1,92;1,91;1,9;1,88;1,99;1,96
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Arango E.;Lamens S.;50;57;1180;1087;6;3;6;3;;;2;0;Completed;2,5;1,53;;;2,53;1,55;2,45;1,54;2,72;1,57
+44;Beijing;China Open;25/09/2025;WTA1000;Outdoor;Hard;1st Round;3;Yuan Y.;Putintseva Y.;110;63;685;1065;6;3;6;3;;;2;0;Completed;1,73;2,1;1,79;2,13;1,77;2,2;1,71;2,12;1,74;2,32
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Gauff C.;Rakhimova K.;3;89;7873;823;6;4;6;0;;;2;0;Completed;1,1;7;1,12;7,66;1,11;7;1,1;6,75;1,13;8
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Kenin S.;Kudermetova P.;26;76;1678;899;6;4;6;2;;;2;0;Completed;1,5;2,63;1,5;2,77;1,5;2,7;1,48;2,64;1,54;2,8
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Fernandez L.A.;Sakkari M.;25;56;1684;1091;6;2;6;0;;;2;0;Completed;1,62;2,3;1,69;2,29;1,63;2,32;1,62;2,25;1,67;2,44
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Bouzkova M.;Linette M.;52;38;1173;1404;7;5;7;5;;;2;0;Completed;1,33;3,4;1,39;3,23;1,4;3,4;1,35;3,15;1,41;3,25
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Lys E.;Jovic I.;66;37;1041;1413;6;3;4;6;7;5;2;1;Completed;1,91;1,91;1,87;2,03;1,91;2;1,82;1,98;1,87;2,1
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Rybakina E.;McNally C.;10;90;3833;812;7;5;4;6;6;3;2;1;Completed;1,2;4,5;1,21;4,99;1,2;5;1,18;4,67;1,21;5,6
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Kudermetova V.;Bondar A.;30;96;1563;779;7;5;6;3;;;2;0;Completed;1,4;3;1,48;2,82;1,45;3;1,43;2,77;1,49;3
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Badosa P.;Ruzic A.;18;80;2195;878;6;3;7;6;;;2;0;Completed;1,44;2,75;1,45;2,95;1,44;3,05;1,4;2,91;1,47;3,05
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Paolini J.;Sevastova A.;8;221;4006;315;6;1;6;3;;;2;0;Completed;1,17;5;1,17;5,66;1,19;5;1,17;4,92;1,19;6
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Kessler M.;Mertens E.;39;22;1370;2019;6;2;6;4;;;2;0;Completed;2,3;1,62;2,21;1,74;2,33;1,67;2,23;1,64;2,42;1,68
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Krejcikova B.;Alexandrova E.;34;11;1452;3253;7;5;6;2;;;2;0;Completed;2,2;1,67;2,29;1,69;2,29;1,67;2,2;1,66;2,36;1,72
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Anisimova A.;Boulter K.;4;54;5109;1108;6;1;6;3;;;2;0;Completed;1,22;4,33;1,3;3,85;1,27;4,33;1,25;3,84;1,28;4,4
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Hon P.;Ostapenko J.;108;24;696;1780;6;3;6;2;;;2;0;Completed;2,38;1,57;2,45;1,61;2,6;1,57;2,43;1,54;2,56;1,63
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Zhang S.;Wang Xin.;112;33;682;1461;6;4;6;2;;;2;0;Completed;2,2;1,67;2,07;1,83;2,2;1,73;2,14;1,69;2,3;1,75
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Muchova K.;Cirstea S.;15;64;2488;1057;6;2;6;3;;;2;0;Completed;1,62;2,3;1,78;2,15;1,67;2,3;1,63;2,23;1,73;2,34
+44;Beijing;China Open;26/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Bencic B.;Volynets K.;16;107;2334;699;6;3;6;3;;;2;0;Completed;1,44;2,75;1,47;2,87;1,44;2,9;1,42;2,78;1,46;3,1
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Navarro E.;Ruse E.G.;17;98;2310;755;6;3;7;6;;;2;0;Completed;1,44;2,75;1,48;2,84;1,45;2,8;1,44;2,73;1,49;2,98
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Andreeva M.;Zhu L.;5;253;4793;275;6;2;6;2;;;2;0;Completed;1,17;5;1,15;6,39;1,17;5,5;1,15;5,16;1,17;6,6
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Bouzas Maneiro J.;Yastremska D.;48;31;1196;1559;7;5;6;4;;;2;0;Completed;1,91;1,91;1,93;1,95;1,91;1,97;1,85;1,92;1,99;2
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Potapova A.;Mboko V.;59;23;1076;1841;7;6;7;5;;;2;0;Completed;2,38;1,57;2,33;1,67;2,38;1,65;2,27;1,61;2,4;1,69
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Osorio M.;Kalinskaya A.;83;29;844;1582;6;1;4;6;6;4;2;1;Completed;3;1,4;3,05;1,43;3,05;1,4;2,95;1,38;3,15;1,45
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Swiatek I.;Yuan Y.;2;110;8433;685;6;0;6;3;;;2;0;Completed;1,03;15;1,03;16,33;1,04;17;1,03;12,27;1,03;26
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Boisson L.;Samsonova L.;41;21;1289;2049;6;3;6;4;;;2;0;Completed;2,63;1,5;2,59;1,56;2,7;1,53;2,59;1,48;2,66;1,58
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Joint M.;Shnaider D.;36;19;1429;2111;7;5;6;1;;;2;0;Completed;1,91;1,91;1,85;2,05;1,91;2,05;1,8;1,99;1,84;2,16
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Sonmez Z.;Tauson C.;82;12;855;2775;6;4;2;6;6;3;2;1;Completed;3,75;1,29;3,83;1,3;3,75;1,29;3,65;1,28;4;1,31
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Kostyuk M.;Seidel E.;28;95;1659;782;6;1;6;1;;;2;0;Completed;1,3;3,5;1,34;3,55;1,33;3,5;1,3;3,43;1,39;3,5
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Pegula J.;Tomljanovic A.;7;94;4383;791;6;0;6;3;;;2;0;Completed;1,14;5,5;1,15;6,18;1,17;6;1,14;5,4;1,18;6
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Noskova L.;Wang Xiy.;27;152;1670;481;6;3;6;2;;;2;0;Completed;1,4;3;1,4;3,17;1,4;3,1;1,38;3;1,41;3,3
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Kartal S.;Kasatkina D.;81;20;870;2106;6;3;6;0;;;2;0;Completed;2,1;1,73;2,06;1,84;2,1;1,76;2,09;1,72;2,16;1,84
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Sasnovich A.;Osaka N.;130;14;580;2489;1;6;6;4;6;2;2;1;Completed;7;1,1;8,02;1,11;7;1,1;6,77;1,1;8,2;1,13
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Zheng Q.;Arango E.;9;50;4003;1180;6;3;6;2;;;2;0;Completed;1,25;4;1,28;4,05;1,29;4;1,26;3,75;1,31;4,1
+44;Beijing;China Open;27/09/2025;WTA1000;Outdoor;Hard;2nd Round;3;Raducanu E.;Bucsa C.;32;67;1498;1025;6;3;6;3;;;2;0;Completed;1,29;3,75;1,3;3,86;1,29;3,75;1,27;3,64;1,34;3,85
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Lys E.;Rybakina E.;66;10;1041;3833;6;3;1;6;6;4;2;1;Completed;6,5;1,11;7,99;1,11;6,75;1,11;6,48;1,1;7,6;1,14
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Kessler M.;Krejcikova B.;39;34;1370;1452;1;6;7;5;3;0;1;1;Retired;2,75;1,44;2,72;1,52;2,75;1,5;2,64;1,46;2,94;1,5
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Gauff C.;Fernandez L.A.;3;25;7873;1684;6;4;4;6;7;5;2;1;Completed;1,29;3,75;1,36;3,44;1,33;3,75;1,31;3,37;1,39;3,5
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Bouzkova M.;Kudermetova V.;52;30;1173;1563;6;3;7;5;;;2;0;Completed;1,8;2;1,85;2,07;1,86;2,03;1,81;1,97;1,88;2,1
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Paolini J.;Kenin S.;8;26;4006;1678;6;3;6;0;;;2;0;Completed;1,3;3,5;1,32;3,72;1,32;3,65;1,29;3,5;1,32;3,9
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Bencic B.;Hon P.;16;108;2334;696;4;6;6;4;6;3;2;1;Completed;1,25;4;1,29;4,03;1,28;4;1,26;3,77;1,3;4,2
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Muchova K.;Badosa P.;15;18;2488;2195;4;2;;;;;0;0;Retired;1,44;2,75;1,5;2,82;1,52;2,75;1,48;2,62;1,55;2,78
+44;Beijing;China Open;28/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Anisimova A.;Zhang S.;4;112;5109;682;7;6;6;0;;;2;0;Completed;1,17;5;1,2;5,16;1,19;5;1,18;4,67;1,21;5,5
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Andreeva M.;Bouzas Maneiro J.;5;48;4793;1196;6;4;6;1;;;2;0;Completed;1,17;5;1,23;4,66;1,21;5;1,19;4,55;1,23;5,1
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Kostyuk M.;Sasnovich A.;28;130;1659;580;6;4;6;2;;;2;0;Completed;1,17;5;1,2;5,27;1,2;5;1,18;4,72;1,21;5,4
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Navarro E.;Boisson L.;17;41;2310;1289;6;2;1;0;;;1;0;Retired;1,53;2,5;1,57;2,57;1,55;2,6;1,51;2,51;1,58;2,68
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Kartal S.;Joint M.;81;36;870;1429;6;3;6;2;;;2;0;Completed;2,5;1,53;2,42;1,63;2,63;1,55;2,49;1,52;2,74;1,55
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Swiatek I.;Osorio M.;2;83;8433;844;6;0;0;0;;;1;0;Retired;1,02;19;;;1,03;19;1,02;14,67;1,03;30
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Pegula J.;Raducanu E.;7;32;4383;1498;3;6;7;6;6;0;2;1;Completed;1,67;2,2;1,7;2,3;1,67;2,25;1,65;2,22;1,73;2,34
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Potapova A.;Sonmez Z.;59;82;1076;855;6;3;7;5;;;2;0;Completed;1,57;2,38;1,57;2,57;1,57;2,5;1,55;2,41;1,61;2,56
+44;Beijing;China Open;29/09/2025;WTA1000;Outdoor;Hard;3rd Round;3;Noskova L.;Zheng Q.;27;9;1670;4003;6;4;3;6;3;0;1;1;Retired;2,1;1,73;2,12;1,81;2,1;1,8;2,03;1,76;2,12;1,87
+44;Beijing;China Open;30/09/2025;WTA1000;Outdoor;Hard;4th Round;3;Gauff C.;Bencic B.;3;16;7873;2334;4;6;7;6;6;2;2;1;Completed;1,33;3,4;1,36;3,42;1,37;3,5;1,33;3,32;1,38;3,55
+44;Beijing;China Open;30/09/2025;WTA1000;Outdoor;Hard;4th Round;3;Lys E.;Kessler M.;66;39;1041;1370;4;6;6;1;6;2;2;1;Completed;1,8;2;1,93;1,97;1,91;2;1,85;1,94;1,94;2,02
+44;Beijing;China Open;30/09/2025;WTA1000;Outdoor;Hard;4th Round;3;Anisimova A.;Muchova K.;4;15;5109;2488;1;6;6;2;6;4;2;1;Completed;1,53;2,5;1,6;2,51;1,56;2,54;1,53;2,46;1,57;2,7
+44;Beijing;China Open;30/09/2025;WTA1000;Outdoor;Hard;4th Round;3;Paolini J.;Bouzkova M.;8;52;4006;1173;6;2;7;5;;;2;0;Completed;1,53;2,5;1,44;3,04;1,55;2,7;1,51;2,54;1,59;2,66
+44;Beijing;China Open;01/10/2025;WTA1000;Outdoor;Hard;4th Round;3;Noskova L.;Potapova A.;27;59;1670;1076;6;2;6;4;;;2;0;Completed;1,5;2,63;1,53;2,66;1,55;2,63;1,5;2,55;1,54;2,82
+44;Beijing;China Open;01/10/2025;WTA1000;Outdoor;Hard;4th Round;3;Kartal S.;Andreeva M.;81;5;870;4793;7;5;2;6;7;5;2;1;Completed;4,5;1,2;4,65;1,24;4,5;1,25;4,07;1,23;5,1;1,24
+44;Beijing;China Open;01/10/2025;WTA1000;Outdoor;Hard;4th Round;3;Navarro E.;Swiatek I.;17;2;2310;8433;6;4;4;6;6;0;2;1;Completed;8;1,08;9,09;1,1;9,5;1,09;8,43;1,07;11;1,09
+44;Beijing;China Open;01/10/2025;WTA1000;Outdoor;Hard;4th Round;3;Pegula J.;Kostyuk M.;7;28;4383;1659;6;3;6;7;6;1;2;1;Completed;1,53;2,5;1,63;2,44;1,62;2,5;1,58;2,34;1,62;2,58
+44;Beijing;China Open;02/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Gauff C.;Lys E.;3;66;7873;1041;6;3;6;4;;;2;0;Completed;1,2;4,5;1,23;4,78;1,24;4,6;1,21;4,28;1,25;4,8
+44;Beijing;China Open;02/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Anisimova A.;Paolini J.;4;8;5109;4006;6;7;6;3;6;4;2;1;Completed;1,57;2,38;1,53;2,69;1,61;2,5;1,58;2,33;1,64;2,52
+44;Beijing;China Open;03/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Noskova L.;Kartal S.;27;81;1670;870;6;3;6;4;;;2;0;Completed;1,53;2,5;1,56;2,6;1,55;2,6;1,52;2,49;1,58;2,68
+44;Beijing;China Open;03/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Pegula J.;Navarro E.;7;17;4383;2310;6;7;6;2;6;1;2;1;Completed;1,44;2,75;1,49;2,84;1,45;2,8;1,44;2,74;1,48;3
+44;Beijing;China Open;04/10/2025;WTA1000;Outdoor;Hard;Semifinals;3;Anisimova A.;Gauff C.;4;3;5109;7873;6;1;6;2;;;2;0;Completed;2;1,8;2,1;1,82;2,04;2;1,93;1,86;2;1,98
+44;Beijing;China Open;04/10/2025;WTA1000;Outdoor;Hard;Semifinals;3;Noskova L.;Pegula J.;27;7;1670;4383;6;3;1;6;7;6;2;1;Completed;2,5;1,53;2,54;1,59;2,75;1,55;2,5;1,52;2,68;1,58
+44;Beijing;China Open;05/10/2025;WTA1000;Outdoor;Hard;The Final;3;Anisimova A.;Noskova L.;4;27;5109;1670;6;0;2;6;6;2;2;1;Completed;1,33;3,4;1,36;3,48;1,35;3,55;1,33;3,36;1,36;3,75
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Bouzkova M.;Osorio M.;41;80;1293;874;6;3;6;4;;;2;0;Completed;1,36;3,2;1,3;3,7;1,4;3,3;1,38;2,98;1,44;3,2
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Siegemund L.;Yastremska D.;57;31;1115;1559;7;5;4;6;4;1;1;1;Retired;2,63;1,5;2,47;1,58;2,63;1,62;2,43;1,55;2,68;1,57
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Baptiste H.;Krueger A.;55;50;1121;1212;2;6;6;4;6;2;2;1;Completed;2;1,8;2,07;1,8;2,05;1,83;2,01;1,78;2,14;1,86
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Mertens E.;Kudermetova P.;21;73;1964;919;7;6;6;3;;;2;0;Completed;1,25;4;1,27;3,55;1,29;4,6;1,25;3,8;1,29;4,3
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Siniakova K.;Shnaider D.;62;18;1066;2056;6;4;6;4;;;2;0;Completed;1,91;1,91;2,01;1,86;2;1,91;1,93;1,84;2,08;1,9
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Joint M.;Zhu L.;35;230;1462;310;7;5;7;6;;;2;0;Completed;1,25;4;1,29;3,89;1,29;4;1,26;3,72;1,31;4,1
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Bouzas Maneiro J.;Gracheva V.;47;82;1251;862;7;6;6;2;;;2;0;Completed;1,53;2,5;1,5;2,74;1,53;2,75;1,5;2,55;1,59;2,62
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Tauson C.;Danilovic O.;12;42;2723;1278;6;3;7;5;;;2;0;Completed;1,36;3,2;1,36;3,34;1,36;3,25;1,34;3,18;1,37;3,6
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Ruzic A.;Linette M.;78;40;898;1294;6;2;6;3;;;2;0;Completed;1,67;2,2;1,74;2,17;1,72;2,2;1,68;2,15;1,73;2,32
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Yuan Y.;Bronzetti L.;109;74;710;912;7;6;7;6;;;2;0;Completed;1,5;2,63;1,53;2,62;1,53;2,63;1,5;2,53;1,56;2,78
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Uchijima M.;Wang Xin.;91;37;802;1436;6;4;7;6;;;2;0;Completed;2,75;1,44;2,64;1,53;2,8;1,45;2,72;1,44;0;0
+45;Wuhan;Wuhan Open;06/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Alexandrova E.;Mboko V.;11;24;3253;1828;6;3;6;2;;;2;0;Completed;1,44;2,75;1,51;2,7;1,45;2,83;1,44;2,72;1,51;2,96
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Kenin S.;Zakharova A.;28;83;1708;858;3;6;7;6;6;3;2;1;Completed;1,53;2,5;1,62;2,41;1,57;2,5;1,55;2,41;1,65;2,5
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Samsonova L.;Arango E.;20;49;2049;1222;6;1;7;5;;;2;0;Completed;1,33;3,4;1,35;3,41;1,34;3,75;1,32;3,31;1,38;3,55
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Cristian J.;Kessler M.;48;33;1226;1480;6;7;6;0;6;3;2;1;Completed;2,5;1,53;2,47;1,59;2,55;1,57;2,44;1,53;2,56;1,62
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Osaka N.;Fernandez L.A.;16;27;2379;1739;4;6;7;5;6;3;2;1;Completed;1,5;2,63;1,56;2,54;1,54;2,63;1,5;2,54;1,56;2,7
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Muchova K.;Kostyuk M.;22;26;1958;1769;2;6;6;2;6;4;2;1;Completed;2;1,8;1,85;2,03;2,06;2;1,99;1,79;2,1;1,87
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Frech M.;Kudermetova V.;53;29;1146;1563;6;3;2;6;6;3;2;1;Completed;2,63;1,5;2,74;1,5;2,63;1,5;2,6;1,47;0;0
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Li A.;Raducanu E.;46;30;1254;1563;6;1;4;1;;;1;0;Retired;4;1,25;4,21;1,26;4,33;1,27;3,85;1,25;4,5;1,27
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Sramkova R.;Kalinskaya A.;68;34;1012;1472;6;2;3;6;6;3;2;1;Completed;3,5;1,3;3,5;1,34;3,5;1,33;3,32;1,31;3,6;1,35
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Zhang S.;Navarro E.;142;14;532;2515;6;2;2;6;6;3;2;1;Completed;3;1,4;3,14;1,4;3;1,45;2,81;1,42;3,25;1,43
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Bencic B.;Vekic D.;15;71;2453;937;6;2;6;2;;;2;0;Completed;1,33;3,4;1,34;3,44;1,36;3,45;1,32;3,31;1,36;3,7
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Noskova L.;Putintseva Y.;17;63;2310;1065;6;4;4;6;7;6;2;1;Completed;1,73;2,1;1,83;2,05;1,8;2,16;1,73;2,08;1,87;2,1
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;1st Round;3;Cirstea S.;Ostapenko J.;58;25;1091;1790;6;0;2;1;;;1;0;Retired;1,5;2,63;1,52;2,67;1,5;2,63;1,49;2,58;1,51;2,9
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Swiatek I.;Bouzkova M.;2;41;8553;1293;6;1;6;1;;;2;0;Completed;1,1;7;1,12;7,36;1,12;8;1,1;6,43;1,14;7,8
+45;Wuhan;Wuhan Open;07/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Siegemund L.;Andreeva M.;57;5;1115;4698;6;7;6;3;6;3;2;1;Completed;5;1,17;5,54;1,18;5,5;1,17;5,06;1,16;6;1,19
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Siniakova K.;Joint M.;62;35;1066;1462;6;3;6;1;;;2;0;Completed;1,91;1,91;1,91;1,98;2,2;2;1,88;1,91;1,94;2,04
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Pegula J.;Baptiste H.;6;55;4653;1121;6;4;4;6;7;6;2;1;Completed;1,11;6,5;1,13;7,16;1,12;6,5;1,11;6,25;1,14;7,6
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Jovic I.;Bouzas Maneiro J.;39;47;1314;1251;6;4;6;4;;;2;0;Completed;2,1;1,73;2,26;1,7;2,2;1,73;2,12;1,7;2,3;1,75
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Alexandrova E.;Li A.;11;46;3253;1254;7;6;6;2;;;2;0;Completed;1,3;3,5;1,27;4,1;1,3;3,85;1,26;3,75;1,27;4,5
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Frech M.;Muchova K.;53;22;1146;1958;7;6;4;1;;;1;0;Retired;5;1,17;4,87;1,21;5,25;1,2;4,73;1,18;5,1;1,23
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Samsonova L.;Kenin S.;20;28;2049;1708;3;6;6;3;6;1;2;1;Completed;1,57;2,38;1,62;2,43;1,64;2,43;1,57;2,35;1,67;2,44
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Bencic B.;Mertens E.;15;21;2453;1964;;;;;;;;;Walkover;1,67;2,2;1,68;2,31;1,68;2,25;1,65;2,21;1,7;2,4
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Gauff C.;Uchijima M.;3;91;7263;802;6;1;6;0;;;2;0;Completed;1,08;8;1,11;8,18;1,1;8;1,08;7,39;1,12;9
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Zhang S.;Cirstea S.;142;58;532;1091;6;4;3;6;6;4;2;1;Completed;1,91;1,91;1,93;1,96;2,05;1,91;1,99;1,79;2,08;1,9
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Tauson C.;Ruzic A.;12;78;2723;898;6;4;6;0;;;2;0;Completed;1,4;3;1,46;2,91;1,44;3,1;1,41;2,87;1,48;3
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Sabalenka A.;Sramkova R.;1;68;11010;1012;4;6;6;3;6;1;2;1;Completed;1,05;11;1,05;13,69;1,06;11;1,05;9,58;1,08;12
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Noskova L.;Osaka N.;17;16;2310;2379;7;6;6;3;;;2;0;Completed;2,5;1,53;2,7;1,51;2,63;1,55;2,53;1,5;2,72;1,57
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Paolini J.;Yuan Y.;8;109;4156;710;3;6;6;4;6;3;2;1;Completed;1,22;4,33;1,28;4,06;1,27;4,33;1,24;3,91;1,29;4,3
+45;Wuhan;Wuhan Open;08/10/2025;WTA1000;Outdoor;Hard;2nd Round;3;Rybakina E.;Cristian J.;9;48;3898;1226;6;4;6;3;;;2;0;Completed;1,13;6;1,15;6,28;1,17;6,25;1,14;5,59;1,17;6,4
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Pegula J.;Alexandrova E.;6;11;4653;3253;7;5;3;6;6;3;2;1;Completed;2;1,8;2,11;1,81;2,02;2;1,97;1,81;2,08;1,91
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Sabalenka A.;Samsonova L.;1;20;11010;2049;6;3;6;2;;;2;0;Completed;1,2;4,5;1,2;5,13;1,2;4,9;1,19;4,58;1,23;5,1
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Siniakova K.;Jovic I.;62;39;1066;1314;7;5;6;3;;;2;0;Completed;1,57;2,38;1,67;2,36;1,67;2,5;1,58;2,35;1,61;2,6
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Siegemund L.;Frech M.;57;53;1115;1146;6;4;7;6;;;2;0;Completed;1,73;2,1;1,8;2,11;1,8;2,1;1,74;2,07;1,86;2,14
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Paolini J.;Tauson C.;8;12;4156;2723;3;6;6;1;3;1;1;1;Retired;2;1,8;1,82;2,09;2;2;1,96;1,82;2,12;1,86
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Rybakina E.;Noskova L.;9;17;3898;2310;6;3;6;4;;;2;0;Completed;1,4;3;1,46;2,96;1,47;3;1,44;2,74;1,49;3
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Swiatek I.;Bencic B.;2;15;8553;2453;7;6;6;4;;;2;0;Completed;1,14;5,5;1,17;5,95;1,15;5,75;1,14;5,48;1,16;6,8
+45;Wuhan;Wuhan Open;09/10/2025;WTA1000;Outdoor;Hard;3rd Round;3;Gauff C.;Zhang S.;3;142;7263;532;6;3;6;2;;;2;0;Completed;1,2;4,5;1,24;4,65;1,21;4,7;1,2;4,46;1,24;5,1
+45;Wuhan;Wuhan Open;10/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Pegula J.;Siniakova K.;6;62;4653;1066;2;6;6;0;6;3;2;1;Completed;1,44;2,75;1,43;3,1;1,5;2,9;1,43;2,78;1,45;3,15
+45;Wuhan;Wuhan Open;10/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Sabalenka A.;Rybakina E.;1;9;11010;3898;6;3;6;3;;;2;0;Completed;1,73;2,1;1,76;2,2;1,75;2,2;1,69;2,14;1,83;2,18
+45;Wuhan;Wuhan Open;10/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Gauff C.;Siegemund L.;3;57;7263;1115;6;3;6;0;;;2;0;Completed;1,14;5,5;1,16;6,06;1,16;6;1,13;5,62;1,16;6,8
+45;Wuhan;Wuhan Open;10/10/2025;WTA1000;Outdoor;Hard;Quarterfinals;3;Paolini J.;Swiatek I.;8;2;4156;8553;6;1;6;2;;;2;0;Completed;5;1,17;5,94;1,17;5,5;1,19;5,22;1,15;6,2;1,18
+45;Wuhan;Wuhan Open;11/10/2025;WTA1000;Outdoor;Hard;Semifinals;3;Gauff C.;Paolini J.;3;8;7263;4156;6;4;6;3;;;2;0;Completed;1,73;2,1;1,72;2,25;1,8;2,2;1,72;2,11;1,72;2,36
+45;Wuhan;Wuhan Open;11/10/2025;WTA1000;Outdoor;Hard;Semifinals;3;Pegula J.;Sabalenka A.;6;1;4653;11010;2;6;6;4;7;6;2;1;Completed;3,5;1,3;3,84;1,31;3,75;1,33;3,53;1,29;3,9;1,34
+45;Wuhan;Wuhan Open;12/10/2025;WTA1000;Outdoor;Hard;The Final;3;Gauff C.;Pegula J.;3;6;7263;4653;6;4;7;5;;;2;0;Completed;1,62;2,3;1,68;2,34;1,7;2,5;1,63;2,25;1,69;2,4
+46;Ningbo;Ningbo Open;13/10/2025;WTA500;Outdoor;Hard;1st Round;3;Kessler M.;Kenin S.;33;26;1480;1719;6;1;6;0;;;2;0;Completed;1,62;2,3;1,66;2,29;1,62;2,3;1,61;2,25;1,72;2,34
+46;Ningbo;Ningbo Open;13/10/2025;WTA500;Outdoor;Hard;1st Round;3;Bencic B.;Linette M.;14;56;2564;1089;6;3;6;2;;;2;0;Completed;1,25;4;1,24;4,41;1,25;4,4;1,22;4,1;1,23;5,1
+46;Ningbo;Ningbo Open;13/10/2025;WTA500;Outdoor;Hard;1st Round;3;Starodubtseva Y.;Putintseva Y.;131;69;587;975;6;4;6;2;;;2;0;Completed;3;1,4;3,23;1,38;3,2;1,4;3,06;1,36;3,2;1,42
+46;Ningbo;Ningbo Open;13/10/2025;WTA500;Outdoor;Hard;1st Round;3;Sonmez Z.;Sasnovich A.;76;114;900;673;2;6;7;5;6;3;2;1;Completed;1,91;1,91;2,01;1,85;2,1;2,4;1,96;1,81;2,16;1,86
+46;Ningbo;Ningbo Open;13/10/2025;WTA500;Outdoor;Hard;1st Round;3;Shnaider D.;Wang Xiy.;19;145;2056;516;7;5;6;3;;;2;0;Completed;1,44;2,75;1,45;2,91;1,55;2,8;1,45;2,69;1,52;2,9
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Kudermetova V.;Ruzic A.;31;70;1511;964;6;3;6;2;;;2;0;Completed;;;;;1,13;5,25;1,13;5,25;;
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Tomljanovic A.;Tauson C.;104;12;731;2789;1;6;7;6;6;3;2;1;Completed;2,63;1,5;2,73;1,5;2,75;1,5;2,63;1,46;2,8;1,55
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Samsonova L.;Guo H.;18;190;2159;378;6;2;6;4;;;2;0;Completed;1,2;4,5;1,23;4,49;1,25;4,5;1,2;4,31;1,21;5,4
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Muchova K.;Vondrousova M.;20;36;2023;1443;6;4;6;3;;;2;0;Completed;2;1,8;1,82;2,06;2,07;1,8;2,01;1,77;2,12;1,86
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Yastremska D.;Mboko V.;30;24;1559;1806;6;3;7;6;;;2;0;Completed;2,2;1,67;2,26;1,69;2,25;1,7;2,19;1,65;2,34;1,73
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Zhu L.;Raducanu E.;219;29;320;1563;3;6;6;4;6;1;2;1;Completed;4,5;1,2;4,44;1,24;4,5;1,21;4,34;1,2;5;1,23
+46;Ningbo;Ningbo Open;14/10/2025;WTA500;Outdoor;Hard;1st Round;3;Yuan Y.;Wang Xin.;108;62;710;1056;6;3;6;3;;;2;0;Completed;1,91;1,91;2;1,88;1,96;2,05;1,89;1,89;2,08;1,9
+46;Ningbo;Ningbo Open;15/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Bencic B.;Starodubtseva Y.;14;131;2564;587;5;7;6;4;7;5;2;1;Completed;1,17;5;1,18;5,44;1,18;5,25;1,16;4,98;1,2;5,7
+46;Ningbo;Ningbo Open;15/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Tomljanovic A.;Sonmez Z.;104;76;731;900;7;6;6;3;;;2;0;Completed;1,73;2,1;1,73;2,22;1,75;2,2;1,69;2,12;1,73;2,34
+46;Ningbo;Ningbo Open;15/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Shnaider D.;Muchova K.;19;20;2056;2023;2;6;6;1;6;2;2;1;Completed;3;1,4;3,05;1,43;3,15;1,41;3;1,37;3,35;1,41
+46;Ningbo;Ningbo Open;15/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Zhu L.;Andreeva M.;219;6;320;4643;4;6;6;3;6;2;2;1;Completed;6;1,13;5,8;1,16;6,66;1,14;5,74;1,13;6,6;1,17
+46;Ningbo;Ningbo Open;16/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Kessler M.;Samsonova L.;33;18;1480;2159;7;6;6;1;;;2;0;Completed;1,91;1,91;1,88;2,01;2,1;1,91;1,91;1,87;2;1,98
+46;Ningbo;Ningbo Open;16/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Paolini J.;Kudermetova V.;8;31;4331;1511;6;2;7;5;;;2;0;Completed;1,5;2,63;1,56;2,59;1,5;2,7;1,47;2,61;1,55;2,76
+46;Ningbo;Ningbo Open;16/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Alexandrova E.;Yuan Y.;10;108;3158;710;6;3;6;3;;;2;0;Completed;1,33;3,4;1,36;3,41;1,35;3,75;1,31;3,34;1,34;3,85
+46;Ningbo;Ningbo Open;16/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Rybakina E.;Yastremska D.;9;30;4113;1559;6;4;6;7;6;3;2;1;Completed;1,14;5,5;1,18;5,58;1,17;5,75;1,15;5,29;1,2;5,7
+46;Ningbo;Ningbo Open;17/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Paolini J.;Bencic B.;8;14;4331;2564;5;7;7;5;6;3;2;1;Completed;1,57;2,38;1,6;2,48;1,67;2,5;1,55;2,39;1,59;2,64
+46;Ningbo;Ningbo Open;17/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Alexandrova E.;Kessler M.;10;33;3158;1480;6;3;6;3;;;2;0;Completed;1,44;2,75;1,48;2,86;1,45;2,9;1,43;2,76;1,51;2,9
+46;Ningbo;Ningbo Open;17/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Rybakina E.;Tomljanovic A.;9;104;4113;731;6;2;6;0;;;2;0;Completed;1,14;5,5;1,15;6,51;1,15;6;1,14;5,56;1,18;6,2
+46;Ningbo;Ningbo Open;17/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Shnaider D.;Zhu L.;19;219;2056;320;2;6;6;3;6;1;2;1;Completed;1,36;3,2;1,43;3,08;1,5;3,2;1,39;2,95;1,43;3,2
+46;Ningbo;Ningbo Open;18/10/2025;WTA500;Outdoor;Hard;Semifinals;3;Rybakina E.;Paolini J.;9;8;4113;4331;6;3;6;2;;;2;0;Completed;1,4;3;1,45;2,95;1,44;3,05;1,41;2,87;1,47;3
+46;Ningbo;Ningbo Open;18/10/2025;WTA500;Outdoor;Hard;Semifinals;3;Alexandrova E.;Shnaider D.;10;19;3158;2056;6;3;6;4;;;2;0;Completed;1,5;2,63;1,5;2,77;1,5;2,75;1,46;2,64;1,53;2,8
+46;Ningbo;Ningbo Open;19/10/2025;WTA500;Outdoor;Hard;The Final;3;Rybakina E.;Alexandrova E.;9;10;4113;3158;3;6;6;0;6;2;2;1;Completed;1,44;2,75;1,51;2,75;1,5;2,75;1,47;2,65;1,53;2,84
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Danilovic O.;Hibino N.;49;171;1188;425;6;4;1;6;6;2;2;1;Completed;1,4;3;1,41;3,06;1,44;3,05;1,39;2,94;1,41;3,35
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Osaka N.;Sonobe W.;16;266;2444;261;6;0;6;4;;;2;0;Completed;1,05;11;1,06;10,93;1,06;11;1,05;9,39;1,07;13,5
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Cirstea S.;Uchijima M.;51;81;1155;867;2;6;6;4;6;2;2;1;Completed;1,25;4;1,3;3,8;1,32;4;1,28;3,61;1,33;3,9
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Lamens S.;Arango E.;57;46;1087;1229;6;1;6;2;;;2;0;Completed;1,91;1,91;1,85;2,03;1,91;2;1,82;1,95;1,95;2,04
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Krueger A.;Sakkari M.;48;55;1212;1116;2;6;6;3;6;4;2;1;Completed;1,73;2,1;1,64;2,37;1,75;2,24;1,72;2,1;1,83;2,16
+47;Osaka;Japan Open;13/10/2025;WTA250;Outdoor;Hard;1st Round;3;Boulter K.;Noskova L.;59;17;1078;2376;7;6;6;3;;;2;0;Completed;3,5;1,3;3,53;1,33;3,75;1,5;3,45;1,3;3,7;1,36
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Fernandez L.A.;Baptiste H.;27;64;1673;1036;6;2;7;5;;;2;0;Completed;1,36;3,2;1,38;3,22;1,38;3,2;1,36;3,06;1,41;3,3
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Li A.;Gracheva V.;42;83;1280;862;6;4;6;0;;;2;0;Completed;1,57;2,38;1,65;2,34;1,62;3,2;1,59;2,34;;
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Cristian J.;Cocciaretto E.;47;91;1226;795;6;2;7;6;;;2;0;Completed;1,8;2;1,76;2,15;1,8;2,25;1,73;2,08;1,79;2,24
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Sramkova R.;Garland J.;65;132;1017;582;6;3;6;1;;;2;0;Completed;1,53;2,5;1,63;2,39;1,65;2,6;1,58;2,35;1,7;2,38
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Golubic V.;Andreescu B.;60;170;1063;426;6;3;4;6;6;4;2;1;Completed;2,1;1,73;2,13;1,78;2,2;1,73;2,12;1,7;2,24;1,78
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Galfi D.;Parks A.;96;66;764;1015;6;4;6;4;;;2;0;Completed;1,33;3,4;1,36;3,33;1,35;3,4;1,33;3,2;1,38;3,55
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bouzas Maneiro J.;Volynets K.;40;95;1306;765;6;2;6;4;;;2;0;Completed;1,67;2,2;1,71;2,23;1,72;2,2;1,67;2,16;1,79;2,24
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Valentova T.;Eala A.;78;54;891;1131;6;1;6;2;;;2;0;Completed;1,44;2,75;1,51;2,67;1,45;2,9;1,44;2,72;1,51;2,96
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bouzkova M.;Shibahara E.;41;184;1304;387;6;1;6;1;;;2;0;Completed;1,14;5,5;1,18;5,39;1,17;5,5;1,15;5,15;1,19;5,9
+47;Osaka;Japan Open;14/10/2025;WTA250;Outdoor;Hard;1st Round;3;Mertens E.;Bucsa C.;21;72;1969;953;7;6;6;3;;;2;0;Completed;1,44;2,75;1,47;2,81;1,55;2,9;1,42;2,79;1,46;3,1
+47;Osaka;Japan Open;15/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Cristian J.;Bouzas Maneiro J.;47;40;1226;1306;0;6;6;4;6;2;2;1;Completed;2,2;1,67;2,17;1,76;2,25;1,67;2,19;1,65;2,3;1,73
+47;Osaka;Japan Open;15/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Danilovic O.;Krueger A.;49;48;1188;1212;6;4;6;4;;;2;0;Completed;2,38;1,57;2,24;1,71;2,38;1,75;2,23;1,64;2,34;1,73
+47;Osaka;Japan Open;15/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Osaka N.;Lamens S.;16;57;2444;1087;7;6;3;6;6;2;2;1;Completed;1,17;5;1,19;5,37;1,18;5,33;1,17;4,96;1,18;6
+47;Osaka;Japan Open;15/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Cirstea S.;Boulter K.;51;59;1155;1078;6;3;6;1;;;2;0;Completed;1,8;2;1,78;2,13;1,88;2,05;1,79;1,99;1,95;2,04
+47;Osaka;Japan Open;16/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Sramkova R.;Li A.;65;42;1017;1280;6;2;3;6;6;3;2;1;Completed;2,2;1,67;2,24;1,71;2,29;1,67;2,21;1,64;2,3;1,74
+47;Osaka;Japan Open;16/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Fernandez L.A.;Galfi D.;27;96;1673;764;6;1;6;4;;;2;0;Completed;1,36;3,2;1,38;3,3;1,36;3,45;1,34;3,19;1,41;3,35
+47;Osaka;Japan Open;16/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Valentova T.;Mertens E.;78;21;891;1969;6;4;6;1;;;2;0;Completed;1,73;2,1;1,82;2,09;2;2,11;1,76;2,04;1,84;2,16
+47;Osaka;Japan Open;16/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Golubic V.;Bouzkova M.;60;41;1063;1304;1;6;6;2;7;6;2;1;Completed;2,75;1,44;2,74;1,51;2,9;1,45;2,65;1,44;3;1,49
+47;Osaka;Japan Open;17/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Fernandez L.A.;Sramkova R.;27;65;1673;1017;7;6;6;3;;;2;0;Completed;1,4;3;1,48;2,83;1,45;3;1,42;2,83;1,5;2,98
+47;Osaka;Japan Open;17/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Cristian J.;Osaka N.;47;16;1226;2444;;;;;;;;;Walkover;3;1,4;2,89;1,47;3;1,44;2,8;1,42;2,92;1,51
+47;Osaka;Japan Open;17/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Cirstea S.;Golubic V.;51;60;1155;1063;6;2;2;6;6;2;2;1;Completed;1,44;2,75;1,49;2,76;1,48;3;1,44;2,71;1,5;2,92
+47;Osaka;Japan Open;17/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Valentova T.;Danilovic O.;78;49;891;1188;4;6;6;2;6;3;2;1;Completed;1,3;3,5;1,33;3,58;1,33;3,5;1,3;3,41;1,35;3,75
+47;Osaka;Japan Open;18/10/2025;WTA250;Outdoor;Hard;Semifinals;3;Fernandez L.A.;Cirstea S.;27;51;1673;1155;6;1;2;6;6;4;2;1;Completed;1,57;2,38;1,62;2,43;1,64;2,5;1,59;2,31;1,65;2,46
+47;Osaka;Japan Open;18/10/2025;WTA250;Outdoor;Hard;Semifinals;3;Valentova T.;Cristian J.;78;47;891;1226;6;7;6;4;6;3;2;1;Completed;1,33;3,4;1,38;3,29;1,38;3,4;1,34;3,13;1,41;3,35
+47;Osaka;Japan Open;19/10/2025;WTA250;Outdoor;Hard;The Final;3;Fernandez L.A.;Valentova T.;27;78;1673;891;6;0;5;7;6;3;2;1;Completed;1,67;2,2;1,89;2;1,76;2,25;1,7;2,11;1,77;2,28
+48;Guangzhou;Guangzhou Open;20/10/2025;WTA250;Outdoor;Hard;1st Round;3;Erjavec V.;Maria T.;100;43;745;1277;6;4;6;7;6;2;2;1;Completed;2,1;1,73;2,06;1,83;2,3;1,8;2,07;1,74;2,16;1,86
+48;Guangzhou;Guangzhou Open;20/10/2025;WTA250;Outdoor;Hard;1st Round;3;Wang Xiy.;Jones F.;163;74;457;912;6;4;6;4;;;2;0;Completed;1,53;2,5;1,6;2,45;1,53;2,6;1,52;2,49;1,59;2,66
+48;Guangzhou;Guangzhou Open;20/10/2025;WTA250;Outdoor;Hard;1st Round;3;Cocciaretto E.;Parry D.;95;125;783;615;6;4;6;7;6;2;2;1;Completed;1,44;2,75;1,5;2,73;1,45;2,8;1,44;2,72;1,47;2,92
+48;Guangzhou;Guangzhou Open;20/10/2025;WTA250;Outdoor;Hard;1st Round;3;Wang Y.;Rakhimova K.;332;103;191;731;6;2;6;4;;;2;0;Completed;1,73;2,1;1,75;2,17;1,73;2,17;1,7;2,12;1,82;2,2
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Li A.;Jimenez Kasintseva V.;44;107;1247;697;6;4;7;6;;;2;0;Completed;1,5;2,63;;;1,5;2,7;1,47;2,64;1,49;2,98
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Seidel E.;Jeanjean L.;96;94;774;791;6;2;6;2;;;2;0;Completed;1,5;2,63;1,52;2,68;1,53;2,63;1,5;2,55;1,55;2,78
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Osorio M.;Bronzetti L.;83;91;857;828;6;1;6;2;;;2;0;Completed;1,57;2,38;1,61;2,42;1,62;2,5;1,54;2,44;1,64;2,56
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Sun L.;Bouzas Maneiro J.;116;40;659;1309;7;6;7;6;;;2;0;Completed;2;1,8;;;2,06;1,8;2,01;1,77;2,1;1,89
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Putintseva Y.;Korneeva A.;76;165;894;450;7;6;4;6;6;4;2;1;Completed;1,67;2,2;;;1,67;2,25;1,65;2,2;1,75;2,3
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bondar A.;Guo H.;78;180;885;402;6;3;3;6;7;6;2;1;Completed;1,67;2,2;1,68;2,28;1,7;2,3;1,66;2,19;1,78;2,28
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Rakotomanga Rajaonah T.;Kudermetova P.;129;75;602;910;1;6;6;1;6;2;2;1;Completed;2,75;1,44;2,73;1,5;2,88;1,45;2,77;1,43;2,94;1,51
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Volynets K.;Kawa K.;98;127;765;612;4;6;6;2;6;2;2;1;Completed;1,11;6,5;1,13;6,75;1,13;6,5;1,11;6,23;1,13;7,6
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;McNally C.;Juvan K.;90;104;832;725;6;3;1;6;6;3;2;1;Completed;1,8;2;1,74;2,16;1,8;2,1;1,73;2,07;1,74;2,3
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Zhang S.;Zakharova A.;122;84;641;852;6;4;6;1;;;2;0;Completed;1,5;2,63;1,55;2,57;1,5;2,75;1,47;2,64;1,56;2,74
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Liu C.;Eala A.;305;53;213;1131;2;6;6;4;6;4;2;1;Completed;3;1,4;3,18;1,38;3,15;1,4;3,01;1,37;3,25;1,42
+48;Guangzhou;Guangzhou Open;21/10/2025;WTA250;Outdoor;Hard;1st Round;3;Tomljanovic A.;Parks A.;89;65;839;1015;7;5;7;5;;;2;0;Completed;1,3;3,5;1,39;3,18;1,38;3,5;1,34;3,19;1,4;3,4
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Li A.;Osorio M.;44;83;1247;857;7;5;6;2;;;2;0;Completed;1,67;2,2;;;1,67;2,24;1,65;2,19;1,76;2,28
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Sun L.;Wang Y.;116;332;659;191;6;3;6;1;;;2;0;Completed;1,5;2,63;;;1,53;2,63;1,5;2,56;1,55;2,78
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Cocciaretto E.;Wang Xiy.;95;163;783;457;6;3;2;6;6;3;2;1;Completed;1,91;1,91;;;1,91;2,1;1,85;1,93;1,99;1,99
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;McNally C.;Tomljanovic A.;90;89;832;839;6;4;4;6;6;3;2;1;Completed;1,73;2,1;;;1,83;2,14;1,73;2,07;1,81;2,22
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Seidel E.;Putintseva Y.;96;76;774;894;6;3;6;2;;;2;0;Completed;2,2;1,67;;;2,25;1,8;2,14;1,69;2,28;1,76
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Liu C.;Bondar A.;305;78;213;885;6;3;6;4;;;2;0;Completed;2,1;1,73;;;2,2;1,73;2,15;1,68;2,26;1,79
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Zhang S.;Erjavec V.;122;100;641;745;3;6;6;3;6;2;2;1;Completed;1,2;4,5;;;1,21;4,75;1,2;4,46;1,23;5,1
+48;Guangzhou;Guangzhou Open;23/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Volynets K.;Rakotomanga Rajaonah T.;98;129;765;602;6;3;6;3;;;2;0;Completed;1,25;4;;;1,29;4;1,26;3,77;1,29;4,3
+48;Guangzhou;Guangzhou Open;24/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Sun L.;McNally C.;116;90;659;832;3;6;6;3;6;4;2;1;Completed;1,53;2,5;;;1,73;2,5;1,66;2,2;1,75;2,32
+48;Guangzhou;Guangzhou Open;24/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Liu C.;Seidel E.;305;96;213;774;4;6;6;0;6;4;2;1;Completed;3;1,4;;;3;1,43;2,9;1,4;3,1;1,46
+48;Guangzhou;Guangzhou Open;24/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Li A.;Cocciaretto E.;44;95;1247;783;6;3;6;4;;;2;0;Completed;1,53;2,5;;;1,53;2,63;1,52;2,52;1,5;2,96
+48;Guangzhou;Guangzhou Open;24/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Zhang S.;Volynets K.;122;98;641;765;7;6;5;7;7;5;2;1;Completed;1,5;2,63;;;1,61;2,65;1,53;2,46;1,62;2,58
+48;Guangzhou;Guangzhou Open;25/10/2025;WTA250;Outdoor;Hard;Semifinals;3;Sun L.;Liu C.;116;305;659;213;6;0;7;6;;;2;0;Completed;1,36;3,2;;;1,36;3,25;1,35;3,11;1,41;3,3
+48;Guangzhou;Guangzhou Open;25/10/2025;WTA250;Outdoor;Hard;Semifinals;3;Li A.;Zhang S.;44;122;1247;641;5;2;;;;;0;0;Retired;1,62;2,3;;;1,63;2,45;1,59;2,31;1,63;2,46
+48;Guangzhou;Guangzhou Open;26/10/2025;WTA250;Outdoor;Hard;The Final;3;Li A.;Sun L.;44;116;1247;659;7;6;6;2;;;2;0;Completed;2;1,8;;;2;1,84;1,97;1,81;1,99;1,98
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Lys E.;Boulter K.;50;63;1190;1018;6;2;6;1;;;2;0;Completed;1,44;2,75;1,47;2,81;1,48;2,88;1,45;2,69;1,55;2,74
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Gracheva V.;Wang Xin.;82;59;862;1056;4;6;6;3;6;4;2;1;Completed;2;1,8;2,16;1,74;2,15;1,8;2,04;1,75;;
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Kessler M.;Bucsa C.;31;72;1558;953;3;6;7;5;6;3;2;1;Completed;1,5;2,63;1,53;2,65;1,53;2,63;1,5;2,53;1,54;2,78
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Joint M.;Golubic V.;32;55;1479;1105;1;6;7;6;6;2;2;1;Completed;1,57;2,38;1,69;2,26;1,62;2,38;1,6;2,27;1,67;2,46
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Kalinskaya A.;Lamens S.;38;86;1319;849;6;3;6;1;;;2;0;Completed;1,4;3;1,37;3,27;1,4;3,25;1,36;3,09;1,41;3,3
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;20/10/2025;WTA500;Outdoor;Hard;1st Round;3;Muchova K.;Vondrousova M.;21;34;1888;1444;6;2;1;0;;;1;0;Retired;1,67;2,2;1,68;2,28;1,67;2,29;1,63;2,23;1,73;2,34
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Fernandez L.A.;Sakkari M.;22;54;1869;1116;7;6;6;4;;;2;0;Completed;1,4;3;1,53;2,64;1,42;3;1,41;2,84;1,46;3,05
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Shnaider D.;Yastremska D.;19;28;2191;1604;6;3;6;1;;;2;0;Completed;1,57;2,38;1,63;2,39;1,62;2,4;1,58;2,31;1,69;2,42
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Cristian J.;Charaeva A.;42;150;1294;491;6;2;6;3;;;2;0;Completed;1,25;4;1,27;4,11;1,26;4,1;1,24;3,93;1,31;4,2
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Mboko V.;Andreescu B.;23;172;1806;426;6;3;6;3;;;2;0;Completed;1,8;2;2,05;1,83;2;2;1,86;1,9;1,93;2,04
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Sonobe W.;Bartunkova N.;263;132;262;582;6;4;6;3;;;2;0;Completed;3,2;1,36;3,11;1,4;3,2;1,37;3,07;1,36;3,35;1,41
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;21/10/2025;WTA500;Outdoor;Hard;1st Round;3;Kenin S.;Uchijima M.;25;81;1719;867;6;1;6;3;;;2;0;Completed;1,73;2,1;1,93;1,94;1,8;2,2;1,75;2,05;1,89;2,1
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;22/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Noskova L.;Kessler M.;17;31;2376;1558;5;7;6;3;6;4;2;1;Completed;1,62;2,3;1,68;2,3;1,73;2,38;1,64;2,24;1,73;2,34
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;22/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Mboko V.;Lys E.;23;50;1806;1190;6;1;6;1;;;2;0;Completed;2,1;1,73;2,16;1,75;2,1;1,78;2,05;1,74;2,24;1,78
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;22/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Kalinskaya A.;Shnaider D.;38;19;1319;2191;7;6;2;6;7;6;2;1;Completed;2,2;1,67;2,26;1,69;2,38;1,71;2,2;1,66;2,34;1,73
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;22/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Muchova K.;Joint M.;21;32;1888;1479;6;3;7;5;;;2;0;Completed;1,33;3,4;1,36;3,4;1,4;3,4;1,34;3,21;1,4;3,4
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;23/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Bencic B.;Gracheva V.;13;82;2662;862;6;4;6;3;;;2;0;Completed;1,22;4,33;;;1,22;5,5;1,2;4,47;;
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;23/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Rybakina E.;Fernandez L.A.;7;22;4505;1869;6;4;6;3;;;2;0;Completed;1,25;4;;;1,29;4,33;1,25;3,85;1,3;4,1
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;23/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Alexandrova E.;Cristian J.;10;42;3375;1294;6;1;6;2;;;2;0;Completed;1,3;3,5;;;1,3;3,65;1,3;3,48;1,33;3,9
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;23/10/2025;WTA500;Outdoor;Hard;2nd Round;3;Kenin S.;Sonobe W.;25;263;1719;262;3;6;6;1;7;6;2;1;Completed;1,29;3,75;;;1,36;3,8;1,28;3,64;1,28;4,3
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;24/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Noskova L.;Kalinskaya A.;17;38;2376;1319;6;0;1;0;;;1;0;Retired;1,62;2,3;1,65;2,4;1,63;2,32;1,61;2,26;1,66;2,46
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;24/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Rybakina E.;Mboko V.;7;23;4505;1806;6;3;7;6;;;2;0;Completed;1,25;4;;;1,27;4;1,25;3,8;1,28;4,4
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;24/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Kenin S.;Alexandrova E.;25;10;1719;3375;6;0;2;6;7;6;2;1;Completed;4,5;1,2;;;4,7;1,29;4,39;1,21;4,7;1,26
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;24/10/2025;WTA500;Outdoor;Hard;Quarterfinals;3;Bencic B.;Muchova K.;13;21;2662;1888;3;6;7;5;7;5;2;1;Completed;2,38;1,57;;;2,38;1,73;2,26;1,62;2,34;1,72
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;25/10/2025;WTA500;Outdoor;Hard;Semifinals;3;Noskova L.;Rybakina E.;17;7;2376;4505;;;;;;;;;Walkover;3;1,4;;;3;1,4;2,92;1,4;3,35;1,41
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;25/10/2025;WTA500;Outdoor;Hard;Semifinals;3;Bencic B.;Kenin S.;13;25;2662;1719;7;6;3;6;6;2;2;1;Completed;1,44;2,75;;;1,44;3,1;1,42;2,81;1,5;2,96
+49;Tokyo;Toray Pan Pacific Open Tennis Tournament;26/10/2025;WTA500;Outdoor;Hard;The Final;3;Bencic B.;Noskova L.;13;17;2662;2376;6;2;6;3;;;2;0;Completed;2,1;1,73;;;2,12;1,8;2,08;1,73;2,24;1,78
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Fruhvirtova L.;Lew Yan Foon A.;139;381;553;158;6;2;6;2;;;2;0;Completed;1,2;4,5;;;1,21;4,5;1,2;4,38;1,25;4,9
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Garland J.;Hartono A.;132;260;585;266;6;4;6;3;;;2;0;Completed;1,4;3;;;1,42;3;1,4;2,89;1,44;3,15
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Birrell K.;Bartunkova N.;117;133;667;582;1;6;6;1;6;3;2;1;Completed;1,91;1,91;;;1,91;2;1,84;1,93;1,93;2,06
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Rodionova Ar.;Stojanovic N.;250;164;288;436;6;3;5;5;;;1;0;Retired;;;;;1,91;1,8;1,91;1,8;1,02;1,02
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bhamidipaty S.R.;Rajeshwaran Revathi M.;434;658;128;62;6;1;6;4;;;2;0;Completed;1,73;2,1;;;1,75;2,25;1,72;2,09;1,8;2,18
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Hunter S.;Hontama M.;630;256;69;271;6;7;6;2;6;4;2;1;Completed;2;1,8;;;2,05;1,91;1,99;1,79;2,12;1,86
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Tjen J.;Werner C.;82;271;870;256;6;4;6;7;6;2;2;1;Completed;1,06;10;;;1,07;10;1,06;9,11;1,07;14
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Yamaguchi M.;Jones F.;279;71;242;912;5;7;6;0;1;0;1;1;Retired;6;1,13;;;6;1,14;5,64;1,13;6,2;1,18
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Vekic D.;Adkar V.;78;697;882;54;6;1;6;2;;;2;0;Completed;1,01;26;;;1,02;29;1,02;19,82;1,01;34
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Tararudee L.;Timofeeva M.;171;144;427;519;6;2;2;0;;;1;0;Retired;2,2;1,67;2,23;1,71;2,2;1,73;2,12;1,7;2,28;1,74
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Kawa K.;Bronzetti L.;126;105;609;731;6;7;6;0;6;2;2;1;Completed;3,2;1,36;3,34;1,36;3,25;1,36;3,18;1,34;3,55;1,38
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Iatcenko P.;Charaeva A.;181;162;391;451;6;3;5;0;;;1;0;Retired;1,8;2;1,87;2;1,91;2,02;1,83;1,95;1,89;2,1
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Yamalapalli S.;Nugroho P.M.;344;280;183;242;6;4;6;2;;;2;0;Completed;2,3;1,62;2,33;1,65;2,31;1,83;2,22;1,63;2,46;1,65
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Parry D.;Naklo T.;131;543;586;88;6;2;6;0;;;2;0;Completed;1,04;13;1,04;11,82;1,04;15;1,03;11,57;1,04;18
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Pohankova M.;Hibino N.;659;173;62;415;7;5;6;1;;;2;0;Completed;1,91;1,91;1,88;1,99;1,91;1,93;1,86;1,91;1,92;2,02
+50;Chennai;Chennai Open;29/10/2025;WTA250;Outdoor;Hard;1st Round;3;Sonmez Z.;Prozorova T.;73;172;900;421;7;5;6;4;;;2;0;Completed;1,53;2,5;1,55;2,57;1,57;2,5;1,54;2,44;1,62;2,56
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Rodionova Ar.;Hunter S.;250;630;288;69;1;6;6;4;7;6;2;1;Completed;2,3;1,62;2,3;1,67;2,4;1,62;2,3;1,59;2,28;1,76
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Tjen J.;Fruhvirtova L.;82;139;870;553;2;6;6;3;6;2;2;1;Completed;1,3;3,5;1,35;3,41;1,33;3,5;1,31;3,35;1,39;3,4
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Iatcenko P.;Kawa K.;181;126;391;609;6;2;6;3;;;2;0;Completed;1,44;2,75;1,48;2,78;1,47;2,75;1,45;2,69;1,51;2,88
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Vekic D.;Yamalapalli S.;78;344;882;183;6;2;6;2;;;2;0;Completed;1,13;6;1,16;5,65;1,14;6;1,13;5,59;1,16;7,2
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Garland J.;Yamaguchi M.;132;279;585;242;5;7;7;5;7;5;2;1;Completed;1,25;4;1,28;3,85;1,25;4;1,25;3,85;1,29;4,1
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Birrell K.;Bhamidipaty S.R.;117;434;667;128;7;5;7;6;;;2;0;Completed;1,11;6,5;1,09;9,02;1,11;7,5;1,09;7;1,11;9,2
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Tararudee L.;Sonmez Z.;171;73;427;900;2;6;6;3;6;3;2;1;Completed;2,5;1,53;2,52;1,57;2,5;1,62;2,38;1,56;2,56;1,63
+50;Chennai;Chennai Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Pohankova M.;Parry D.;659;131;62;586;6;3;6;4;;;2;0;Completed;2;1,8;2,08;1,81;2,5;1,8;2,04;1,76;2,22;1,8
+50;Chennai;Chennai Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Garland J.;Rodionova Ar.;132;250;585;288;6;2;7;6;;;2;0;Completed;1,4;3;1,43;3,04;1,4;5;1,35;3,18;1,47;3,1
+50;Chennai;Chennai Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Tjen J.;Pohankova M.;82;659;870;62;6;3;6;1;;;2;0;Completed;1,4;3;1,38;3,3;1,4;5;1,36;3,14;1,43;3,2
+50;Chennai;Chennai Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Birrell K.;Vekic D.;117;78;667;882;6;4;6;0;;;2;0;Completed;2,5;1,53;2,52;1,58;2,55;1,57;2,45;1,53;2,62;1,61
+50;Chennai;Chennai Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Tararudee L.;Iatcenko P.;171;181;427;391;6;0;6;2;;;2;0;Completed;1,73;2,1;1,8;2,11;1,86;2,1;1,76;2,02;1,85;2,16
+50;Chennai;Chennai Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Tjen J.;Tararudee L.;82;171;870;427;7;6;7;6;;;2;0;Completed;1,36;3,2;1,39;3,29;1,4;3,25;1,35;3,09;1,4;3,4
+50;Chennai;Chennai Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Birrell K.;Garland J.;117;132;667;585;6;7;6;3;7;5;2;1;Completed;1,5;2,63;1,48;2,87;1,5;2,75;1,47;2,61;1,52;2,88
+50;Chennai;Chennai Open;02/11/2025;WTA250;Outdoor;Hard;The Final;3;Tjen J.;Birrell K.;82;117;870;667;6;4;6;3;;;2;0;Completed;1,4;3;;;1,45;3;1,42;2,79;1,51;2,96
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Wang Y.;Inglis M.;298;186;221;385;6;4;6;7;6;3;2;1;Completed;1,44;2,75;;;1,45;2,8;1,44;2,73;1,48;3
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bucsa C.;Ma Y.;68;238;965;305;6;1;6;2;;;2;0;Completed;1,17;5;;;1,19;5;1,18;4,69;1,23;5,3
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Lys E.;Sidorova K.;44;541;1274;89;6;0;6;3;;;2;0;Completed;1,05;11;;;1,05;11;1,04;10,54;1,06;14
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Tomljanovic A.;Kobori M.;86;470;844;112;7;5;6;2;;;2;0;Completed;1,08;8;;;1,11;8,5;1,08;7,86;1,08;12
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Morvayova V.;Wong Hong Yi C.;520;498;95;100;6;1;6;0;;;2;0;Completed;2,1;1,73;;;2,1;1,84;1,99;1,79;2,14;1,86
+51;Hong Kong;Hong Kong Tennis Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Joint M.;Sevastova A.;32;208;1490;350;2;6;6;4;6;3;2;1;Completed;1,4;3;;;1,57;3,05;1,4;2,91;1,43;3,2
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Sakatsume H.;Kenin S.;228;28;316;1589;6;2;6;1;;;2;0;Completed;4;1,25;;;4;1,28;3,77;1,26;4,3;1,29
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Cirstea S.;Galfi D.;45;96;1243;795;7;5;6;3;;;2;0;Completed;1,4;3;;;1,44;3;1,41;2,87;1,41;3,35
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Mboko V.;Gibson T.;21;134;1913;575;6;7;6;1;6;4;2;1;Completed;1,14;5,5;;;1,18;5,5;1,16;5,12;1,17;6,4
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Chong E.;Lamens S.;632;85;69;849;6;3;6;4;;;2;0;Completed;11;1,05;;;11;1,06;9,8;1,05;15;1,06
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Arango E.;Uchijima M.;47;92;1229;808;6;7;6;1;6;4;2;1;Completed;2,1;1,73;;;2,12;1,75;2,09;1,72;2,24;1,79
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Fernandez L.A.;Wang Xiy.;22;167;1821;433;6;1;6;4;;;2;0;Completed;1,22;4,33;;;1,26;4,4;1,23;4,08;1,28;4,4
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Kalinskaya A.;Rakhimova K.;35;106;1417;731;6;4;6;4;;;2;0;Completed;1,29;3,75;;;1,33;3,75;1,29;3,51;1,32;4
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bencic B.;Sasnovich A.;11;111;3146;685;6;3;6;4;;;2;0;Completed;1,22;4,33;;;1,25;4,33;1,23;4,03;1,27;4,5
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Zhang S.;Erjavec V.;107;98;709;774;6;2;6;2;;;2;0;Completed;1,36;3,2;;;1,38;3,2;1,36;3,06;1,4;3,4
+51;Hong Kong;Hong Kong Tennis Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Eala A.;Boulter K.;51;79;1131;877;6;4;2;1;;;1;0;Retired;1,91;1,91;;;1,95;1,91;1,9;1,87;2;1,98
+51;Hong Kong;Hong Kong Tennis Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Joint M.;Morvayova V.;32;520;1490;95;6;1;6;4;;;2;0;Completed;1,03;17;;;1,03;17;1,02;14,57;1,04;21
+51;Hong Kong;Hong Kong Tennis Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Bucsa C.;Arango E.;68;47;965;1229;6;2;6;4;;;2;0;Completed;1,36;3,2;;;1,4;3,2;1,37;3,01;1,4;3,35
+51;Hong Kong;Hong Kong Tennis Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Cirstea S.;Tomljanovic A.;45;86;1243;844;4;6;6;4;6;3;2;1;Completed;1,4;3;;;1,42;3;1,39;2,94;1,42;3,25
+51;Hong Kong;Hong Kong Tennis Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Fernandez L.A.;Lys E.;22;44;1821;1274;6;4;6;1;;;2;0;Completed;1,5;2,63;1,56;2,59;1,62;2,65;1,53;2,47;1,58;2,68
+51;Hong Kong;Hong Kong Tennis Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Kalinskaya A.;Zhang S.;35;107;1417;709;6;1;6;1;;;2;0;Completed;1,62;2,3;1,68;2,31;1,68;2,3;1,65;2,21;1,7;2,38
+51;Hong Kong;Hong Kong Tennis Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Bencic B.;Wang Y.;11;298;3146;221;6;2;6;2;;;2;0;Completed;1,14;5,5;1,16;6,14;1,15;6;1,14;5,47;1,18;6,2
+51;Hong Kong;Hong Kong Tennis Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Mboko V.;Eala A.;21;51;1913;1131;3;6;6;3;6;4;2;1;Completed;1,44;2,75;1,48;2,82;1,47;2,9;1,42;2,79;1,47;3,05
+51;Hong Kong;Hong Kong Tennis Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Sakatsume H.;Chong E.;228;632;316;69;6;2;6;1;;;2;0;Completed;1,17;5;1,21;4,98;1,2;5,4;1,17;4,87;1,21;5,7
+51;Hong Kong;Hong Kong Tennis Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Bucsa C.;Bencic B.;68;11;965;3146;;;;;;;;;Walkover;3,75;1,29;3,86;1,3;3,75;1,29;3,62;1,28;4,4;1,27
+51;Hong Kong;Hong Kong Tennis Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Joint M.;Sakatsume H.;32;228;1490;316;6;4;2;6;6;4;2;1;Completed;1,25;4;;;1,25;4;1,25;3,87;1,3;4,2
+51;Hong Kong;Hong Kong Tennis Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Mboko V.;Kalinskaya A.;21;35;1913;1417;6;1;3;1;;;1;0;Retired;1,91;1,91;2,01;1,88;2;1,91;1,95;1,83;2,06;1,93
+51;Hong Kong;Hong Kong Tennis Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Fernandez L.A.;Cirstea S.;22;45;1821;1243;6;4;6;4;;;2;0;Completed;1,44;2,75;1,43;3,01;1,53;3;1,43;2,77;1,46;3,1
+51;Hong Kong;Hong Kong Tennis Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Bucsa C.;Joint M.;68;32;965;1490;6;3;6;1;;;2;0;Completed;2,2;1,67;2,26;1,72;2,23;1,67;2,17;1,67;2,32;1,74
+51;Hong Kong;Hong Kong Tennis Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Mboko V.;Fernandez L.A.;21;22;1913;1821;2;6;6;3;6;2;2;1;Completed;2,38;1,57;;;2,5;1,57;2,43;1,54;2,62;1,61
+51;Hong Kong;Hong Kong Tennis Open;02/11/2025;WTA250;Outdoor;Hard;The Final;3;Mboko V.;Bucsa C.;21;68;1913;965;7;5;6;7;6;2;2;1;Completed;1,36;3,2;1,41;3,1;1,42;3,2;1,39;2,97;1,45;3,2
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bondar A.;Wei S.;74;207;900;351;6;2;6;2;;;2;0;Completed;1,33;3,4;;;1,36;3,4;1,34;3,2;1,37;3,55
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Guo H.;Korneeva A.;179;155;402;467;3;6;6;2;7;6;2;1;Completed;2,63;1,5;;;2,85;1,5;2,69;1,45;2,82;1,53
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Salkova D.;Falei A.;151;340;491;186;7;6;7;5;;;2;0;Completed;1,44;2,75;;;1,52;2,85;1,48;2,61;1,56;2,72
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Korpatsch T.;Kudermetova P.;159;72;461;910;3;0;;;;;0;0;Retired;2,3;1,62;;;2,45;1,62;2,35;1,57;2,52;1,63
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Seidel E.;Rakotomanga Rajaonah T.;90;123;816;643;6;4;6;3;;;2;0;Completed;1,25;4;;;1,28;4;1,26;3,73;1,33;3,9
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Putintseva Y.;Jimenez Kasintseva V.;75;109;897;697;6;3;6;1;;;2;0;Completed;1,57;2,38;;;1,57;2,55;1,52;2,47;1,56;2,7
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Zakharova A.;Shibahara E.;99;193;765;370;6;4;6;1;;;2;0;Completed;1,44;2,75;;;1,48;2,83;1,45;2,66;1,53;2,88
+52;Jiujiang;Jiangxi Open;27/10/2025;WTA250;Outdoor;Hard;1st Round;3;Zheng W.;Starodubtseva Y.;309;115;215;671;6;3;7;6;;;2;0;Completed;7;1,1;;;7,5;1,11;6,57;1,1;8;1,13
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Blinkova A.;Paquet C.;95;244;798;299;6;4;6;4;;;2;0;Completed;1,4;3;;;1,4;3,2;1,38;2,99;1,47;3,05
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Parks A.;Zhu L.;65;170;988;428;6;3;2;1;;;1;0;Retired;2,75;1,44;;;2,85;1,57;2,7;1,45;2,84;1,52
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Golubic V.;Saigo R.;53;365;1105;168;6;2;6;4;;;2;0;Completed;1,1;7;;;1,11;7,5;1,1;6,71;1,12;8,6
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Cocciaretto E.;Osorio M.;89;80;822;874;6;2;3;0;;;1;0;Retired;1,8;2;;;1,91;2;1,88;1,89;1,94;2
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Pridankina E.;Yuan Y.;205;113;353;682;6;2;3;6;7;6;2;1;Completed;3,75;1,29;;;3,75;1,29;3,65;1,27;4,2;1,29
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Tagger L.;Zhu C.;235;596;309;76;6;2;6;1;;;2;0;Completed;1,22;4,33;;;1,24;4,33;1,22;4,09;1,24;4,8
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Juvan K.;Liu C.;102;222;742;329;3;6;6;2;7;5;2;1;Completed;1,5;2,63;;;1,53;2,63;1,5;2,56;1,58;2,7
+52;Jiujiang;Jiangxi Open;28/10/2025;WTA250;Outdoor;Hard;1st Round;3;Bai Z.;Li A.;N/A;33;N/A;1465;6;3;6;1;;;2;0;Completed;9;1,07;;;9;1,08;8,29;1,07;10;1,1
+52;Jiujiang;Jiangxi Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Tagger L.;Cocciaretto E.;235;89;309;822;6;4;6;2;;;2;0;Completed;3,5;1,3;;;3,6;1,33;3,41;1,3;3,7;1,35
+52;Jiujiang;Jiangxi Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Korpatsch T.;Seidel E.;159;90;461;816;3;6;6;0;6;1;2;1;Completed;4,33;1,22;;;4,33;1,23;4,1;1,22;5,2;1,23
+52;Jiujiang;Jiangxi Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Golubic V.;Pridankina E.;53;205;1105;353;6;0;4;6;7;5;2;1;Completed;1,2;4,5;;;1,22;4,5;1,21;4,21;1,24;5
+52;Jiujiang;Jiangxi Open;29/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Putintseva Y.;Zheng W.;75;309;897;215;6;2;6;0;;;2;0;Completed;1,08;8;1,1;8,45;1,09;8;1,07;7,52;1,1;10
+52;Jiujiang;Jiangxi Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Parks A.;Juvan K.;65;102;988;742;1;6;6;1;6;1;2;1;Completed;2,63;1,5;2,66;1,53;2,65;1,53;2,55;1,5;2,78;1,55
+52;Jiujiang;Jiangxi Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Salkova D.;Zakharova A.;151;99;491;765;7;6;2;6;6;2;2;1;Completed;2,75;1,44;2,9;1,46;2,83;1,44;2,77;1,43;3,1;1,45
+52;Jiujiang;Jiangxi Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Blinkova A.;Bondar A.;95;74;798;900;7;6;7;5;;;2;0;Completed;2,1;1,73;2,2;1,74;2,11;1,8;2,07;1,73;2,1;1,87
+52;Jiujiang;Jiangxi Open;30/10/2025;WTA250;Outdoor;Hard;2nd Round;3;Bai Z.;Guo H.;N/A;179;N/A;402;3;6;7;5;6;4;2;1;Completed;2,75;1,44;2,78;1,5;2,8;1,45;2,72;1,44;2,82;1,53
+52;Jiujiang;Jiangxi Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Tagger L.;Korpatsch T.;235;159;309;461;6;3;6;4;;;2;0;Completed;1,5;2,63;1,57;2,56;1,53;2,7;1,5;2,53;1,58;2,66
+52;Jiujiang;Jiangxi Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Golubic V.;Putintseva Y.;53;75;1105;897;7;5;6;2;;;2;0;Completed;2,1;1,73;2,23;1,72;2,2;1,73;2,13;1,68;2,28;1,76
+52;Jiujiang;Jiangxi Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Salkova D.;Bai Z.;151;N/A;491;N/A;6;3;6;4;;;2;0;Completed;1,62;2,3;1,58;2,51;1,62;2,48;1,56;2,39;1,58;2,68
+52;Jiujiang;Jiangxi Open;31/10/2025;WTA250;Outdoor;Hard;Quarterfinals;3;Blinkova A.;Parks A.;95;65;798;988;7;5;7;5;;;2;0;Completed;1,73;2,1;1,71;2,24;1,8;2,1;1,73;2,07;1,81;2,2
+52;Jiujiang;Jiangxi Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Blinkova A.;Salkova D.;95;151;798;491;6;4;6;4;;;2;0;Completed;1,57;2,38;1,66;2,36;1,62;2,38;1,6;2,29;1,66;2,48
+52;Jiujiang;Jiangxi Open;01/11/2025;WTA250;Outdoor;Hard;Semifinals;3;Tagger L.;Golubic V.;235;53;309;1105;6;1;4;6;7;5;2;1;Completed;3;1,4;2,9;1,47;3;1,46;2,78;1,42;2,96;1,51
+52;Jiujiang;Jiangxi Open;02/11/2025;WTA250;Outdoor;Hard;The Final;3;Blinkova A.;Tagger L.;95;235;798;309;6;3;6;3;;;2;0;Completed;1,8;2;1,93;1,97;1,89;2;1,82;1,95;1,88;2,1
+53;Riyadh;WTA Finals;01/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Swiatek I.;Keys M.;2;7;8195;4335;6;1;6;2;;;2;0;Completed;1,17;5;1,22;4,75;1,21;5;1,2;4,49;1,21;5,5
+53;Riyadh;WTA Finals;01/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Rybakina E.;Anisimova A.;6;4;4350;5887;6;3;6;1;;;2;0;Completed;1,8;2;1,84;2,06;1,85;2,5;1,79;2,02;1,88;2,1
+53;Riyadh;WTA Finals;02/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Sabalenka A.;Paolini J.;1;8;9870;4325;6;3;6;1;;;2;0;Completed;1,29;3,75;1,33;3,58;1,32;4,1;1,28;3,69;1,29;4,2
+53;Riyadh;WTA Finals;02/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Pegula J.;Gauff C.;5;3;5183;6563;6;3;6;7;6;2;2;1;Completed;2,63;1,5;2,63;1,54;2,63;2,2;2,44;1,58;2,66;1,59
+53;Riyadh;WTA Finals;03/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Rybakina E.;Swiatek I.;6;2;4350;8195;3;6;6;1;6;0;2;1;Completed;2,2;1,67;2,26;1,65;2,25;1,7;2,21;1,66;2,38;1,71
+53;Riyadh;WTA Finals;03/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Anisimova A.;Keys M.;4;7;5887;4335;4;6;6;3;6;2;2;1;Completed;1,3;3,5;1,27;4,09;1,32;4,1;1,29;3,64;1,31;4,1
+53;Riyadh;WTA Finals;04/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Gauff C.;Paolini J.;3;8;6563;4325;6;3;6;2;;;2;0;Completed;1,44;2,75;1,48;2,84;1,5;3;1,45;2,75;1,48;3,05
+53;Riyadh;WTA Finals;04/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Sabalenka A.;Pegula J.;1;5;9870;5183;6;4;2;6;6;3;2;1;Completed;1,29;3,75;1,33;3,62;1,33;3,75;1,3;3,56;1,33;4
+53;Riyadh;WTA Finals;05/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Rybakina E.;Alexandrova E.;6;10;4350;3375;6;4;6;4;;;2;0;Completed;1,36;3,2;;;1,4;3,25;1,36;3,14;1,38;3,55
+53;Riyadh;WTA Finals;05/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Anisimova A.;Swiatek I.;4;2;5887;8195;6;7;6;4;6;2;2;1;Completed;2,63;1,5;2,84;1,48;2,8;1,5;2,7;1,46;3;1,48
+53;Riyadh;WTA Finals;06/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Pegula J.;Paolini J.;5;8;5183;4325;6;2;6;3;;;2;0;Completed;1,25;4;1,27;4,1;1,26;4,33;1,24;3,93;1,28;4,4
+53;Riyadh;WTA Finals;06/11/2025;Tour Championships;Indoor;Hard;Round Robin;3;Sabalenka A.;Gauff C.;1;3;9870;6563;7;6;6;2;;;2;0;Completed;1,5;2,63;1,51;2,73;1,52;2,75;1,48;2,63;1,52;2,88
+53;Riyadh;WTA Finals;07/11/2025;Tour Championships;Indoor;Hard;Semifinals;3;Rybakina E.;Pegula J.;6;5;4350;5183;4;6;6;4;6;3;2;1;Completed;1,4;2,75;;;1,45;2,95;1,42;2,81;1,48;3
+53;Riyadh;WTA Finals;07/11/2025;Tour Championships;Indoor;Hard;The Final;3;Sabalenka A.;Anisimova A.;1;4;9870;5887;6;3;3;6;6;3;2;1;Completed;1,36;3;1,43;3,08;1,46;3,1;1,4;2,94;1,44;3,2
+53;Riyadh;WTA Finals;08/11/2025;Tour Championships;Indoor;Hard;The Final;3;Rybakina E.;Sabalenka A.;6;1;4350;9870;6;3;7;6;;;2;0;Completed;2,5;1,53;2,6;1,56;2,7;1,56;2,57;1,5;2,76;1,56
