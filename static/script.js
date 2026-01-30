@@ -82,7 +82,7 @@ form.addEventListener('submit', async (e) => {
 
     try {
         // https://tennis-8gw3.onrender.com
-        const response = await fetch('https://tennis-8gw3.onrender.com/predict', {
+        const response = await fetch('https://utaa76.github.io/tennis/predict', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
