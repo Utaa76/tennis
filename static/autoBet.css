@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    font-family: "Montserrat"
+}
+
+#bets {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: fit-content;
+    
+    p {
+        margin: 0;
+        font-size: 1.2em;
+    }
+
+    .bet {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+        box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .25);
+        
+        h3 {
+            font-size: 1.5em;
+            margin: 0;
+            text-align: center;
+        }
+
+        .infos {
+            display: flex;
+            flex-direction: row;
+            gap: 100px;
+            align-items: center;
+
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 150px;
+
+                .placeholder {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}
+
+#loader {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255,255,255,0.6);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+.tennis-ball {
+    width: 50px;
+    height: 50px;
+    background: #ccff00;
+    border-radius: 50%;
+    position: relative;
+    animation: bounce 0.8s ease-in-out infinite;
+}
+
+.tennis-ball::before,
+.tennis-ball::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.tennis-ball::before {
+    clip-path: inset(0 0 50% 0);
+}
+
+.tennis-ball::after {
+    clip-path: inset(50% 0 0 0);
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-60px) scale(0.95); }
+}
+
+
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}

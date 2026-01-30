@@ -1,0 +1,25 @@
+match: "Anisimova A. vs Pegula J.", joueur1: "Anisimova A.", joueur2: "Pegula J.", winner: "Pegula J.", surface: "Hard", probability: 0.5257731958762886, cote: 2.2, expected_value: 0.15670103092783494, mise: 3.264604810996561, gain_attendu: 3.9175257731958735, … }
+​
+cote: 2.2
+​
+expected_value: 0.15670103092783494
+​
+gain_attendu: 3.9175257731958735
+​
+joueur1: "Anisimova A."
+​
+joueur2: "Pegula J."
+​
+level: "Grand Slam"
+​
+match: "Anisimova A. vs Pegula J."
+​
+mise: 3.264604810996561
+​
+probability: 0.5257731958762886
+​
+round: "Quarterfinals"
+​
+surface: "Hard"
+​
+winner: "Pegula J."

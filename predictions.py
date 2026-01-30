@@ -199,8 +199,8 @@ def predict_match(
     level_name,                # ex. 'Grand Slam', 'ATP500', …
     round_name,                # ex. 'Quarterfinals', 'Semifinals', …
     rmv_margin=False,
-    ev_comparison=False,
-    bankroll=100, min_ev=0.05  # mettre 0.1 ?
+    ev_comparison=True,
+    bankroll=100, min_ev=0.02  # mettre 0.1 ?
 ):
     """
     Renvoie la décision de pari pour un seul match A‑B à `surface`
@@ -307,8 +307,7 @@ def predict_match(
     kellyA = (probA * (oddA - 1) - (1 - probA)) / (oddA - 1)
     kellyB = (probB * (oddB - 1) - (1 - probB)) / (oddB - 1)
 
-    # Sélection via Kelly (même si EV < 0, tu choisis le + gros Kelly)
-    if kellyA > kellyB:
+    if evA > evB:
         winner, odd, cote, p_win, kelly = A, oddA, bookOddA, probA, kellyA
     else:
         winner, odd, cote, p_win, kelly = B, oddB, bookOddB, probB, kellyB
@@ -324,7 +323,7 @@ def predict_match(
         return None
 
     # ---------- Kelly ----------
-    mise = kelly * bankroll * 0.25
+    mise = kelly * bankroll
     if mise < 0.1:
         print(f"\t⚠️ \033[91m Mise ({mise:.2f} €) trop faible, aucun pari. 💸\033[0m")
         print("\n")
@@ -370,6 +369,9 @@ def evaluate_bets_online(dataset, bankroll=100, min_ev=0.1):
         date = row['Date'] if 'Date' in row else None
         coteA = row['OddA']
         coteB = row['OddB']
+
+        if coteA == 0 or coteB == 0:
+          continue
 
         lst = remove_margin([coteA, coteB])
         oddA, oddB = lst[0], lst[1]
@@ -426,7 +428,7 @@ def evaluate_bets_online(dataset, bankroll=100, min_ev=0.1):
             cote_pred = unfairOddB
             ev = evB
 
-        if (player_pred == playerA and get_player_stats(playerB, player_stats)['rank'] <= 10) or (player_pred == playerB and get_player_stats(playerA, player_stats)['rank'] <= 10):
+        if (player_pred == playerA and get_player_stats(playerB, player_stats)['rank'] <= 5) or (player_pred == playerB and get_player_stats(playerA, player_stats)['rank'] <= 5):
             continue
 
         if row['Winner'] == player_pred:
@@ -457,7 +459,7 @@ def evaluate_bets_online(dataset, bankroll=100, min_ev=0.1):
             continue
 
         gain_net = (cote_pred - 1) * mise if row['Winner'] == player_pred else -mise
-        bankroll += gain_net
+        # bankroll += gain_net
         # print("New bankroll : ", bankroll)
 
         results.append({
@@ -499,20 +501,20 @@ def simulation_paris_2025():
     df_bets_results['Bankroll'] = 100 + df_bets_results['Cumulative Gain']  # 100 = bankroll initiale
 
     # Tracé de la courbe de bankroll
-    plt.figure(figsize=(12, 6))
-    plt.plot(df_bets_results['Bankroll'], label='Bankroll (€)', color='green')
-    plt.axhline(y=100, color='gray', linestyle='--', label='Bankroll initiale')
-    plt.title("📈 Évolution de la bankroll")
-    plt.xlabel("Nombre de paris")
-    plt.ylabel("Bankroll (€)")
-    plt.legend()
-    plt.grid(True)
-    plt.tight_layout()
-    plt.show()
+    # plt.figure(figsize=(12, 6))
+    # plt.plot(df_bets_results['Bankroll'], label='Bankroll (€)', color='green')
+    # plt.axhline(y=100, color='gray', linestyle='--', label='Bankroll initiale')
+    # plt.title("📈 Évolution de la bankroll")
+    # plt.xlabel("Nombre de paris")
+    # plt.ylabel("Bankroll (€)")
+    # plt.legend()
+    # plt.grid(True)
+    # plt.tight_layout()
+    # plt.show()
 
-    df_bets_results['Gain net'].hist(bins=30)
-    plt.title("Distribution des gains nets")
-    plt.show()
+    # df_bets_results['Gain net'].hist(bins=30)
+    # plt.title("Distribution des gains nets")
+    # plt.show()
 
     # df_combines = df_combines.sort_values(by="Date")
     # pd.set_option('display.max_rows', None)
@@ -573,530 +575,530 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Liste construite à partir du tirage officiel PDF de Wimbledon 2025
-# Forme : "Player1" vs "Player2"
-data = [
-  {
-    "Player1": "Tarvet O.",
-    "Player2": "Riedi L.",
-    "Odds_A": 2.1,
-    "Odds_B": 1.75,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Lehecka J.",
-    "Player2": "Dellien H.",
-    "Odds_A": 1.02,
-    "Odds_B": 15.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Thompson J.",
-    "Player2": "Kopriva V.",
-    "Odds_A": 1.4,
-    "Odds_B": 3.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "O Connell C.",
-    "Player2": "Mannarino A.",
-    "Odds_A": 2.9,
-    "Odds_B": 1.36,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Bellucci M.",
-    "Player2": "Crawford O.",
-    "Odds_A": 1.3,
-    "Odds_B": 3.6,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Bonzi B.",
-    "Player2": "Medvedev D.",
-    "Odds_A": 8.5,
-    "Odds_B": 1.07,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Basavareddy N.",
-    "Player2": "Tien L.",
-    "Odds_A": 2.6,
-    "Odds_B": 1.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Tiafoe F.",
-    "Player2": "Moller E.",
-    "Odds_A": 1.04,
-    "Odds_B": 9.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Norrie C.",
-    "Player2": "Bautista Agut R.",
-    "Odds_A": 1.83,
-    "Odds_B": 1.91,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Fery A.",
-    "Player2": "Popyrin A.",
-    "Odds_A": 4.33,
-    "Odds_B": 1.22,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Bergs Z.",
-    "Player2": "Harris L.",
-    "Odds_A": 1.5,
-    "Odds_B": 2.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Jarry N.",
-    "Player2": "Rune H.",
-    "Odds_A": 3.75,
-    "Odds_B": 1.29,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Tsitsipas S.",
-    "Player2": "Royer V.",
-    "Odds_A": 1.25,
-    "Odds_B": 4.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Fognini F.",
-    "Player2": "Alcaraz C.",
-    "Odds_A": 17.0,
-    "Odds_B": 1.01,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Darderi L.",
-    "Player2": "Safiullin R.",
-    "Odds_A": 3.0,
-    "Odds_B": 1.4,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Cerundolo F.",
-    "Player2": "Borges N.",
-    "Odds_A": 1.53,
-    "Odds_B": 2.4,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Duckworth J.",
-    "Player2": "Auger-Aliassime F.",
-    "Odds_A": 4.5,
-    "Odds_B": 1.18,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Fonseca J.",
-    "Player2": "Fearnley J.",
-    "Odds_A": 1.5,
-    "Odds_B": 2.63,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Quinn E.",
-    "Player2": "Searle H.",
-    "Odds_A": 1.44,
-    "Odds_B": 2.8,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Harris B.",
-    "Player2": "Lajovic D.",
-    "Odds_A": 1.4,
-    "Odds_B": 2.8,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Khachanov K.",
-    "Player2": "McDonald M.",
-    "Odds_A": 1.22,
-    "Odds_B": 4.33,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Garin C.",
-    "Player2": "Rodesch C.",
-    "Odds_A": 1.67,
-    "Odds_B": 2.2,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Djere L.",
-    "Player2": "Rublev A.",
-    "Odds_A": 4.0,
-    "Odds_B": 1.22,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Misolic F.",
-    "Player2": "Struff J.L.",
-    "Odds_A": 2.25,
-    "Odds_B": 1.67,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Berrettini M.",
-    "Player2": "Majchrzak K.",
-    "Odds_A": 1.13,
-    "Odds_B": 6.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Holt B.",
-    "Player2": "Davidovich Fokina A.",
-    "Odds_A": 4.33,
-    "Odds_B": 1.22,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Griekspoor T.",
-    "Player2": "Brooksby J.",
-    "Odds_A": 1.4,
-    "Odds_B": 2.75,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Diallo G.",
-    "Player2": "Altmaier D.",
-    "Odds_A": 1.2,
-    "Odds_B": 4.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Tseng C.H.",
-    "Player2": "Vukic A.",
-    "Odds_A": 4.0,
-    "Odds_B": 1.25,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "McCabe J.",
-    "Player2": "Marozsan F.",
-    "Odds_A": 2.8,
-    "Odds_B": 1.44,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Kecmanovic M.",
-    "Player2": "Michelsen A.",
-    "Odds_A": 2.8,
-    "Odds_B": 1.44,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Faria J.",
-    "Player2": "Sonego L.",
-    "Odds_A": 3.6,
-    "Odds_B": 1.3,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Monday J.",
-    "Player2": "Paul T.",
-    "Odds_A": 8.5,
-    "Odds_B": 1.05,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "De Minaur A.",
-    "Player2": "Carballes Baena R.",
-    "Odds_A": 1.01,
-    "Odds_B": 13.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Walton A.",
-    "Player2": "Cazaux A.",
-    "Odds_A": 2.5,
-    "Odds_B": 1.53,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Basilashvili N.",
-    "Player2": "Musetti L.",
-    "Odds_A": 3.4,
-    "Odds_B": 1.3,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "De Jong J.",
-    "Player2": "Eubanks C.",
-    "Odds_A": 1.75,
-    "Odds_B": 2.1,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Navone M.",
-    "Player2": "Shapovalov D.",
-    "Odds_A": 6.0,
-    "Odds_B": 1.13,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Bublik A.",
-    "Player2": "Munar J.",
-    "Odds_A": 1.22,
-    "Odds_B": 4.33,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Sinner J.",
-    "Player2": "Nardi L.",
-    "Odds_A": 1.01,
-    "Odds_B": 13.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Medjedovic H.",
-    "Player2": "Ofner S.",
-    "Odds_A": 1.53,
-    "Odds_B": 2.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Loffhagen G.",
-    "Player2": "Martinez P.",
-    "Odds_A": 1.3,
-    "Odds_B": 3.6,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Van De Zandschulp B.",
-    "Player2": "Arnaldi M.",
-    "Odds_A": 2.25,
-    "Odds_B": 1.67,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Zeppieri G.",
-    "Player2": "Mochizuki S.",
-    "Odds_A": 2.6,
-    "Odds_B": 1.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Evans D.",
-    "Player2": "Clarke J.",
-    "Odds_A": 1.18,
-    "Odds_B": 5.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Moutet C.",
-    "Player2": "Comesana F.",
-    "Odds_A": 1.45,
-    "Odds_B": 2.8,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Mpetshi G.",
-    "Player2": "Fritz T.",
-    "Odds_A": 5.5,
-    "Odds_B": 1.15,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Halys Q.",
-    "Player2": "Holmgren A.",
-    "Odds_A": 1.17,
-    "Odds_B": 5.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Machac T.",
-    "Player2": "Dzumhur D.",
-    "Odds_A": 1.2,
-    "Odds_B": 4.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Rinderknech A.",
-    "Player2": "Zverev A.",
-    "Odds_A": 7.5,
-    "Odds_B": 1.08,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Zhukayev B.",
-    "Player2": "Cobolli F.",
-    "Odds_A": 3.4,
-    "Odds_B": 1.33,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Mensik J.",
-    "Player2": "Gaston H.",
-    "Odds_A": 1.07,
-    "Odds_B": 8.5,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Cilic M.",
-    "Player2": "Collignon R.",
-    "Odds_A": 1.08,
-    "Odds_B": 7.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Bolt A.",
-    "Player2": "Shelton B.",
-    "Odds_A": 4.0,
-    "Odds_B": 1.25,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Shevchenko A.",
-    "Player2": "Opelka R.",
-    "Odds_A": 3.25,
-    "Odds_B": 1.33,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Humbert U.",
-    "Player2": "Monfils G.",
-    "Odds_A": 1.33,
-    "Odds_B": 3.4,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Kovacevic A.",
-    "Player2": "Fucsovics M.",
-    "Odds_A": 3.75,
-    "Odds_B": 1.25,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Nishioka Y.",
-    "Player2": "Dimitrov G.",
-    "Odds_A": 5.0,
-    "Odds_B": 1.18,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Goffin D.",
-    "Player2": "Hijikata R.",
-    "Odds_A": 2.38,
-    "Odds_B": 1.6,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Pinnington Jones J.",
-    "Player2": "Etcheverry T.",
-    "Odds_A": 2.75,
-    "Odds_B": 1.45,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Draper J.",
-    "Player2": "Baez S.",
-    "Odds_A": 1.02,
-    "Odds_B": 15.0,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Ugo Carabelli C.",
-    "Player2": "Giron M.",
-    "Odds_A": 9.0,
-    "Odds_B": 1.06,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Muller A.",
-    "Player2": "Djokovic N.",
-    "Odds_A": 15.0,
-    "Odds_B": 1.02,
-    "Round": "1st Round"
-  },
-  {
-    "Player1": "Nakashima B.",
-    "Player2": "Bu Y.",
-    "Odds_A": 1.13,
-    "Odds_B": 6.0,
-    "Round": "1st Round"
-  },
-  {"Player1": "Tiafoe F.", "Player2": "Norrie C.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
-  {"Player1": "Brooksby J.", "Player2": "Fonseca J.", "Odds_A": 2.8, "Odds_B": 1.44, "Round": "2nd Round"},
-  {"Player1": "Mannarino A.", "Player2": "Royer V.", "Odds_A": 1.44, "Odds_B": 2.8, "Round": "2nd Round"},
-  {"Player1": "Tien L.", "Player2": "Jarry N.", "Odds_A": 2.2, "Odds_B": 1.67, "Round": "2nd Round"},
-  {"Player1": "Khachanov K.", "Player2": "Mochizuki S.", "Odds_A": 1.14, "Odds_B": 5.5, "Round": "2nd Round"},
-  {"Player1": "Rublev A.", "Player2": "Harris L.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "2nd Round"},
-  {"Player1": "Borges N.", "Player2": "Harris B.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
-  {"Player1": "Tarvet O.", "Player2": "Alcaraz C.", "Odds_A": 12, "Odds_B": 1.01, "Round": "2nd Round"},
-  {"Player1": "Bonzi B.", "Player2": "Thompson J.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
-  {"Player1": "Bellucci M.", "Player2": "Lehecka J.", "Odds_A": 4.5, "Odds_B": 1.2, "Round": "2nd Round"},
-  {"Player1": "Quinn E.", "Player2": "Majchrzak K.", "Odds_A": 1.62, "Odds_B": 2.2, "Round": "2nd Round"},
-  {"Player1": "Fritz T.", "Player2": "Diallo G.", "Odds_A": 1.3, "Odds_B": 3.6, "Round": "2nd Round"},
-  {"Player1": "Kecmanovic M.", "Player2": "De Jong J.", "Odds_A": 1.4, "Odds_B": 3, "Round": "2nd Round"},
-  {"Player1": "Giron M.", "Player2": "Mensik J.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "2nd Round"},
-  {"Player1": "Cazaux A.", "Player2": "De Minaur A.", "Odds_A": 8, "Odds_B": 1.08, "Round": "2nd Round"},
-  {"Player1": "Cobolli F.", "Player2": "Pinnington Jones J.", "Odds_A": 1.36, "Odds_B": 3.2, "Round": "2nd Round"},
-  {"Player1": "Moutet C.", "Player2": "Dimitrov G.", "Odds_A": 2.38, "Odds_B": 1.6, "Round": "2nd Round"},
-  {"Player1": "Davidovich Fokina A.", "Player2": "Van De Zandschulp B.", "Odds_A": 1.3, "Odds_B": 3.6, "Round": "2nd Round"},
-  {"Player1": "Marozsan F.", "Player2": "Munar J.", "Odds_A": 2, "Odds_B": 1.8, "Round": "2nd Round"},
-  {"Player1": "Auger-Aliassime F.", "Player2": "Struff J.L.", "Odds_A": 1.33, "Odds_B": 3.25, "Round": "2nd Round"},
-  {"Player1": "Rinderknech A.", "Player2": "Garin C.", "Odds_A": 1.67, "Odds_B": 2.25, "Round": "2nd Round"},
-  {"Player1": "Djokovic N.", "Player2": "Evans D.", "Odds_A": 1.06, "Odds_B": 9, "Round": "2nd Round"},
-  {"Player1": "Fery A.", "Player2": "Darderi L.", "Odds_A": 1.7, "Odds_B": 2.1, "Round": "2nd Round"},
-  {"Player1": "Machac T.", "Player2": "Holmgren A.", "Odds_A": 1.15, "Odds_B": 5.5, "Round": "2nd Round"},
-  {"Player1": "Martinez P.", "Player2": "Navone M.", "Odds_A": 2.63, "Odds_B": 1.5, "Round": "2nd Round"},
-  {"Player1": "Nakashima B.", "Player2": "Opelka R.", "Odds_A": 1.4, "Odds_B": 3, "Round": "2nd Round"},
-  {"Player1": "Ofner S.", "Player2": "Paul T.", "Odds_A": 5.5, "Odds_B": 1.15, "Round": "2nd Round"},
-  {"Player1": "Draper J.", "Player2": "Cilic M.", "Odds_A": 1.12, "Odds_B": 6.5, "Round": "2nd Round"},
-  {"Player1": "Sonego L.", "Player2": "Basilashvili N.", "Odds_A": 1.44, "Odds_B": 2.8, "Round": "2nd Round"},
-  {"Player1": "Sinner J.", "Player2": "Vukic A.", "Odds_A": 1.01, "Odds_B": 17, "Round": "2nd Round"},
-  {"Player1": "Monfils G.", "Player2": "Fucsovics M.", "Odds_A": 1.91, "Odds_B": 1.9, "Round": "2nd Round"},
-  {"Player1": "Hijikata R.", "Player2": "Shelton B.", "Odds_A": 4.33, "Odds_B": 1.22, "Round": "2nd Round"},
+# # Forme : "Player1" vs "Player2"
+# data = [
+#   {
+#     "Player1": "Tarvet O.",
+#     "Player2": "Riedi L.",
+#     "Odds_A": 2.1,
+#     "Odds_B": 1.75,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Lehecka J.",
+#     "Player2": "Dellien H.",
+#     "Odds_A": 1.02,
+#     "Odds_B": 15.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Thompson J.",
+#     "Player2": "Kopriva V.",
+#     "Odds_A": 1.4,
+#     "Odds_B": 3.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "O Connell C.",
+#     "Player2": "Mannarino A.",
+#     "Odds_A": 2.9,
+#     "Odds_B": 1.36,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Bellucci M.",
+#     "Player2": "Crawford O.",
+#     "Odds_A": 1.3,
+#     "Odds_B": 3.6,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Bonzi B.",
+#     "Player2": "Medvedev D.",
+#     "Odds_A": 8.5,
+#     "Odds_B": 1.07,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Basavareddy N.",
+#     "Player2": "Tien L.",
+#     "Odds_A": 2.6,
+#     "Odds_B": 1.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Tiafoe F.",
+#     "Player2": "Moller E.",
+#     "Odds_A": 1.04,
+#     "Odds_B": 9.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Norrie C.",
+#     "Player2": "Bautista Agut R.",
+#     "Odds_A": 1.83,
+#     "Odds_B": 1.91,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Fery A.",
+#     "Player2": "Popyrin A.",
+#     "Odds_A": 4.33,
+#     "Odds_B": 1.22,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Bergs Z.",
+#     "Player2": "Harris L.",
+#     "Odds_A": 1.5,
+#     "Odds_B": 2.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Jarry N.",
+#     "Player2": "Rune H.",
+#     "Odds_A": 3.75,
+#     "Odds_B": 1.29,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Tsitsipas S.",
+#     "Player2": "Royer V.",
+#     "Odds_A": 1.25,
+#     "Odds_B": 4.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Fognini F.",
+#     "Player2": "Alcaraz C.",
+#     "Odds_A": 17.0,
+#     "Odds_B": 1.01,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Darderi L.",
+#     "Player2": "Safiullin R.",
+#     "Odds_A": 3.0,
+#     "Odds_B": 1.4,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Cerundolo F.",
+#     "Player2": "Borges N.",
+#     "Odds_A": 1.53,
+#     "Odds_B": 2.4,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Duckworth J.",
+#     "Player2": "Auger-Aliassime F.",
+#     "Odds_A": 4.5,
+#     "Odds_B": 1.18,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Fonseca J.",
+#     "Player2": "Fearnley J.",
+#     "Odds_A": 1.5,
+#     "Odds_B": 2.63,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Quinn E.",
+#     "Player2": "Searle H.",
+#     "Odds_A": 1.44,
+#     "Odds_B": 2.8,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Harris B.",
+#     "Player2": "Lajovic D.",
+#     "Odds_A": 1.4,
+#     "Odds_B": 2.8,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Khachanov K.",
+#     "Player2": "McDonald M.",
+#     "Odds_A": 1.22,
+#     "Odds_B": 4.33,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Garin C.",
+#     "Player2": "Rodesch C.",
+#     "Odds_A": 1.67,
+#     "Odds_B": 2.2,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Djere L.",
+#     "Player2": "Rublev A.",
+#     "Odds_A": 4.0,
+#     "Odds_B": 1.22,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Misolic F.",
+#     "Player2": "Struff J.L.",
+#     "Odds_A": 2.25,
+#     "Odds_B": 1.67,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Berrettini M.",
+#     "Player2": "Majchrzak K.",
+#     "Odds_A": 1.13,
+#     "Odds_B": 6.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Holt B.",
+#     "Player2": "Davidovich Fokina A.",
+#     "Odds_A": 4.33,
+#     "Odds_B": 1.22,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Griekspoor T.",
+#     "Player2": "Brooksby J.",
+#     "Odds_A": 1.4,
+#     "Odds_B": 2.75,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Diallo G.",
+#     "Player2": "Altmaier D.",
+#     "Odds_A": 1.2,
+#     "Odds_B": 4.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Tseng C.H.",
+#     "Player2": "Vukic A.",
+#     "Odds_A": 4.0,
+#     "Odds_B": 1.25,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "McCabe J.",
+#     "Player2": "Marozsan F.",
+#     "Odds_A": 2.8,
+#     "Odds_B": 1.44,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Kecmanovic M.",
+#     "Player2": "Michelsen A.",
+#     "Odds_A": 2.8,
+#     "Odds_B": 1.44,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Faria J.",
+#     "Player2": "Sonego L.",
+#     "Odds_A": 3.6,
+#     "Odds_B": 1.3,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Monday J.",
+#     "Player2": "Paul T.",
+#     "Odds_A": 8.5,
+#     "Odds_B": 1.05,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "De Minaur A.",
+#     "Player2": "Carballes Baena R.",
+#     "Odds_A": 1.01,
+#     "Odds_B": 13.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Walton A.",
+#     "Player2": "Cazaux A.",
+#     "Odds_A": 2.5,
+#     "Odds_B": 1.53,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Basilashvili N.",
+#     "Player2": "Musetti L.",
+#     "Odds_A": 3.4,
+#     "Odds_B": 1.3,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "De Jong J.",
+#     "Player2": "Eubanks C.",
+#     "Odds_A": 1.75,
+#     "Odds_B": 2.1,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Navone M.",
+#     "Player2": "Shapovalov D.",
+#     "Odds_A": 6.0,
+#     "Odds_B": 1.13,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Bublik A.",
+#     "Player2": "Munar J.",
+#     "Odds_A": 1.22,
+#     "Odds_B": 4.33,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Sinner J.",
+#     "Player2": "Nardi L.",
+#     "Odds_A": 1.01,
+#     "Odds_B": 13.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Medjedovic H.",
+#     "Player2": "Ofner S.",
+#     "Odds_A": 1.53,
+#     "Odds_B": 2.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Loffhagen G.",
+#     "Player2": "Martinez P.",
+#     "Odds_A": 1.3,
+#     "Odds_B": 3.6,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Van De Zandschulp B.",
+#     "Player2": "Arnaldi M.",
+#     "Odds_A": 2.25,
+#     "Odds_B": 1.67,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Zeppieri G.",
+#     "Player2": "Mochizuki S.",
+#     "Odds_A": 2.6,
+#     "Odds_B": 1.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Evans D.",
+#     "Player2": "Clarke J.",
+#     "Odds_A": 1.18,
+#     "Odds_B": 5.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Moutet C.",
+#     "Player2": "Comesana F.",
+#     "Odds_A": 1.45,
+#     "Odds_B": 2.8,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Mpetshi G.",
+#     "Player2": "Fritz T.",
+#     "Odds_A": 5.5,
+#     "Odds_B": 1.15,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Halys Q.",
+#     "Player2": "Holmgren A.",
+#     "Odds_A": 1.17,
+#     "Odds_B": 5.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Machac T.",
+#     "Player2": "Dzumhur D.",
+#     "Odds_A": 1.2,
+#     "Odds_B": 4.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Rinderknech A.",
+#     "Player2": "Zverev A.",
+#     "Odds_A": 7.5,
+#     "Odds_B": 1.08,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Zhukayev B.",
+#     "Player2": "Cobolli F.",
+#     "Odds_A": 3.4,
+#     "Odds_B": 1.33,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Mensik J.",
+#     "Player2": "Gaston H.",
+#     "Odds_A": 1.07,
+#     "Odds_B": 8.5,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Cilic M.",
+#     "Player2": "Collignon R.",
+#     "Odds_A": 1.08,
+#     "Odds_B": 7.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Bolt A.",
+#     "Player2": "Shelton B.",
+#     "Odds_A": 4.0,
+#     "Odds_B": 1.25,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Shevchenko A.",
+#     "Player2": "Opelka R.",
+#     "Odds_A": 3.25,
+#     "Odds_B": 1.33,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Humbert U.",
+#     "Player2": "Monfils G.",
+#     "Odds_A": 1.33,
+#     "Odds_B": 3.4,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Kovacevic A.",
+#     "Player2": "Fucsovics M.",
+#     "Odds_A": 3.75,
+#     "Odds_B": 1.25,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Nishioka Y.",
+#     "Player2": "Dimitrov G.",
+#     "Odds_A": 5.0,
+#     "Odds_B": 1.18,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Goffin D.",
+#     "Player2": "Hijikata R.",
+#     "Odds_A": 2.38,
+#     "Odds_B": 1.6,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Pinnington Jones J.",
+#     "Player2": "Etcheverry T.",
+#     "Odds_A": 2.75,
+#     "Odds_B": 1.45,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Draper J.",
+#     "Player2": "Baez S.",
+#     "Odds_A": 1.02,
+#     "Odds_B": 15.0,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Ugo Carabelli C.",
+#     "Player2": "Giron M.",
+#     "Odds_A": 9.0,
+#     "Odds_B": 1.06,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Muller A.",
+#     "Player2": "Djokovic N.",
+#     "Odds_A": 15.0,
+#     "Odds_B": 1.02,
+#     "Round": "1st Round"
+#   },
+#   {
+#     "Player1": "Nakashima B.",
+#     "Player2": "Bu Y.",
+#     "Odds_A": 1.13,
+#     "Odds_B": 6.0,
+#     "Round": "1st Round"
+#   },
+#   {"Player1": "Tiafoe F.", "Player2": "Norrie C.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
+#   {"Player1": "Brooksby J.", "Player2": "Fonseca J.", "Odds_A": 2.8, "Odds_B": 1.44, "Round": "2nd Round"},
+#   {"Player1": "Mannarino A.", "Player2": "Royer V.", "Odds_A": 1.44, "Odds_B": 2.8, "Round": "2nd Round"},
+#   {"Player1": "Tien L.", "Player2": "Jarry N.", "Odds_A": 2.2, "Odds_B": 1.67, "Round": "2nd Round"},
+#   {"Player1": "Khachanov K.", "Player2": "Mochizuki S.", "Odds_A": 1.14, "Odds_B": 5.5, "Round": "2nd Round"},
+#   {"Player1": "Rublev A.", "Player2": "Harris L.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "2nd Round"},
+#   {"Player1": "Borges N.", "Player2": "Harris B.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
+#   {"Player1": "Tarvet O.", "Player2": "Alcaraz C.", "Odds_A": 12, "Odds_B": 1.01, "Round": "2nd Round"},
+#   {"Player1": "Bonzi B.", "Player2": "Thompson J.", "Odds_A": 1.53, "Odds_B": 2.5, "Round": "2nd Round"},
+#   {"Player1": "Bellucci M.", "Player2": "Lehecka J.", "Odds_A": 4.5, "Odds_B": 1.2, "Round": "2nd Round"},
+#   {"Player1": "Quinn E.", "Player2": "Majchrzak K.", "Odds_A": 1.62, "Odds_B": 2.2, "Round": "2nd Round"},
+#   {"Player1": "Fritz T.", "Player2": "Diallo G.", "Odds_A": 1.3, "Odds_B": 3.6, "Round": "2nd Round"},
+#   {"Player1": "Kecmanovic M.", "Player2": "De Jong J.", "Odds_A": 1.4, "Odds_B": 3, "Round": "2nd Round"},
+#   {"Player1": "Giron M.", "Player2": "Mensik J.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "2nd Round"},
+#   {"Player1": "Cazaux A.", "Player2": "De Minaur A.", "Odds_A": 8, "Odds_B": 1.08, "Round": "2nd Round"},
+#   {"Player1": "Cobolli F.", "Player2": "Pinnington Jones J.", "Odds_A": 1.36, "Odds_B": 3.2, "Round": "2nd Round"},
+#   {"Player1": "Moutet C.", "Player2": "Dimitrov G.", "Odds_A": 2.38, "Odds_B": 1.6, "Round": "2nd Round"},
+#   {"Player1": "Davidovich Fokina A.", "Player2": "Van De Zandschulp B.", "Odds_A": 1.3, "Odds_B": 3.6, "Round": "2nd Round"},
+#   {"Player1": "Marozsan F.", "Player2": "Munar J.", "Odds_A": 2, "Odds_B": 1.8, "Round": "2nd Round"},
+#   {"Player1": "Auger-Aliassime F.", "Player2": "Struff J.L.", "Odds_A": 1.33, "Odds_B": 3.25, "Round": "2nd Round"},
+#   {"Player1": "Rinderknech A.", "Player2": "Garin C.", "Odds_A": 1.67, "Odds_B": 2.25, "Round": "2nd Round"},
+#   {"Player1": "Djokovic N.", "Player2": "Evans D.", "Odds_A": 1.06, "Odds_B": 9, "Round": "2nd Round"},
+#   {"Player1": "Fery A.", "Player2": "Darderi L.", "Odds_A": 1.7, "Odds_B": 2.1, "Round": "2nd Round"},
+#   {"Player1": "Machac T.", "Player2": "Holmgren A.", "Odds_A": 1.15, "Odds_B": 5.5, "Round": "2nd Round"},
+#   {"Player1": "Martinez P.", "Player2": "Navone M.", "Odds_A": 2.63, "Odds_B": 1.5, "Round": "2nd Round"},
+#   {"Player1": "Nakashima B.", "Player2": "Opelka R.", "Odds_A": 1.4, "Odds_B": 3, "Round": "2nd Round"},
+#   {"Player1": "Ofner S.", "Player2": "Paul T.", "Odds_A": 5.5, "Odds_B": 1.15, "Round": "2nd Round"},
+#   {"Player1": "Draper J.", "Player2": "Cilic M.", "Odds_A": 1.12, "Odds_B": 6.5, "Round": "2nd Round"},
+#   {"Player1": "Sonego L.", "Player2": "Basilashvili N.", "Odds_A": 1.44, "Odds_B": 2.8, "Round": "2nd Round"},
+#   {"Player1": "Sinner J.", "Player2": "Vukic A.", "Odds_A": 1.01, "Odds_B": 17, "Round": "2nd Round"},
+#   {"Player1": "Monfils G.", "Player2": "Fucsovics M.", "Odds_A": 1.91, "Odds_B": 1.9, "Round": "2nd Round"},
+#   {"Player1": "Hijikata R.", "Player2": "Shelton B.", "Odds_A": 4.33, "Odds_B": 1.22, "Round": "2nd Round"},
 
-  {"Player1": "Davidovich Fokina A.", "Player2": "Fritz T.", "Odds_A": 3.75, "Odds_B": 1.25, "Round": "3rd Round"},
-  {"Player1": "Rublev A.", "Player2": "Mannarino A.", "Odds_A": 1.25, "Odds_B": 3.75, "Round": "3rd Round"},
-  {"Player1": "Norrie C.", "Player2": "Bellucci M.", "Odds_A": 1.57, "Odds_B": 2.3, "Round": "3rd Round"},
-  {"Player1": "Thompson J.", "Player2": "Darderi L.", "Odds_A": 1.67, "Odds_B": 2.1, "Round": "3rd Round"},
-  {"Player1": "Rinderknech A.", "Player2": "Majchrzak K.", "Odds_A": 1.9, "Odds_B": 1.91, "Round": "3rd Round"},
-  {"Player1": "Fonseca J.", "Player2": "Jarry N.", "Odds_A": 1.4, "Odds_B": 2.9, "Round": "3rd Round"},
-  {"Player1": "Borges N.", "Player2": "Khachanov K.", "Odds_A": 3, "Odds_B": 1.4, "Round": "3rd Round"},
-  {"Player1": "Struff J.L.", "Player2": "Alcaraz C.", "Odds_A": 11, "Odds_B": 1.04, "Round": "3rd Round"},
-  {"Player1": "Cobolli F.", "Player2": "Mensik J.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "3rd Round"},
-  {"Player1": "Martinez P.", "Player2": "Sinner J.", "Odds_A": 19, "Odds_B": 1.01, "Round": "3rd Round"},
-  {"Player1": "Dimitrov G.", "Player2": "Ofner S.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "3rd Round"},
-  {"Player1": "Sonego L.", "Player2": "Nakashima B.", "Odds_A": 2.6, "Odds_B": 1.5, "Round": "3rd Round"},
-  {"Player1": "De Minaur A.", "Player2": "Holmgren A.", "Odds_A": 1.06, "Odds_B": 8, "Round": "3rd Round"},
-  {"Player1": "Munar J.", "Player2": "Cilic M.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "3rd Round"},
-  {"Player1": "Fucsovics M.", "Player2": "Shelton B.", "Odds_A": 3.6, "Odds_B": 1.3, "Round": "3rd Round"},
-  {"Player1": "Kecmanovic M.", "Player2": "Djokovic N.", "Odds_A": 9.5, "Odds_B": 1.04, "Round": "3rd Round"},
-  {"Player1": "Majchrzak K.", "Player2": "Khachanov K.", "Odds_A": 3.2, "Odds_B": 1.36, "Round": "4th Round"},
-  {"Player1": "Thompson J.", "Player2": "Fritz T.", "Odds_A": 5.5, "Odds_B": 1.14, "Round": "4th Round"},
-  {"Player1": "Norrie C.", "Player2": "Jarry N.", "Odds_A": 1.83, "Odds_B": 1.91, "Round": "4th Round"},
-  {"Player1": "Rublev A.", "Player2": "Alcaraz C.", "Odds_A": 7, "Odds_B": 1.08, "Round": "4th Round"},
-  {"Player1": "Cobolli F.", "Player2": "Cilic M.", "Odds_A": 1.83, "Odds_B": 2, "Round": "4th Round"},
-  {"Player1": "Djokovic N.", "Player2": "De Minaur A.", "Odds_A": 1.17, "Odds_B": 5, "Round": "4th Round"},
-  {"Player1": "Sonego L.", "Player2": "Shelton B.", "Odds_A": 3.75, "Odds_B": 1.29, "Round": "4th Round"},
-  {"Player1": "Sinner J.", "Player2": "Dimitrov G.", "Odds_A": 1.03, "Odds_B": 13, "Round": "4th Round"},
+#   {"Player1": "Davidovich Fokina A.", "Player2": "Fritz T.", "Odds_A": 3.75, "Odds_B": 1.25, "Round": "3rd Round"},
+#   {"Player1": "Rublev A.", "Player2": "Mannarino A.", "Odds_A": 1.25, "Odds_B": 3.75, "Round": "3rd Round"},
+#   {"Player1": "Norrie C.", "Player2": "Bellucci M.", "Odds_A": 1.57, "Odds_B": 2.3, "Round": "3rd Round"},
+#   {"Player1": "Thompson J.", "Player2": "Darderi L.", "Odds_A": 1.67, "Odds_B": 2.1, "Round": "3rd Round"},
+#   {"Player1": "Rinderknech A.", "Player2": "Majchrzak K.", "Odds_A": 1.9, "Odds_B": 1.91, "Round": "3rd Round"},
+#   {"Player1": "Fonseca J.", "Player2": "Jarry N.", "Odds_A": 1.4, "Odds_B": 2.9, "Round": "3rd Round"},
+#   {"Player1": "Borges N.", "Player2": "Khachanov K.", "Odds_A": 3, "Odds_B": 1.4, "Round": "3rd Round"},
+#   {"Player1": "Struff J.L.", "Player2": "Alcaraz C.", "Odds_A": 11, "Odds_B": 1.04, "Round": "3rd Round"},
+#   {"Player1": "Cobolli F.", "Player2": "Mensik J.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "3rd Round"},
+#   {"Player1": "Martinez P.", "Player2": "Sinner J.", "Odds_A": 19, "Odds_B": 1.01, "Round": "3rd Round"},
+#   {"Player1": "Dimitrov G.", "Player2": "Ofner S.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "3rd Round"},
+#   {"Player1": "Sonego L.", "Player2": "Nakashima B.", "Odds_A": 2.6, "Odds_B": 1.5, "Round": "3rd Round"},
+#   {"Player1": "De Minaur A.", "Player2": "Holmgren A.", "Odds_A": 1.06, "Odds_B": 8, "Round": "3rd Round"},
+#   {"Player1": "Munar J.", "Player2": "Cilic M.", "Odds_A": 2.5, "Odds_B": 1.53, "Round": "3rd Round"},
+#   {"Player1": "Fucsovics M.", "Player2": "Shelton B.", "Odds_A": 3.6, "Odds_B": 1.3, "Round": "3rd Round"},
+#   {"Player1": "Kecmanovic M.", "Player2": "Djokovic N.", "Odds_A": 9.5, "Odds_B": 1.04, "Round": "3rd Round"},
+#   {"Player1": "Majchrzak K.", "Player2": "Khachanov K.", "Odds_A": 3.2, "Odds_B": 1.36, "Round": "4th Round"},
+#   {"Player1": "Thompson J.", "Player2": "Fritz T.", "Odds_A": 5.5, "Odds_B": 1.14, "Round": "4th Round"},
+#   {"Player1": "Norrie C.", "Player2": "Jarry N.", "Odds_A": 1.83, "Odds_B": 1.91, "Round": "4th Round"},
+#   {"Player1": "Rublev A.", "Player2": "Alcaraz C.", "Odds_A": 7, "Odds_B": 1.08, "Round": "4th Round"},
+#   {"Player1": "Cobolli F.", "Player2": "Cilic M.", "Odds_A": 1.83, "Odds_B": 2, "Round": "4th Round"},
+#   {"Player1": "Djokovic N.", "Player2": "De Minaur A.", "Odds_A": 1.17, "Odds_B": 5, "Round": "4th Round"},
+#   {"Player1": "Sonego L.", "Player2": "Shelton B.", "Odds_A": 3.75, "Odds_B": 1.29, "Round": "4th Round"},
+#   {"Player1": "Sinner J.", "Player2": "Dimitrov G.", "Odds_A": 1.03, "Odds_B": 13, "Round": "4th Round"},
 
-  {"Player1": "Fritz T.", "Player2": "Khachanov K.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "Quarterfinals"},
-  {"Player1": "Norrie C.", "Player2": "Alcaraz C.", "Odds_A": 9, "Odds_B": 1.06, "Round": "Quarterfinals"},
-  {"Player1": "Sinner J.", "Player2": "Shelton B.", "Odds_A": 1.25, "Odds_B": 3.6, "Round": "Quarterfinals"},
-  {"Player1": "Cobolli F.", "Player2": "Djokovic N.", "Odds_A": 7, "Odds_B": 1.1, "Round": "Quarterfinals"},
+#   {"Player1": "Fritz T.", "Player2": "Khachanov K.", "Odds_A": 1.29, "Odds_B": 3.75, "Round": "Quarterfinals"},
+#   {"Player1": "Norrie C.", "Player2": "Alcaraz C.", "Odds_A": 9, "Odds_B": 1.06, "Round": "Quarterfinals"},
+#   {"Player1": "Sinner J.", "Player2": "Shelton B.", "Odds_A": 1.25, "Odds_B": 3.6, "Round": "Quarterfinals"},
+#   {"Player1": "Cobolli F.", "Player2": "Djokovic N.", "Odds_A": 7, "Odds_B": 1.1, "Round": "Quarterfinals"},
 
-  {"Player1": "Fritz T.", "Player2": "Alcaraz C.", "Odds_A": 4.75, "Odds_B": 1.17, "Round": "Semifinals"},
-  {"Player1": "Djokovic N.", "Player2": "Sinner J.", "Odds_A": 2.8, "Odds_B": 1.4, "Round": "Semifinals"},
+#   {"Player1": "Fritz T.", "Player2": "Alcaraz C.", "Odds_A": 4.75, "Odds_B": 1.17, "Round": "Semifinals"},
+#   {"Player1": "Djokovic N.", "Player2": "Sinner J.", "Odds_A": 2.8, "Odds_B": 1.4, "Round": "Semifinals"},
 
-  {"Player1": "Sinner J.", "Player2": "Alcaraz C.", "Odds_A": 1.83, "Odds_B": 2, "Round": "The Final"}
-]
+#   {"Player1": "Sinner J.", "Player2": "Alcaraz C.", "Odds_A": 1.83, "Odds_B": 2, "Round": "The Final"}
+# ]
 
-upcoming_df = pd.DataFrame(data)
-upcoming_df['Surface'] = 'Grass'
-upcoming_df['Series'] = 'Grand Slam'
+# upcoming_df = pd.DataFrame(data)
+# upcoming_df['Surface'] = 'Grass'
+# upcoming_df['Series'] = 'Grand Slam'
 
-simulation_paris_2025()
+# simulation_paris_2025()
 
 # predict_match("Bonzi B.", "Rinderknech A.", "Hard", 1.74, 2.05, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
 # predict_match("Lehecka J.", "Collignon R.", "Hard", 1.12, 6, 'Grand Slam', '3rd Round', ev_comparison=True, bankroll=17)
@@ -1135,3 +1137,5 @@ simulation_paris_2025()
 # print(upcoming_df.head(64))
 
 # plot_elo_evolution(match_df, "Alcaraz C.")
+
+# predict_match("Alcaraz C.", "Rogers S.", "Grass", 3.0, 3.0, "Grand Slam", "1st Round")

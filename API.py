@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import joblib
+from api_request import getPredictionsOnDay
 
 modelLGBM = joblib.load("modeleLGBM_tennis_2024-20.pkl")
 iso = joblib.load("calibrateur-20.pkl")
@@ -186,7 +187,7 @@ def predict_match(
     kellyB = (probB * (oddB - 1) - (1 - probB)) / (oddB - 1)
 
     # Sélection via Kelly (même si EV < 0, tu choisis le + gros Kelly)
-    if kellyA > kellyB:
+    if evA > evB:
         winner, odd, cote, p_win, kelly = A, oddA, bookOddA, probA, kellyA
     else:
         winner, odd, cote, p_win, kelly = B, oddB, bookOddB, probB, kellyB
@@ -244,11 +245,26 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"]
 )
 
+class APIInput(BaseModel):
+    day: int
+    month: int
+    year: int
+    bankroll: float
+
+@app.post("/getPredictions")
+def getPredictions(input: APIInput):
+    try:
+        result = getPredictionsOnDay(input.day, input.month, input.year, input.bankroll)
+        return [x for x in result if x is not None]
+    except Exception as e:
+        print("❌ ERREUR getPredictions:", e)
+        return {"error": str(e)}
+    
 @app.get("/")
 def read_index():
     return FileResponse("index.html")
@@ -266,7 +282,6 @@ class MatchInput(BaseModel):
 
 @app.post("/predict")
 def predict(match: MatchInput):
-    # Appelle ta fonction predict_match avec les paramètres reçus
     result = predict_match(
         match.A, match.B, match.surface,
         match.cote_A, match.cote_B,
@@ -291,22 +306,22 @@ def predict(match: MatchInput):
 	'level': level_name
 """
 
-from types import SimpleNamespace
+# from types import SimpleNamespace
 
-# predict_match("Boulter K.", "Golubic V.", "Hard", 1.72, 2.05, 'WTA500', '2nd Round', bankroll=100)
+# # predict_match("Boulter K.", "Golubic V.", "Hard", 1.72, 2.05, 'WTA500', '2nd Round', bankroll=100)
 
-match = {
-    "A": "Boulter K.",
-    "B": "Golubic V.",
-    "surface": "Hard",
-    "cote_A": 1.72,
-    "cote_B": 2.05,
-    "level_name": "WTA500",
-    "round_name": "2nd Round",
-    "bankroll": 100,
-    "min_ev": 0.05
-}
+# match = {
+#     "A": "Boulter K.",
+#     "B": "Golubic V.",
+#     "surface": "Hard",
+#     "cote_A": 1.72,
+#     "cote_B": 2.05,
+#     "level_name": "WTA500",
+#     "round_name": "2nd Round",
+#     "bankroll": 100,
+#     "min_ev": 0.05
+# }
 
-match = SimpleNamespace(**match)
+# match = SimpleNamespace(**match)
 
-predict(match)
+# predict(match)

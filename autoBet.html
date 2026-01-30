@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto bet</title>
+    <script src="static/autoBet.js" defer></script>
+    <link rel="stylesheet" href="static/autoBet.css">
+</head>
+<body>
+    <form method="post" id="form-date">
+        <input type="date" name="date" id="match-date">
+        <input type="number" name="bankroll" id="bankroll-input">
+        <input type="submit" value="Submit">
+    </form>
+    <div id="bets"></div>
+    <div id="loader">
+        <div class="tennis-ball"></div>
+    </div>
+</body>
+</html>
