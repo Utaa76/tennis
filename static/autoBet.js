@@ -63,7 +63,7 @@ formDate.addEventListener('submit', (e) => {
     loader.style.display = 'flex';
 
     // fetch('http://127.0.0.1:8000/getPredictions', {
-    fetch('https://utaa76.github.io/tennis/getPredictions', {
+    fetch('https://tennis-8gw3.onrender.com/getPredictions', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
