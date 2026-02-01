@@ -53,7 +53,7 @@ def default_player_stats(player_name):
     }
 
 def get_player_stats(player_name, player_stats_df):
-    if player_name in player_stats:
+    if player_name in player_stats_df:
         return player_stats_df[player_name]
     else:
         return default_player_stats(player_name)
@@ -256,9 +256,9 @@ class APIInput(BaseModel):
     year: int
     bankroll: float
 
-@app.post("/autoBet")
+@app.get("/autoBet")
 def renderAutoBet():
-    return FileResponse("autoBet.html")
+    return FileResponse("/static/autoBet.html")
 
 @app.post("/getPredictions")
 def getPredictions(input: APIInput):
@@ -271,7 +271,7 @@ def getPredictions(input: APIInput):
     
 @app.get("/")
 def read_index():
-    return FileResponse("index.html")
+    return FileResponse("/static/index.html")
 
 class MatchInput(BaseModel):
     A: str
