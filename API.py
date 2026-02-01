@@ -258,7 +258,7 @@ class APIInput(BaseModel):
 
 @app.get("/autoBet")
 def renderAutoBet():
-    return FileResponse("/static/autoBet.html")
+    return FileResponse("autoBet.html")
 
 @app.post("/getPredictions")
 def getPredictions(input: APIInput):
@@ -271,7 +271,7 @@ def getPredictions(input: APIInput):
     
 @app.get("/")
 def read_index():
-    return FileResponse("/static/index.html")
+    return FileResponse("index.html")
 
 class MatchInput(BaseModel):
     A: str
