@@ -50,7 +50,7 @@ formDate.addEventListener('submit', (e) => {
     month = dateString[1];
     day   = dateString[2];
 
-    bankroll = document.getElementById('bankroll-input').value;
+    bankroll = Number(document.getElementById('bankroll-input').value).toFixed(2);
 
     const data = {
         day: Number(day),
