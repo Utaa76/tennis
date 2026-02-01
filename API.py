@@ -256,6 +256,10 @@ class APIInput(BaseModel):
     year: int
     bankroll: float
 
+@app.post("/autoBet")
+def renderAutoBet():
+    return FileResponse("autoBet.html")
+
 @app.post("/getPredictions")
 def getPredictions(input: APIInput):
     try:
