@@ -15,7 +15,9 @@ NAME_FIXES = {
     "Lorenzo Musetti": "Musetti L.",
     "Novak Djokovic": "Djokovic N.",
     "Ben Shelton": "Shelton B.",
-    "Jannik Sinner": "Sinner J."
+    "Jannik Sinner": "Sinner J.",
+    "Carreño Busta P.": "Carreno Busta P.",
+    "Van de Zandschulp B.": "Van De Zandschulp B."
 }
 
 def format_player(name):
