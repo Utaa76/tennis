@@ -1,10 +1,10 @@
 import requests
 from predictions import predict_match
 
-key1 = "15023aab03mshe741c694d87ba09p1d25c7jsn2831ec352181"
-key = "30c4f58ed3msh2c671728169a68dp10d40djsneaf6b1a69049"
-key3 = "76ec2fb838msh5b33f1561f7aa0ep11c67cjsn07f16a9259dd"
-key2 = "f211a17182msh7eda8c94e801a60p1ecd31jsn4a6662c55314"
+key2 = "15023aab03mshe741c694d87ba09p1d25c7jsn2831ec352181"
+key1 = "30c4f58ed3msh2c671728169a68dp10d40djsneaf6b1a69049"
+key = "76ec2fb838msh5b33f1561f7aa0ep11c67cjsn07f16a9259dd"
+key3 = "f211a17182msh7eda8c94e801a60p1ecd31jsn4a6662c55314"
 
 NAME_FIXES = {
     "Felix Auger Aliassime": "Auger-Aliassime F.",
@@ -16,14 +16,17 @@ NAME_FIXES = {
     "Novak Djokovic": "Djokovic N.",
     "Ben Shelton": "Shelton B.",
     "Jannik Sinner": "Sinner J.",
-    "Carreño Busta P.": "Carreno Busta P.",
-    "Van de Zandschulp B.": "Van De Zandschulp B."
+    "Pablo Carreño Busta": "Carreno Busta P.",
+    "Botic Van de Zandschulp": "Van De Zandschulp B.",
+    "Martin Damm Jr": "Damm M.",
+    "Zeynep Sönmez": "Sonmez Z.",
 }
 
 def format_player(name):
     if name in NAME_FIXES:
         return NAME_FIXES[name]
 
+    print("name not in NAME_FIXES", name)
     parts = name.split()
     first = parts[0]
     last = " ".join(parts[1:])
@@ -48,7 +51,7 @@ roundCategories = {
     "Round of 64": "2nd Round",
     "Round of 32": "3rd Round",
     "Round of 16": "4th Round",
-    "Quarterfinals": "Quaterfinals",
+    "Quarterfinals": "Quarterfinals",
     "Semifinals": "Semifinals",
     "Final": "The Final"
 }
@@ -100,8 +103,8 @@ def getPredictionsOnDay(day, month, year, bankroll):
             rOdds = requests.get(urlOdds, headers=headersOdds)
             dataOdds = rOdds.json()
             choices = dataOdds["featured"]["default"]["choices"]
-            oddA = round(1.0 + eval(choices[0]["initialFractionalValue"]), 2)
-            oddB = round(1.0 + eval(choices[1]["initialFractionalValue"]), 2)
+            oddA = round(1.0 + eval(choices[0]["fractionalValue"]), 2)
+            oddB = round(1.0 + eval(choices[1]["fractionalValue"]), 2)
 
             print(playerA, "vs", playerB, "[", tournamentLevel, ",", roundName, "on", groundType, "] Cotes :", oddA, "|", oddB)
             matchPredictions.append(predict_match(playerA, playerB, groundType, oddA, oddB, tournamentLevel, roundName, bankroll=bankroll))
@@ -111,6 +114,7 @@ def getPredictionsOnDay(day, month, year, bankroll):
     except Exception:
         print(data)
     finally:
+        matchPredictions.append({"Error": "Problem in main loop"})
         return matchPredictions
         
 

@@ -62,8 +62,8 @@ formDate.addEventListener('submit', (e) => {
     const loader = document.getElementById("loader");
     loader.style.display = 'flex';
 
-    // fetch('http://127.0.0.1:8000/getPredictions', {
-    fetch('https://tennis-8gw3.onrender.com/getPredictions', {
+    fetch('http://127.0.0.1:8000/getPredictions', {
+    // fetch('https://tennis-8gw3.onrender.com/getPredictions', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(data)
