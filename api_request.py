@@ -1,5 +1,6 @@
 import requests
 from predictions import predict_match
+import traceback
 
 keys = ["15023aab03mshe741c694d87ba09p1d25c7jsn2831ec352181",
         "30c4f58ed3msh2c671728169a68dp10d40djsneaf6b1a69049",
@@ -68,52 +69,59 @@ def hasRequestFailed(json):
     
     return False
 
-def getPredictionsOnDay(day, month, year, bankroll, keyId = 0):
+
+def getPredictionsOnDay(day, month, year, bankroll, keyId=0):
     matchPredictions = []
 
     if keyId >= len(keys):
+        print("Toutes les clés API ont été épuisées !")
         return [{"Error": "All API keys exhausted"}]
 
-
     key = keys[keyId]
+
     try:
+        # --- Singles ---
         url = f"https://tennisapi1.p.rapidapi.com/api/tennis/category/3/events/{day}/{month}/{year}"
         headers = {
-                    "x-rapidapi-host": "tennisapi1.p.rapidapi.com",
-                    "x-rapidapi-key": key
-                }
+            "x-rapidapi-host": "tennisapi1.p.rapidapi.com",
+            "x-rapidapi-key": key
+        }
 
-        r = requests.get(url, headers=headers)
-        data = r.json()
+        r = requests.get(url, headers=headers, timeout=10)
+        r.raise_for_status()
+        try:
+            data = r.json()
+        except ValueError:
+            print(f"JSONDecodeError avec la clé {key}, essai avec la suivante...")
+            return getPredictionsOnDay(day, month, year, bankroll, keyId + 1)
 
-        if hasRequestFailed(data) and keyId < len(keys) - 1:
-            return getPredictionsOnDay(day, month, year, bankroll, keyId+1)
+        if "message" in data:
+            print(f"Erreur API avec la clé {key} : {data['message']}")
+            return getPredictionsOnDay(day, month, year, bankroll, keyId + 1)
 
+        # --- Womens ---
         urlW = f"https://tennisapi1.p.rapidapi.com/api/tennis/category/6/events/{day}/{month}/{year}"
-        headersW = {
-                    "x-rapidapi-host": "tennisapi1.p.rapidapi.com",
-                    "x-rapidapi-key": key
-                }
+        rW = requests.get(urlW, headers=headers, timeout=10)
+        rW.raise_for_status()
+        try:
+            dataW = rW.json()
+        except ValueError:
+            print(f"JSONDecodeError (Womens) avec la clé {key}, essai avec la suivante...")
+            return getPredictionsOnDay(day, month, year, bankroll, keyId + 1)
 
-        rW = requests.get(urlW, headers=headersW)
-        dataW = rW.json()
+        if "message" in dataW:
+            print(f"Erreur API (Womens) avec la clé {key} : {dataW['message']}")
+            return getPredictionsOnDay(day, month, year, bankroll, keyId + 1)
 
-        if hasRequestFailed(dataW)  and keyId < len(keys) - 1:
-            return getPredictionsOnDay(day, month, year, bankroll, keyId+1)
-
-        # if data["message"]:
-        #     print(data["message"])
-        #     exit(1)
-
-        print("keyId :", keyId)
-
+        # --- Boucle sur les matchs ---
         for match in data["events"] + dataW["events"]:
-            type = match["eventFilters"]["category"][0]
+            match_type = match["eventFilters"]["category"][0]
             status = match["status"]["type"]
 
-            if type != "singles" or status != "notstarted":
+            if match_type != "singles" or status != "notstarted":
                 continue
 
+            # Récupération des infos
             idMatch = match["id"]
             playerA = format_player(match["homeTeam"]["name"])
             playerB = format_player(match["awayTeam"]["name"])
@@ -121,39 +129,52 @@ def getPredictionsOnDay(day, month, year, bankroll, keyId = 0):
             groundType = surfaceCategories[match["groundType"].split(" ")[0]]
             tournamentLevel = tournamentCategories[match["eventFilters"]["tournament"][0]]
 
+            # --- Récupération des cotes ---
             while True:
                 urlOdds = f"https://tennisapi1.p.rapidapi.com/api/tennis/event/{idMatch}/odds/1/featured"
-                headersOdds = {
-                            "x-rapidapi-host": "tennisapi1.p.rapidapi.com",
-                            "x-rapidapi-key": key
-                        }
-                
-                rOdds = requests.get(urlOdds, headers=headersOdds)
-                dataOdds = rOdds.json()
+                rOdds = requests.get(urlOdds, headers=headers, timeout=10)
+                try:
+                    dataOdds = rOdds.json()
+                except ValueError:
+                    print(f"JSONDecodeError (Odds) avec la clé {key}, essai avec la suivante...")
+                    keyId += 1
+                    if keyId >= len(keys):
+                        return matchPredictions
+                    key = keys[keyId]
+                    headers["x-rapidapi-key"] = key
+                    continue
 
-                if not hasRequestFailed(dataOdds):
-                    break
+                if "message" in dataOdds:
+                    print(f"Erreur API (Odds) avec la clé {key} : {dataOdds['message']}")
+                    keyId += 1
+                    if keyId >= len(keys):
+                        return matchPredictions
+                    key = keys[keyId]
+                    headers["x-rapidapi-key"] = key
+                    continue
 
-                keyId += 1
-                if keyId >= len(keys):
-                    return matchPredictions
+                break  # tout ok
 
-                key = keys[keyId]
-
+            # Calcul des cotes
             choices = dataOdds["featured"]["default"]["choices"]
             oddA = round(1.0 + eval(choices[0]["fractionalValue"]), 2)
             oddB = round(1.0 + eval(choices[1]["fractionalValue"]), 2)
 
             print(playerA, "vs", playerB, "[", tournamentLevel, ",", roundName, "on", groundType, "] Cotes :", oddA, "|", oddB)
-            matchPredictions.append(predict_match(playerA, playerB, groundType, oddA, oddB, tournamentLevel, roundName, bankroll=bankroll))
+            matchPredictions.append(
+                predict_match(playerA, playerB, groundType, oddA, oddB, tournamentLevel, roundName, bankroll=bankroll)
+            )
 
-        # print(matchPredictions)
+    except requests.exceptions.RequestException as e:
+        print(f"Erreur requête HTTP avec la clé {key} : {e}")
+        return getPredictionsOnDay(day, month, year, bankroll, keyId + 1)
     except Exception as e:
+        print(f"Erreur inattendue : {e}")
+        traceback.print_exc()
         matchPredictions.append({"Error": "Problem in main loop"})
 
-
-
     return matchPredictions
+
         
 
 
