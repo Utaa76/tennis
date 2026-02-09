@@ -133,6 +133,15 @@ def getPredictionsOnDay(day, month, year, bankroll, keyId=0):
             while True:
                 urlOdds = f"https://tennisapi1.p.rapidapi.com/api/tennis/event/{idMatch}/odds/1/featured"
                 rOdds = requests.get(urlOdds, headers=headers, timeout=10)
+
+                if rOdds.status_code != 200:
+                    print(f"HTTP {rOdds.status_code} avec la clé {key}")
+                    keyId += 1
+                    if keyId >= len(keys):
+                        return matchPredictions
+                    headers["x-rapidapi-key"] = keys[keyId]
+                    continue
+
                 try:
                     dataOdds = rOdds.json()
                 except ValueError:
