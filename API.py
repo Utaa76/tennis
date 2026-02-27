@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 import joblib
+from excel_save import ajouter_matchs_excel
 from api_request import getPredictionsOnDay
 
 modelLGBM = joblib.load("modeleLGBM_tennis_2024-20.pkl")
@@ -264,7 +265,12 @@ def renderAutoBet():
 def getPredictions(input: APIInput):
     try:
         result = getPredictionsOnDay(input.day, input.month, input.year, input.bankroll)
-        return [x for x in result if x is not None]
+        suggested_bets = [x for x in result if x is not None]
+        print(suggested_bets)
+        ajouter_matchs_excel(suggested_bets)
+
+        return suggested_bets
+
     except Exception as e:
         print("❌ ERREUR getPredictions:", e)
         return {"error": str(e)}
