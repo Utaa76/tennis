@@ -26,6 +26,7 @@ NAME_FIXES = {
     "Botic Van de Zandschulp": "Van De Zandschulp B.",
     "Martin Damm Jr": "Damm M.",
     "Zeynep Sönmez": "Sonmez Z.",
+    "Sebastian Báez": "Baez S.",
 }
 
 def format_player(name):
