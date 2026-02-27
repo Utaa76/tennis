@@ -48,7 +48,7 @@ tournamentCategories = {
 
 surfaceCategories = {
     "Hardcourt": "Hard",
-    "Red clay": "Clay",
+    "Red": "Clay",
     "Grass": "Grass"
 }
 
