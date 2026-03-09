@@ -267,7 +267,6 @@ def getPredictions(input: APIInput):
         result = getPredictionsOnDay(input.day, input.month, input.year, input.bankroll)
         suggested_bets = [x for x in result if x is not None]
         print(suggested_bets)
-        ajouter_matchs_excel(suggested_bets)
 
         return suggested_bets
 
